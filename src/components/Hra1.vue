@@ -23,6 +23,11 @@
             <div class="zvukoveTlacitko"> </div>
                 <button class="zvuk"> zvuk </button>
         </div>
+
+        <modal name="alert" width="400"> 
+            <h1> dorci modalni upozorneni</h1>
+            <h2> jsi sikulka </h2>
+        </modal>
            
     </div>
 </template>
@@ -83,7 +88,7 @@ export default {
 
         vyhodnot(index) {
             if (index === this.indexNepatri) {
-                alert("Sikulka!")
+                this.$modal.show("alert")
             }
 
             else {alert("Blbe!")}
@@ -156,5 +161,9 @@ export default {
     width: 500px;
     margin: 0 auto;
 }
+
+
+
+
 
 </style>

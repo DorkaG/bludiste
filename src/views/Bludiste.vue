@@ -1,6 +1,7 @@
 <template>
   <div id="app">
       <router-link to='/'>Domů</router-link>
+      <router-link to='/hra1'>Hra1</router-link>
     <div class="supercontainer"> 
       <div class="container">
 
@@ -8,9 +9,17 @@
           v-bind:src="raketa.obrazek"
           v-bind:style="umistiObjekt(raketa)">
 
-          <img class="saturn obrazek" alt="saturn" 
-          v-bind:src="planeta.obrazek"
-          v-bind:style="umistiObjekt(planeta)">
+          <img class="objekt2 obrazek" alt="saturn" 
+          v-bind:src="objekt2.obrazek"
+          v-bind:style="umistiObjekt(objekt2)"
+          v-if="objekt2.zobrazen"
+          >
+
+          <img class="objekt3 obrazek" alt="ufoun" 
+          v-bind:src="objekt3.obrazek"
+          v-bind:style="umistiObjekt(objekt3)"
+          v-if="objekt3.zobrazen"
+          >
 
           <img class="hvezda obrazek" alt="hvezda" 
           v-bind:src="hvezda.obrazek"
@@ -20,9 +29,7 @@
           v-bind:src="hvezda2.obrazek"
           v-bind:style="umistiObjekt(hvezda2)">
 
-          <img class="ufoun obrazek" alt="ufoun" 
-          v-bind:src="ufoun.obrazek"
-          v-bind:style="umistiObjekt(ufoun)">
+          
 
           <div class="radek" v-for="(radek, indexRadku) in bludiste"
           v-bind:key="indexRadku" >
@@ -54,20 +61,31 @@ export default {
       zdi: [],
 
       raketa: {
-        x: 80,
-        y: 140,
+        x: 70,
+        y: 130,
         sirka: 40,
         vyska: 27,
         obrazek: require("./../assets/images/sipka_doprava.png")
       },
-       planeta: {
-        x: 0,
-        y: 0,
-        sirka: 90,
-        vyska: 51,
-        obrazek: require("./../assets/images/saturn.png")
-       },
 
+      objekt2: {
+        x: 0, 
+        y: 0, 
+        sirka: 90, 
+        vyska: 51, 
+        obrazek: require("./../assets/images/objekt2.png"),
+        zobrazen: true
+        },
+
+      objekt3: {
+        x: 0, 
+        y: 0, 
+        sirka: 90, 
+        vyska: 46, 
+        obrazek: require("./../assets/images/objekt3.png"),
+        zobrazen: true
+        },
+      
        hvezda: {
         x: 0,
         y: 100,
@@ -84,16 +102,7 @@ export default {
         obrazek: require("./../assets/images/hvezda.png")
        },
 
-       ufoun: {
-           x: 0,
-           y: 0,
-           sirka: 90,
-           vyska: 46,
-           obrazek: require("./../assets/images/ufoun.png")
-       }
-
-
-
+      
 
     }
   },
@@ -104,22 +113,54 @@ export default {
     posunRaketu(event) {
             if (event.code === "ArrowRight") {
                 this.posun(60, -60, "doprava", "x")
+
+                if (this.objekt2.zobrazen) {
+                  this.potkejObjekt(this.objekt2)
+                    }
+
+                else if (this.objekt3.zobrazen) {
+                  this.potkejObjekt(this.objekt3)
+                    }
             }
 
             else if (event.code === "ArrowLeft") {
-                this.posun(-60, 60, "vlevo", "x")              
+                this.posun(-60, 60, "vlevo", "x")  
+                
+                if (this.objekt2.zobrazen) {
+                  this.potkejObjekt(this.objekt2)
+                    }
+
+                else if (this.objekt3.zobrazen) {
+                  this.potkejObjekt(this.objekt3)
+                    }        
                 }
 
             else if (event.code === "ArrowUp") {               
-                this.posun(-60, 60, "nahoru", "y")           
+                this.posun(-60, 60, "nahoru", "y") 
+
+                if (this.objekt2.zobrazen) {
+                  this.potkejObjekt(this.objekt2)
+                    }
+
+                else if (this.objekt3.zobrazen) {
+                  this.potkejObjekt(this.objekt3)
+                    }      
+                  
                 }   
             
              else if (event.code === "ArrowDown") {             
-                this.posun(60, -60, "dolu", "y")               
+                this.posun(60, -60, "dolu", "y")   
+
+                if (this.objekt2.zobrazen) {
+                  this.potkejObjekt(this.objekt2)
+                    }
+
+                else if (this.objekt3.zobrazen) {
+                  this.potkejObjekt(this.objekt3)
+                    }             
                 }
 
-                this.potkejObjekt(this.planeta)
-                this.potkejObjekt(this.ufoun)
+                
         }, 
 
         posun(cisloPosunu, cisloKolize, smer, osa) {
@@ -135,6 +176,7 @@ export default {
         potkejObjekt(objekt) {
           if (this.jeKolize(this.raketa, objekt)) {
             alert("ZELENÁ PLANETA POKRYTÁ SLIZEM");
+            objekt.zobrazen = false;
           }
         },
 
@@ -161,8 +203,8 @@ export default {
                         objekt.x = souradniceX;
                         objekt.y = souradniceY;
                         
-                        console.log(this.planeta.x);
-                        console.log(this.planeta.y)
+                        console.log(this.objekt2.x);
+                        console.log(this.objekt3.y)
                     }
                 }
             }
@@ -190,8 +232,8 @@ export default {
         window.addEventListener("keydown", this.posunRaketu),
 
         this.zjistiSouradniceZdi()
-        this.zjistiSouradniceObjektu(2, this.planeta)
-        this.zjistiSouradniceObjektu(3, this.ufoun)
+        this.zjistiSouradniceObjektu(2, this.objekt2)
+        this.zjistiSouradniceObjektu(3, this.objekt3)
         
         
     }

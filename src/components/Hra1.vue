@@ -1,35 +1,24 @@
 <template>
-    <div class="kontejnerHry">
+    
         <div class="hraSPokyny"> 
             <div class="hra"> 
+                <div class="vyskakovaci-okno-vyhra" v-if="vyhra === true">Jupi, sikulka</div>       <!--PRIDAT DO KAZDE HRY-->
+                <div class="vyskakovaci-okno-prohra" v-if="prohra === true">Zkus to znovu</div>     <!--PRIDAT DO KAZDE HRY-->
                 <div class="obrazky"> 
-                    <div class="herniobrazek" v-for="(obrazek, index) in poleObrazku"
+                    <img class="herniobrazek" v-for="(polozka, index) in poleObrazku"
                     v-bind:key="index"
+                    v-bind:src="polozka.obrazek"
                     v-on:click="vyhodnot(index)"
+                    
                     >
-                        {{obrazek}}</div>
+                    
                     
                 </div>
             </div>
             <div class="pokyny"> Vyber, který obrázek k ostatním obrázkům nepatří. </div>
         </div>
-
-
-        <div class="tlacitka"> 
-            <div class="hlavniTlacitka"> </div>
-                <button class="pryc"> pryč </button>
-                <button class="obnov"> obnov </button>
-                <button class="dal"> dál </button>
-            <div class="zvukoveTlacitko"> </div>
-                <button class="zvuk"> zvuk </button>
-        </div>
-
-        <modal name="alert" width="400"> 
-            <h1> dorci modalni upozorneni</h1>
-            <h2> jsi sikulka </h2>
-        </modal>
            
-    </div>
+    
 </template>
 
 
@@ -38,20 +27,41 @@
 
 <script>
 export default {
+    props: ["vyhra", "prohra", "znovuNacist"],             //PRIDAT DO KAZDE HRY
 
     data() {
-        return {
+        return {       
             patri: [
-                [1, 2, 3, 4, 5, 6, 7, 8, 9],
-                [10, 11, 12, 13, 14, 15, 16, 17, 18],
-                [19, 20, 21, 22, 23, 24, 25, 26, 27],
+                [{obrazek: require("./../assets/images/banan.jpg")},
+                {obrazek: require("./../assets/images/banan.jpg")},
+                {obrazek: require("./../assets/images/banan.jpg")},
+                {obrazek: require("./../assets/images/banan.jpg")},
+                {obrazek: require("./../assets/images/banan.jpg")}],
+
+                [{obrazek: require("./../assets/images/banan.jpg")},
+                {obrazek: require("./../assets/images/banan.jpg")},
+                {obrazek: require("./../assets/images/banan.jpg")},
+                {obrazek: require("./../assets/images/banan.jpg")},
+                {obrazek: require("./../assets/images/banan.jpg")}],
+
+                [{obrazek: require("./../assets/images/banan.jpg")},
+                {obrazek: require("./../assets/images/banan.jpg")},
+                {obrazek: require("./../assets/images/banan.jpg")},
+                {obrazek: require("./../assets/images/banan.jpg")},
+                {obrazek: require("./../assets/images/banan.jpg")}],
             ],
 
-            nepatri: ["žížala", "křížala", "žoužele", "žížale", "namále"],
+            nepatri: [{obrazek: require("./../assets/images/hvezda.png")},
+                    {obrazek: require("./../assets/images/objekt2.png")}
+                        ],
 
             poleObrazku: [],
 
-            indexNepatri: 0
+            indexNepatri: 0,
+
+            
+
+            
         }
     },
 
@@ -86,12 +96,22 @@ export default {
             console.log(this.poleObrazku);
         },
 
-        vyhodnot(index) {
+        vyhodnot(index) {                               //PRIDAT DO KAZDE HRY
             if (index === this.indexNepatri) {
-                this.$modal.show("alert")
+                this.$emit("vyhrani");               
             }
 
-            else {alert("Blbe!")}
+            else {
+                this.$emit("prohrani");
+            }
+        },
+
+        znovuNactiHru() {                       //NEFUNGUJE, DODELAT
+            if (this.znovuNacist === true) {
+                this.vyberPoleObrazkuPatri();
+                this.pridejObrazekNepatri();
+                this.$emit("prestan-nacitat")
+            }
         }
 
     }, 
@@ -100,6 +120,13 @@ export default {
     created() {
         this.vyberPoleObrazkuPatri()
         this.pridejObrazekNepatri()
+        
+        
+
+    },
+
+    mounted() {
+        this.znovuNactiHru()                //NEFUNGUJE, DODELAT
 
     }
 
@@ -112,22 +139,25 @@ export default {
 
 <style>
 
-.kontejnerHry {
+/* .kontejnerHry {
     width: 800px;
     height: 500px;
     border: solid blue 5px;
     margin: 0 auto;
-}
+} */
 
 .hraSPokyny {
     display: flex;
+    width: 800px;
+    height: 300px;
 }
 
 .hra {
     border: solid grey 2px;
     margin: 20px;
     width: 550px;
-    height: 350px;
+    height: 90%;
+    position: relative;
 
 }
 
@@ -135,31 +165,52 @@ export default {
     border: solid grey 2px;
     margin: 20px 20px 20px 0;
     width: 200px;
-    height: 350px;
+    height: 90%;
 
 }
 
 
-.tlacitka {
+/* .tlacitka {
     width: 755px;
     border: solid grey 2px;
     margin: 20px;   
     height: 60px;
     display: flex;
     justify-content: space-between;
-}
+} */
 
-.herniobrazek {
-    width: 100px;
-    height: 100px;
-    border: solid grey 2px;
-    margin: 50px 15px;
-}
 
 .obrazky {
     display: flex;
     width: 500px;
-    margin: 0 auto;
+    margin: 60px auto;
+    justify-content: center; 
+}
+
+.herniobrazek {
+    width: 100px;
+    height: 100px;  
+    margin: 50px 15px;
+}
+
+.vyskakovaci-okno-vyhra {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    background-color: lightgreen;
+    z-index: 10;
+}
+
+.vyskakovaci-okno-prohra {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: palevioletred;
+    z-index: 10;
 }
 
 

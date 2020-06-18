@@ -42,6 +42,9 @@
       </div>
 
     </div>
+
+  <modals-container v-on:close="zavriHru"/>
+
     
   </div>
 </template>
@@ -50,6 +53,7 @@
 
 <script>
 import pole from "./../assets/data.js"
+import SablonaHry from "./../components/SablonaHry.vue"
 
 export default {
 
@@ -60,12 +64,12 @@ export default {
 
       zdi: [],
 
-      raketa: {
-        x: 70,
-        y: 130,
-        sirka: 40,
-        vyska: 27,
-        obrazek: require("./../assets/images/sipka_doprava.png")
+      raketa: {   // pocatecni souradnice rakety museji odpovidat souradnicim ctverecku, jinak to nefunguje
+        x: 60,
+        y: 120,
+        sirka: 60,
+        vyska: 40,
+        obrazek: require("./../assets/images/raketa_doprava60.png")
       },
 
       objekt2: {
@@ -112,50 +116,52 @@ export default {
   methods: {
     posunRaketu(event) {
             if (event.code === "ArrowRight") {
-                this.posun(60, -60, "doprava", "x")
+                this.posun(60, -60, "doprava60", "x")
 
                 if (this.objekt2.zobrazen) {
                   this.potkejObjekt(this.objekt2)
                     }
 
-                else if (this.objekt3.zobrazen) {
+                if (this.objekt3.zobrazen) {
                   this.potkejObjekt(this.objekt3)
                     }
             }
 
             else if (event.code === "ArrowLeft") {
-                this.posun(-60, 60, "vlevo", "x")  
+                this.posun(-60, 60, "doleva60", "x")  
                 
                 if (this.objekt2.zobrazen) {
                   this.potkejObjekt(this.objekt2)
                     }
 
-                else if (this.objekt3.zobrazen) {
+                if (this.objekt3.zobrazen) {
                   this.potkejObjekt(this.objekt3)
                     }        
                 }
 
-            else if (event.code === "ArrowUp") {               
-                this.posun(-60, 60, "nahoru", "y") 
+            else if (event.code === "ArrowUp") { 
+                          
+                this.posun(-60, 60, "nahoru60", "y") 
 
                 if (this.objekt2.zobrazen) {
                   this.potkejObjekt(this.objekt2)
                     }
 
-                else if (this.objekt3.zobrazen) {
+                if (this.objekt3.zobrazen) {
                   this.potkejObjekt(this.objekt3)
                     }      
                   
                 }   
             
-             else if (event.code === "ArrowDown") {             
-                this.posun(60, -60, "dolu", "y")   
+             else if (event.code === "ArrowDown") { 
+                           
+                this.posun(60, -60, "dolu60", "y")   
 
                 if (this.objekt2.zobrazen) {
                   this.potkejObjekt(this.objekt2)
                     }
 
-                else if (this.objekt3.zobrazen) {
+                if (this.objekt3.zobrazen) {
                   this.potkejObjekt(this.objekt3)
                     }             
                 }
@@ -165,7 +171,7 @@ export default {
 
         posun(cisloPosunu, cisloKolize, smer, osa) {
                 this.raketa[osa] += cisloPosunu;
-                this.raketa.obrazek = require(`./../assets/images/sipka_${smer}.png`);
+                this.raketa.obrazek = require(`./../assets/images/raketa_${smer}.png`);
 
                     for (let zed of this.zdi) {
                         if (this.jeKolize(this.raketa, zed)){
@@ -175,9 +181,13 @@ export default {
 
         potkejObjekt(objekt) {
           if (this.jeKolize(this.raketa, objekt)) {
-            alert("ZELENÁ PLANETA POKRYTÁ SLIZEM");
+            this.$modal.show(SablonaHry);
             objekt.zobrazen = false;
           }
+        },
+
+        zavriHru() {
+          this.$modal.hide(SablonaHry);
         },
 
         zjistiSouradniceZdi() {
@@ -289,5 +299,7 @@ export default {
 .obrazek {
     position: absolute;
 }
+
+
 
 </style>

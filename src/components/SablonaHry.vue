@@ -9,7 +9,16 @@
         v-on:prohrani="prohrat"
         v-on:prestan-nacitat="prestanNacitat"
         />
-        <!-- PRIDAT ELEMENT, NA KTEREM BUDOU PROPS VYHRA PROHRA PRO KAZDOU HRU -->
+
+
+        <!-- <hra2 
+        v-bind:vyhra="vyhra"
+        v-bind:prohra="prohra"
+
+        v-on:vyhrani="vyhrat"
+        v-on:prohrani="prohrat"
+        />  -->
+        <!-- PRIDAT ELEMENT, NA KTEREM BUDOU PROPS a udalosti KAZDOU HRU -->
     
 
         <div class="tlacitka"> 
@@ -26,10 +35,12 @@
 
 <script>
 import Hra1 from "./Hra1.vue"       //NAIMPORTOVAT KAZDOU HRU
+// import Hra2 from "./Hra2.vue"
 
 export default {
     components: {
-        hra1: Hra1
+        hra1: Hra1,
+        // hra2: Hra2
     },
 
     data() {

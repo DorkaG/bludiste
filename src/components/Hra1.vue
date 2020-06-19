@@ -76,33 +76,38 @@ export default {
     methods: {
         vyberPoleObrazkuPatri() {           //vygeneruje nahodne pole o trech obrazcich, ktere k sobe tematicky patri
 
-            let indexTematu = Math.floor(Math.random() * this.patri.length);  //nahodny vyber pole v poli
-            console.log(indexTematu);
+            let kopiePatri = JSON.parse(JSON.stringify(this.patri)); //zkopiruju si uvodni pole patri (abych si je nize nepromazavala) - TOM!!!!!
+            
+            let indexTematu = Math.floor(Math.random() * kopiePatri.length);  //nahodny vyber pole v poli
+            
 
             let x = 1;
             let index = 0;                          //index obrazku ve vybranem poli
             do {
-                 index = Math.floor(Math.random() * this.patri[indexTematu].length);
-                 this.poleObrazku.push(this.patri[indexTematu][index]);             //vlozi vybrany obrazek do poleObrazku
-                 this.patri[indexTematu].splice(index, 1);                              // z puvodniho pole ho smaze, aby se pak nemohl vybrat znovu
+                 index = Math.floor(Math.random() * kopiePatri[indexTematu].length);
+                 this.poleObrazku.push(kopiePatri[indexTematu][index]);             //vlozi vybrany obrazek do poleObrazku
+                 kopiePatri[indexTematu].splice(index, 1);                              // z puvodniho pole ho smaze, aby se pak nemohl vybrat znovu
                  x++;
-             } while (x <= 3)
                  
-
-                 console.log(this.patri[indexTematu]);
-                 console.log(this.poleObrazku);          
+             } while (x <= 3)
+                       
         },
 
         pridejObrazekNepatri() {            // nahodne vybere jeden obrazek, co nepatri, a pak ho prida na nhodny index do vygenerovaneho pole obrazku, ktere k sobe patri
+            
             let index = Math.floor(Math.random() * this.nepatri.length);        //nahodne vybere obrazek
-            console.log(this.nepatri[index]);
 
             this.indexNepatri = Math.floor(Math.random() * 4)          //nahodne vybrani indexu, na ktery se obrazek prida
-            console.log(this.indexNepatri)
 
-            this.poleObrazku.splice(this.indexNepatri, 0, this.nepatri[index]);    //pridani obrazku, kt. nepatri, do  pole na nahodnou pozici
-            console.log(this.poleObrazku);
+            this.poleObrazku.splice(this.indexNepatri, 0, this.nepatri[index]);    //pridani obrazku, kt. nepatri, do  poleObrazku na nahodnou pozici
+            
+        
         },
+
+
+
+
+
 
         vyhodnot(index) {                               //PRIDAT DO KAZDE HRY
             if (index === this.indexNepatri) {
@@ -114,15 +119,29 @@ export default {
             }
         },
 
-        znovuNactiHru() {                       //NEFUNGUJE, DODELAT
-            if (this.znovuNacist === true) {
-                this.vyberPoleObrazkuPatri();
-                this.pridejObrazekNepatri();
-                this.$emit("prestan-nacitat")
-            }
-        }
 
-    }, 
+
+
+
+
+         znovuNactiHru() {                       //NEFUNGUJE, DODELAT
+        //    if (this.znovuNacist === true) 
+            
+                this.poleObrazku = [];
+                 this.vyberPoleObrazkuPatri();
+                 this.pridejObrazekNepatri();
+                 this.$emit("prestan-nacitat")
+             
+         }
+
+    },
+    
+    watch: {
+        znovuNacist(newVal) {
+            if (newVal === true) {
+            this.znovuNactiHru() }
+        }
+    },
 
 
     created() {
@@ -131,16 +150,14 @@ export default {
         
         
 
-    },
-
-    mounted() {
-        this.znovuNactiHru()                //NEFUNGUJE, DODELAT
-
     }
+
+    
 
     
     
 }
+
 </script>
 
 

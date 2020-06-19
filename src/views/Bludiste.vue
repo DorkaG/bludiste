@@ -1,7 +1,8 @@
 <template>
   <div id="app">
       <router-link to='/'>Domů</router-link>
-      <router-link to='/hra1'>Hra1</router-link>
+      <router-link to='/hra1'>Hra1</router-link>  <!---TOHLE VE FINALE SMAZAT-->
+      <router-link to='/hra2'>Hra2</router-link>  <!---TOHLE VE FINALE SMAZAT-->
     <div class="supercontainer"> 
       <div class="container">
 
@@ -80,7 +81,8 @@ export default {
         sirka: 90, 
         vyska: 51, 
         obrazek: require("./../assets/images/objekt2.png"),
-        zobrazen: true
+        zobrazen: true,
+        // hra: {jmeno: "hra1", obno}
         },
 
       objekt3: {
@@ -117,9 +119,10 @@ export default {
 
   methods: {
     posunRaketu(event) {
-            if (this.hraOtevrena) {
+            if (this.hraOtevrena) {         //pokud je hraOtevrena true, fce se ukonci, nejde hybat s raketou
               return
             }
+
 
             if (event.code === "ArrowRight") {
                 this.posun(60, -60, "doprava60", "x")
@@ -185,7 +188,7 @@ export default {
                 }   
             },
 
-        potkejObjekt(objekt) {
+        potkejObjekt(objekt) {              // kontroluje, zda doslo ke kolizi rakety s objektem. Pokud ano, otevre se modalni okno, zobrazen se u objektu prehodi na false (tj. objekt se uz nebude zobrazovat, osetreno pomoci v-if) a hraOtevrena se nastavi na true (tj. nejde hybat s raketou, funkce pohybu je ukoncena pomoci return, pokud je hraOtevrena true)
           if (this.jeKolize(this.raketa, objekt)) {
             this.$modal.show(SablonaHry);
             objekt.zobrazen = false;
@@ -193,7 +196,7 @@ export default {
           }
         },
 
-        zavriHru() {
+        zavriHru() {                  //fce reagujici na udalost v-on:close, ktera jse pridana na modalu. Dojde k ni tehdy, kdyz se v SabloneHry klikne na tlacitko pryc nebo dal(emit). Zavre se okno s hrou, hraOtevrena je false, tj. jde znovu hybat raketou
           this.$modal.hide(SablonaHry);
           this.hraOtevrena = false;
         },

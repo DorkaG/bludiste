@@ -64,6 +64,8 @@ export default {
 
       zdi: [],
 
+      hraOtevrena: false,
+
       raketa: {   // pocatecni souradnice rakety museji odpovidat souradnicim ctverecku, jinak to nefunguje
         x: 60,
         y: 120,
@@ -115,6 +117,10 @@ export default {
 
   methods: {
     posunRaketu(event) {
+            if (this.hraOtevrena) {
+              return
+            }
+
             if (event.code === "ArrowRight") {
                 this.posun(60, -60, "doprava60", "x")
 
@@ -183,12 +189,20 @@ export default {
           if (this.jeKolize(this.raketa, objekt)) {
             this.$modal.show(SablonaHry);
             objekt.zobrazen = false;
+            this.hraOtevrena = true;
           }
         },
 
         zavriHru() {
           this.$modal.hide(SablonaHry);
+          this.hraOtevrena = false;
         },
+
+
+
+
+
+
 
         zjistiSouradniceZdi() {
             for (let i = 0; i < this.bludiste.length; i++) {
@@ -260,7 +274,7 @@ export default {
 
 #app {
   /* width: 880; */
-  overflow: hidden;
+  overflow: hidden; 
   
 }
 

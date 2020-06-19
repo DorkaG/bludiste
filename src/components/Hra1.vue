@@ -32,28 +32,36 @@ export default {
     data() {
         return {       
             patri: [
-                [{obrazek: require("./../assets/images/banan.jpg")},
+                [
                 {obrazek: require("./../assets/images/banan.jpg")},
-                {obrazek: require("./../assets/images/banan.jpg")},
-                {obrazek: require("./../assets/images/banan.jpg")},
-                {obrazek: require("./../assets/images/banan.jpg")}],
+                {obrazek: require("./../assets/images/jablko.jpg")},
+                {obrazek: require("./../assets/images/kokos.jpg")},
+                {obrazek: require("./../assets/images/meloun.jpg")}
+                ],
 
-                [{obrazek: require("./../assets/images/banan.jpg")},
-                {obrazek: require("./../assets/images/banan.jpg")},
-                {obrazek: require("./../assets/images/banan.jpg")},
-                {obrazek: require("./../assets/images/banan.jpg")},
-                {obrazek: require("./../assets/images/banan.jpg")}],
+                [
+                {obrazek: require("./../assets/images/auto.jpg")},
+                {obrazek: require("./../assets/images/lod.jpg")},
+                {obrazek: require("./../assets/images/raketazluta.jpg")}
+                ],
 
-                [{obrazek: require("./../assets/images/banan.jpg")},
-                {obrazek: require("./../assets/images/banan.jpg")},
-                {obrazek: require("./../assets/images/banan.jpg")},
-                {obrazek: require("./../assets/images/banan.jpg")},
-                {obrazek: require("./../assets/images/banan.jpg")}],
+                [
+                {obrazek: require("./../assets/images/hvezdy.jpg")},
+                {obrazek: require("./../assets/images/mesic.jpg")},
+                {obrazek: require("./../assets/images/slunce.jpg")},
+                {obrazek: require("./../assets/images/planeta1.jpg")},
+                {obrazek: require("./../assets/images/meteorit.jpg")}
+                ]
             ],
 
-            nepatri: [{obrazek: require("./../assets/images/hvezda.png")},
-                    {obrazek: require("./../assets/images/objekt2.png")}
+            nepatri: [
+                    {obrazek: require("./../assets/images/kvetina.jpg")},
+                    {obrazek: require("./../assets/images/mic.jpg")},
+                    {obrazek: require("./../assets/images/pizza.jpg")},
+                    {obrazek: require("./../assets/images/ufo.jpg")},
+                    {obrazek: require("./../assets/images/ufon.jpg")}
                         ],
+                
 
             poleObrazku: [],
 

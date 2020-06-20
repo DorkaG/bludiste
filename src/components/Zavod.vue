@@ -33,6 +33,7 @@ export default {
         return {
             posunuto: false,
             marginLeft: -3,
+            timeoutID: null,
         }
     },
 
@@ -41,7 +42,10 @@ export default {
         start(){
             this.odstartuj();
             this.odlet();
-            setTimeout(this.vyhodnot,25000)
+            clearTimeout(this.timeoutID);
+            this.timeoutID = setTimeout(this.vyhodnot,24000);
+
+            
         },
 
         odstartuj(){
@@ -56,12 +60,14 @@ export default {
         restartuj(){
             this.marginLeft = -3;
             this.posunuto = false;
+            clearTimeout(this.timeoutID);
         },
 
         pocitej(){
             if (this.marginLeft >= 54){
                 this.posunuto = false;
                 this.vyhodnot();
+                clearTimeout(this.timeoutID);
             }
         },
 

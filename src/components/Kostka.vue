@@ -1,5 +1,9 @@
 <template>
   <div>
+        <div class="vyskakovaci-okno-vyhra" v-if="vyhra === true">Jupi, sikulka</div>   
+        <div class="vyskakovaci-okno-prohra" v-if="prohra === true">Zkus to znovu</div>  
+
+
       <img class="ovoce" v-for="(polozka, index) in obrazky"
                         v-bind:key="index"
                         v-bind:src="polozka.obrazek"
@@ -14,7 +18,7 @@
 
 <script>
 export default {
-
+    props: ["vyhra", "prohra", "znovuNacist"],
     data() {
         return {
             hod: 0,
@@ -54,5 +58,26 @@ export default {
 </script>
 
 <style>
+
+.vyskakovaci-okno-vyhra {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40%;
+    height: 40%; 
+    background-color: lightgreen;
+    z-index: 10;
+}
+
+.vyskakovaci-okno-prohra {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40%;
+    height: 40%;
+    background-color: palevioletred;
+    z-index: 10;
+}
+
 
 </style>

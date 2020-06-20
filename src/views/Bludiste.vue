@@ -54,7 +54,10 @@
   
   v-on:close="zavriHru"
   v-on:vyhrat="vyhra"
+  v-on:dalsi-level="dalsiLevel"
+  
   />
+  <!--  -->
 
     
   </div>
@@ -72,7 +75,7 @@ export default {
 
   data() {
     return{
-      bludiste: pole, 
+      bludiste: pole[0].mapa, 
 
       zdi: [],
 
@@ -301,6 +304,14 @@ export default {
           this.pocetBodu++;
 
           console.log(this.pocetBodu);
+        },
+
+
+        dalsiLevel() {
+         this.$modal.hide(SablonaCile);
+          this.bludiste = pole[1].mapa;
+          
+          
         }
 
      

@@ -5,6 +5,10 @@
         <br>
         Predtim
         {{old}}
+        <br>
+        <br>
+        <button>Chci zahrát znovu </button>
+        <button v-on:click="dalsiLevel">Chci další level </button>
     </div>
 </template>
 
@@ -17,6 +21,15 @@ export default {
             old: 0
         }
     },
+
+    methods: {
+        dalsiLevel() {
+            this.$emit("dalsi-level");
+            this.$emit("close");
+        }
+
+    }, 
+
     created() {
         this.old = localStorage.getItem('predchozi')
         localStorage.setItem('predchozi', this.body)

@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Bludiste from '../views/Bludiste.vue'
 import Hra1 from '../components/Hra1.vue' //TOHLE VE FINALE SMAZAT
 import Hra2 from '../components/Hra2.vue' //TOHLE VE FINALE SMAZAT
+import Zavod from '../components/Zavod.vue'
 
 
 Vue.use(VueRouter)
@@ -33,7 +34,13 @@ Vue.use(VueRouter)
     name: 'Hra2',
     component: Hra2
     
-  }
+  },
+  {
+    path: '/zavod',
+    name: 'Zavod',
+    component: Zavod
+    
+  },
 ]
 
 const router = new VueRouter({

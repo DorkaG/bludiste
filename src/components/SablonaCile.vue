@@ -8,7 +8,7 @@
         <br>
         <br>
         <!-- <button>Chci zahrát znovu </button> -->
-        <button v-if="jeDalsiLevel" v-on:click="dalsiLevel">Chci další level </button>
+        <button class="btn btn-green" v-if="jeDalsiLevel" v-on:click="dalsiLevel">Chci další level </button>
     </div>
 </template>
 
@@ -39,6 +39,6 @@ export default {
 
 
 
-<style>
+<style scoped>
 
 </style>

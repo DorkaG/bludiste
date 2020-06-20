@@ -153,7 +153,7 @@ export default {
 
 
 
-<style>
+<style scoped>
 
 .hraSPokyny-hra2 {
     display: flex;

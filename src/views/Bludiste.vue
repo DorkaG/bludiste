@@ -45,7 +45,9 @@
 
     </div>
 
-  <modals-container v-on:close="zavriHru"/>
+  <modals-container 
+  
+  v-on:close="zavriHru"/>
 
     
   </div>
@@ -68,6 +70,8 @@ export default {
 
       hraOtevrena: false,
 
+      typHry: "",
+
       raketa: {   // pocatecni souradnice rakety museji odpovidat souradnicim ctverecku, jinak to nefunguje
         x: 60,
         y: 120,
@@ -81,6 +85,7 @@ export default {
         y: 0, 
         sirka: 90, 
         vyska: 51, 
+        nazevHry: "hra1",
         obrazek: require("./../assets/images/objekt2.png"),
         zobrazen: true,
         // hra: {jmeno: "hra1", obno}
@@ -90,7 +95,8 @@ export default {
         x: 0, 
         y: 0, 
         sirka: 90, 
-        vyska: 46, 
+        vyska: 46,
+        nazevHry: "hra2", 
         obrazek: require("./../assets/images/objekt3.png"),
         zobrazen: true
         },
@@ -191,7 +197,9 @@ export default {
 
         potkejObjekt(objekt) {              // kontroluje, zda doslo ke kolizi rakety s objektem. Pokud ano, otevre se modalni okno, zobrazen se u objektu prehodi na false (tj. objekt se uz nebude zobrazovat, osetreno pomoci v-if) a hraOtevrena se nastavi na true (tj. nejde hybat s raketou, funkce pohybu je ukoncena pomoci return, pokud je hraOtevrena true)
           if (this.jeKolize(this.raketa, objekt)) {
-            this.$modal.show(SablonaHry);
+            
+            this.$modal.show(SablonaHry, {nazevHry: objekt.nazevHry});
+            
             objekt.zobrazen = false;
             this.hraOtevrena = true;
           }

@@ -16,8 +16,10 @@
                 </div>
             </transition>
             <hr>
-            <button v-on:click="odstartuj">Start</button>
-            <button v-on:click="odlet()">Leť</button>
+            <!--v-on:keyup.ArrowRight="odlet()" -->
+            <!--v-on:keyup.enter="odlet()"-->
+           
+            <button v-on:keyup.39="odlet()" v-on:click="start()">Start</button>
             <button v-on:click="restartuj">Znovu</button>
         </div>           
   </div>
@@ -35,6 +37,12 @@ export default {
     },
 
     methods: {
+        start(){
+            this.odstartuj();
+            this.odlet();
+
+        },
+
         odstartuj(){
             this.posunuto = !this.posunuto
         },

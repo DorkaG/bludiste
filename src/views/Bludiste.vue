@@ -75,7 +75,8 @@ export default {
 
   data() {
     return{
-      bludiste: pole[0].mapa, 
+      level: 0,
+     // bludiste: pole[this.level].mapa, 
 
       zdi: [],
 
@@ -167,6 +168,11 @@ export default {
     }
   },
 
+  computed: {
+    bludiste () {
+      return pole[this.level].mapa
+    }
+  },
 
 
   methods: {
@@ -229,7 +235,8 @@ export default {
         potkejObjekt(objekt) {              // kontroluje, zda doslo ke kolizi rakety s objektem. Pokud ano, otevre se modalni okno, zobrazen se u objektu prehodi na false (tj. objekt se uz nebude zobrazovat, osetreno pomoci v-if) a hraOtevrena se nastavi na true (tj. nejde hybat s raketou, funkce pohybu je ukoncena pomoci return, pokud je hraOtevrena true)
           if (this.jeKolize(this.raketa, objekt)) {
             if(objekt.cil === true) {
-              this.$modal.show(SablonaCile, {body: this.pocetBodu})
+              var neniposledni = (pole[this.level+1] !== undefined)
+              this.$modal.show(SablonaCile, {body: this.pocetBodu, jeDalsiLevel: neniposledni})
             }
             else {
             this.$modal.show(SablonaHry, {nazevHry: objekt.nazevHry});
@@ -309,7 +316,17 @@ export default {
 
         dalsiLevel() {
          this.$modal.hide(SablonaCile);
-          this.bludiste = pole[1].mapa;
+         this.level++
+         this.raketa.x = 60;
+        this.raketa.y = 120;
+        this.zdi  = []
+        this.zjistiSouradniceZdi()
+
+        for (let i = 0; i < this.objekty.length; i++) {
+                  this.zjistiSouradniceObjektu(this.objekty[i].id, this.objekty[i])
+
+        }
+//          this.bludiste = pole[this.level].mapa;
           
           
         }

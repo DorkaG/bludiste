@@ -7,15 +7,15 @@
         {{old}}
         <br>
         <br>
-        <button>Chci zahrát znovu </button>
-        <button v-on:click="dalsiLevel">Chci další level </button>
+        <!-- <button>Chci zahrát znovu </button> -->
+        <button v-if="jeDalsiLevel" v-on:click="dalsiLevel">Chci další level </button>
     </div>
 </template>
 
 
 <script>
 export default {
-    props: ["body"],
+    props: ["body", "jeDalsiLevel"],
     data() {
         return {
             old: 0

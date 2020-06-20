@@ -1,8 +1,8 @@
 <template>
     <div class="hraSPokyny-hra2"> 
             <div class="hra2"> 
-                <!-- <div class="vyskakovaci-okno-vyhra-hra2" v-if="vyhra === true">Jupi, sikulka</div>       PRIDAT DO KAZDE HRY
-                <div class="vyskakovaci-okno-prohra-hra2" v-if="prohra === true">Zkus to znovu</div>     PRIDAT DO KAZDE HRY -->
+                <div class="vyskakovaci-okno-vyhra-hra2" v-if="vyhra === true">Jupi, sikulka</div>       <!--PRIDAT DO KAZDE HRY-->
+                <div class="vyskakovaci-okno-prohra-hra2" v-if="prohra === true">Zkus to znovu</div>     <!--PRIDAT DO KAZDE HRY -->
                 
                 <div class="obrazky-hra2"> 
                     <div class="obrazek-raketa_konetejner-hra2">
@@ -31,7 +31,7 @@
 
 <script>
 export default {
-    // props: ["vyhra", "prohra"],
+    props: ["vyhra", "prohra", "znovuNacist"],
 
     data() {
         return {
@@ -69,13 +69,15 @@ export default {
     methods: {
         vyberSipky() {
 
+            let kopieSipky = JSON.parse(JSON.stringify(this.sipky));
+            console.log(kopieSipky);
             let x = 1;
             let index = 0; 
 
             do {
-                 index = Math.floor(Math.random() * this.sipky.length);
-                 this.vybraneSipky.push(this.sipky[index]);             //vlozi vybrany obrazek do vybraneSipky
-                 this.sipky.splice(index, 1);                              // z puvodniho pole ho smaze, aby se pak nemohl vybrat znovu
+                 index = Math.floor(Math.random() * this.kopieSipky.length);
+                 this.vybraneSipky.push(this.kopieSipky[index]);             //vlozi vybrany obrazek do vybraneSipky
+                 this.kopieSipky.splice(index, 1);                              // z puvodniho pole ho smaze, aby se pak nemohl vybrat znovu
                  x++;
              } while (x <= 4)
 
@@ -114,6 +116,23 @@ export default {
                 console.log("prohra") 
             }
         },
+
+
+        znovuNactiHru() {
+            this.vyberSipky();
+            this.vyberRaketu(); 
+
+            this.$emit("prestan-nacitat");
+
+        }
+    },
+
+
+     watch: {
+        znovuNacist(newVal) {
+            if (newVal === true) {
+            this.znovuNactiHru() }
+        }
     },
 
 

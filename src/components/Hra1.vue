@@ -124,7 +124,7 @@ export default {
 
 
 
-         znovuNactiHru() {                       //NEFUNGUJE, DODELAT
+         znovuNactiHru() {                       //PRIDAT DO KAZDE HRY
         //    if (this.znovuNacist === true) 
             
                 this.poleObrazku = [];

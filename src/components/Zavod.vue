@@ -37,10 +37,11 @@ export default {
     },
 
     methods: {
+
         start(){
             this.odstartuj();
             this.odlet();
-
+            setTimeout(this.vyhodnot,25000)
         },
 
         odstartuj(){
@@ -58,14 +59,14 @@ export default {
         },
 
         pocitej(){
-            if (this.marginLeft >= 101){
+            if (this.marginLeft >= 54){
                 this.posunuto = false;
                 this.vyhodnot();
             }
         },
 
         vyhodnot() {                   
-            if (this.marginLeft >= 101) {
+            if (this.marginLeft >= 54) {
                 this.$emit("vyhrani");               
             }
             else {
@@ -81,8 +82,8 @@ export default {
 
 
 .zavodnik {
-    transition: all 45s ease;
-    transform: translateX(115vh);
+    transition: all 35s ease;
+    transform: translateX(65vh);
 
 }
 
@@ -95,16 +96,16 @@ export default {
 .cil{
     position: absolute;
     margin-top: 0;
-    margin-left: 120vh;
-    height: 20%;
+    margin-left: 70vh;
+    height: 50%;
 }
 
 .vyskakovaci-okno-vyhra {
     position: absolute;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%; 
+    width: 40%;
+    height: 40%; 
     background-color: lightgreen;
     z-index: 10;
 }
@@ -113,8 +114,8 @@ export default {
     position: absolute;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
+    width: 40%;
+    height: 40%;
     background-color: palevioletred;
     z-index: 10;
 }

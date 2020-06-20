@@ -50,6 +50,7 @@ import Hra1 from "./Hra1.vue"       //NAIMPORTOVAT KAZDOU HRU
 import Hra2 from "./Hra2.vue" 
 import Zavod from "./Zavod.vue"
 import Kostka from "./Kostka.vue"
+import Pohadka from "./Pohadka.vue"
 
 
 export default {
@@ -59,7 +60,8 @@ export default {
         hra1: Hra1,
         hra2: Hra2,
         zavod: Zavod,
-        kostka: Kostka
+        kostka: Kostka,
+        pohadka: Pohadka
         // zavod: Zavod
         // hra2: Hra2
     },

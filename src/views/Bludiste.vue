@@ -5,6 +5,7 @@
       <router-link to='/hra2'>Hra2</router-link>  <!---TOHLE VE FINALE SMAZAT-->
       <router-link to='/zavod'>Zavod</router-link> 
       <router-link to='/kostka'>Kostka</router-link>|
+      <router-link to='/pohadka'>Pohadka</router-link>|
       {{pocetBodu}}
 
     <div class="supercontainer"> 

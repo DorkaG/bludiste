@@ -35,7 +35,7 @@ export default {
 
     methods: {
         hodKostkou(){
-            this.hod = Math.floor(Math.random() * 6 + 0.5);
+            this.hod = Math.floor(Math.random() * 6 + 1);
         },
 
         vyhodnot(index) {                              

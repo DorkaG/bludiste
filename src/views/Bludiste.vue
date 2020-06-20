@@ -130,6 +130,16 @@ export default {
         zobrazen: true,
         id: 4
         },
+                {
+        x: 0, 
+        y: 0, 
+        sirka: 90, 
+        vyska: 46,
+        nazevHry: "kostka", 
+        obrazek: require("./../assets/images/objekt3.png"),
+        zobrazen: true,
+        id: 5
+        },
 
         {
         x: 0, 

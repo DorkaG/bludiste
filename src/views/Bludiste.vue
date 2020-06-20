@@ -103,7 +103,7 @@ export default {
         sirka: 90, 
         vyska: 51, 
         nazevHry: "hra1",
-        obrazek: require("./../assets/images/objekt2.png"),
+        obrazek: require("./../assets/images/slunecnisoustava.png"),
         zobrazen: true,
         id: 2
         // hra: {jmeno: "hra1", obno}
@@ -115,7 +115,7 @@ export default {
         sirka: 90, 
         vyska: 46,
         nazevHry: "hra2", 
-        obrazek: require("./../assets/images/objekt3.png"),
+        obrazek: require("./../assets/images/planeta.png"),
         zobrazen: true,
         id: 3
         },
@@ -126,17 +126,18 @@ export default {
         sirka: 90, 
         vyska: 46,
         nazevHry: "zavod", 
-        obrazek: require("./../assets/images/objekt3.png"),
+        obrazek: require("./../assets/images/kometa.png"),
         zobrazen: true,
         id: 4
         },
-                {
+
+        {
         x: 0, 
         y: 0, 
         sirka: 90, 
         vyska: 46,
         nazevHry: "kostka", 
-        obrazek: require("./../assets/images/objekt3.png"),
+        obrazek: require("./../assets/images/uforuzove.png"),
         zobrazen: true,
         id: 5
         },
@@ -146,8 +147,21 @@ export default {
         y: 0, 
         sirka: 90, 
         vyska: 46,
+        nazevHry: "pohadka", 
+        obrazek: require("./../assets/images/kokos.png"),
+        zobrazen: true,
+        id: 6
+        },
+
+        
+
+        {
+        x: 0, 
+        y: 0, 
+        sirka: 90, 
+        vyska: 46,
         cil: true, 
-        obrazek: require("./../assets/images/objekt3.png"),
+        obrazek: require("./../assets/images/zeme.png"),
         zobrazen: true,
         id: 9
         },
@@ -393,6 +407,7 @@ export default {
 }
 
 .ctverecek {
+    background: rgb(48, 48, 94);
     width: 60px;
     height: 60px;
     /* border: solid brown 2px; */
@@ -403,15 +418,17 @@ export default {
 }
 
 .zed {
-    background-color: rgb(74, 148, 218); 
+  background-image: url("./../../src/assets/images/pozadi2.jpg");
+    
    
 }
 
 .cesta {
-  background-color: white;
+  background: rgb(48, 48, 94);
 }
 
 .obrazek {
+    background: rgb(48, 48, 94);
     position: absolute;
 }
 

@@ -48,7 +48,8 @@
 <script>
 import Hra1 from "./Hra1.vue"       //NAIMPORTOVAT KAZDOU HRU
 import Hra2 from "./Hra2.vue" 
-import Zavod from "./Zavod.vue" 
+import Zavod from "./Zavod.vue"
+import Kostka from "./Kostka.vue"
 
 
 export default {
@@ -57,7 +58,8 @@ export default {
     components: {
         hra1: Hra1,
         hra2: Hra2,
-        zavod: Zavod
+        zavod: Zavod,
+        kostka: Kostka
         // zavod: Zavod
         // hra2: Hra2
     },

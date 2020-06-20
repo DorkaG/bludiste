@@ -5,6 +5,7 @@ import Bludiste from '../views/Bludiste.vue'
 import Hra1 from '../components/Hra1.vue' //TOHLE VE FINALE SMAZAT
 import Hra2 from '../components/Hra2.vue' //TOHLE VE FINALE SMAZAT
 import Zavod from '../components/Zavod.vue'
+import Kostka from '../components/Kostka.vue'
 
 
 Vue.use(VueRouter)
@@ -39,6 +40,12 @@ Vue.use(VueRouter)
     path: '/zavod',
     name: 'Zavod',
     component: Zavod
+    
+  },
+  {
+    path: '/kostka',
+    name: 'Kostka',
+    component: Kostka
     
   },
 ]

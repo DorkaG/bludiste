@@ -3,7 +3,8 @@
       <router-link to='/'>Domů</router-link>
       <router-link to='/hra1'>Hra1</router-link>  <!---TOHLE VE FINALE SMAZAT-->
       <router-link to='/hra2'>Hra2</router-link>  <!---TOHLE VE FINALE SMAZAT-->
-      <router-link to='/zavod'>Zavod</router-link> |
+      <router-link to='/zavod'>Zavod</router-link> 
+      <router-link to='/kostka'>Kostka</router-link>|
       {{pocetBodu}}
 
     <div class="supercontainer"> 

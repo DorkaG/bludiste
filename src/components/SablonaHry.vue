@@ -1,6 +1,6 @@
 <template>
     <div class="sablona-kontejner"> 
-        <hra1 
+        <component :is="nazevHry"
         v-bind:vyhra="vyhra"
         v-bind:prohra="prohra"
         v-bind:znovuNacist="znovuNactiHru"
@@ -8,7 +8,19 @@
         v-on:vyhrani="vyhrat"
         v-on:prohrani="prohrat"
         v-on:prestan-nacitat="prestanNacitat"
+        
         />
+
+
+        <!-- <hra1 
+        v-bind:vyhra="vyhra"
+        v-bind:prohra="prohra"
+        v-bind:znovuNacist="znovuNactiHru"
+
+        v-on:vyhrani="vyhrat"
+        v-on:prohrani="prohrat"
+        v-on:prestan-nacitat="prestanNacitat"
+        /> -->
 
 
         <!-- <hra2 
@@ -35,11 +47,17 @@
 
 <script>
 import Hra1 from "./Hra1.vue"       //NAIMPORTOVAT KAZDOU HRU
+import Hra2 from "./Hra2.vue" 
+// import Zavod from "./Zavod.vue" 
 // import Hra2 from "./Hra2.vue"
 
 export default {
+    props: ["nazevHry"],
+
     components: {
         hra1: Hra1,
+        hra2: Hra2,
+        // zavod: Zavod
         // hra2: Hra2
     },
 

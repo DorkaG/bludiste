@@ -8,7 +8,7 @@
       <img  v-bind:src="require(`./../assets/images/6jahoda.jpg`)" alt="jahoda">
 
     <p>{{hod}}</p>
-    <button>HOĎ</button>
+    <button v-on:click="hodKostkou()">HOĎ KOSTKOU</button>
 
   </div>
 </template>

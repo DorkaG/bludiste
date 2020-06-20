@@ -371,7 +371,7 @@ export default {
 
 
 
-<style>
+<style scoped>
 
 #app {
   /* width: 880; */

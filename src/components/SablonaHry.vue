@@ -33,13 +33,13 @@
         <!-- PRIDAT ELEMENT, NA KTEREM BUDOU PROPS a udalosti KAZDOU HRU -->
     
 
-        <div class="tlacitka"> 
+        <div class="tlacitka border-grey"> 
             <div class="hlavniTlacitka"> </div>
-                <button class="pryc" v-on:click="pryc" v-bind:class="{neaktivni: vyhra === true}"> pryč </button>
-                <button class="obnov" v-on:click="obnov"> obnov </button>
-                <button class="dal" v-on:click="dal" v-bind:class="{neaktivni: vyhra === false}"> dál </button>
-            <div class="zvukoveTlacitko"> </div>
-                <button class="zvuk"> zvuk </button>
+                <button class="btn btn-red" v-on:click="pryc" v-bind:class="{'btn-grey': vyhra === true}"> pryč </button>
+                <button class="btn btn-yellow" v-on:click="obnov"> obnov </button>
+                <button class="btn btn-green" v-on:click="dal" v-bind:class="{'btn-grey': vyhra === false}"> dál </button>
+            <div class="sound"> </div>
+                <button class="btn btn-blue"> zvuk </button>
         </div> 
 
     </div>
@@ -117,10 +117,9 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
 .tlacitka {
     /* width: 755px; */
-    border: solid grey 2px;
     margin: 20px;   
     height: 60px;
     display: flex;
@@ -128,27 +127,8 @@ export default {
 }
 
 
-.pryc {
-  background-color: red;  
+/* .neaktivni {
+    background-color: silver; 
 
-}
-
-.obnov {
-    background-color: orange;
-
-}
-
-.dal {
-
-background-color: green;
-}
-
-.zvuk {
-    background-color: aqua;
-}
-
-.neaktivni {
-    background-color: silver;
-
-}
+}*/
 </style>

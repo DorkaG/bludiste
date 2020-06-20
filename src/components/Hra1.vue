@@ -158,7 +158,7 @@ export default {
 
 
 
-<style>
+<style scoped>
 
 /* .kontejnerHry {
     width: 800px;

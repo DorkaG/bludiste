@@ -1,8 +1,8 @@
 <template>
     <div>
-        <div class="ramecek"> 
+        <div class="border-yellow border"> 
             <h1> Vítejte ve vesmírném bludišti! </h1>
-            <router-link to="/bludiste"><button class="tlacitko">Chci hrát</button></router-link>
+            <router-link to="/bludiste"><button class="btn btn-green">Chci hrát</button></router-link>
         </div>
     </div>
 </template>
@@ -19,9 +19,9 @@ export default {
 
 
 
-<style>
-.ramecek {
-    border: 5px blueviolet solid;
+<style scoped>
+.border {
+   
     width: 50%;
     height: 200px;
     text-align: center;

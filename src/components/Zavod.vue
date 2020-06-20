@@ -2,6 +2,8 @@
   <div>
         <hr>
         <div id="let">
+                <div class="vyskakovaci-okno-vyhra" v-if="vyhra === true">Jupi, sikulka</div>   
+                <div class="vyskakovaci-okno-prohra" v-if="prohra === true">Zkus to znovu</div>     
             <img class="cil" v-bind:src="require(`./../assets/images/cil.jpg`)" alt="Cilová páska">
             <transition name="start">
                 <img v-bind:class="{zavodnik: posunuto}" v-bind:src="require(`./../assets/images/zavod1.png`)" alt="Raketa1">
@@ -15,7 +17,7 @@
             </transition>
             <hr>
             <button v-on:click="odstartuj">Start</button>
-            <button v-on:click="marginLeft++">Leť</button>
+            <button v-on:click="odlet()">Leť</button>
             <button v-on:click="restartuj">Znovu</button>
         </div>           
   </div>
@@ -23,11 +25,12 @@
 
 <script>
 export default {
+    props: ["vyhra", "prohra", "znovuNacist"],   
+
     data () {
         return {
             posunuto: false,
             marginLeft: -3,
-           
         }
     },
 
@@ -36,13 +39,33 @@ export default {
             this.posunuto = !this.posunuto
         },
 
-        restartuj(){
-          this.marginLeft = -3;
-          this.posunuto = false;
+        odlet(){
+            this.marginLeft++;
+            this.pocitej();
         },
 
-        
-    },
+        restartuj(){
+            this.marginLeft = -3;
+            this.posunuto = false;
+        },
+
+        pocitej(){
+            if (this.marginLeft >= 101){
+                this.posunuto = false;
+                this.vyhodnot();
+            }
+        },
+
+        vyhodnot() {                   
+            if (this.marginLeft >= 101) {
+                this.$emit("vyhrani");               
+            }
+            else {
+                this.$emit("prohrani");
+            }
+        },
+
+    }
 }
 </script>
 
@@ -50,15 +73,16 @@ export default {
 
 
 .zavodnik {
-    transition: all 35s ease;
+    transition: all 45s ease;
     transform: translateX(115vh);
+
 }
 
 .odstartuj {
-    /*transform: translateX(10px);*/
     margin-left: 0;
 
 }
+
 
 .cil{
     position: absolute;
@@ -66,6 +90,28 @@ export default {
     margin-left: 120vh;
     height: 20%;
 }
+
+.vyskakovaci-okno-vyhra {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    background-color: lightgreen;
+    z-index: 10;
+}
+
+.vyskakovaci-okno-prohra {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: palevioletred;
+    z-index: 10;
+}
+
+
 
 
 </style>

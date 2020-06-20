@@ -75,9 +75,9 @@ export default {
             let index = 0; 
 
             do {
-                 index = Math.floor(Math.random() * this.kopieSipky.length);
-                 this.vybraneSipky.push(this.kopieSipky[index]);             //vlozi vybrany obrazek do vybraneSipky
-                 this.kopieSipky.splice(index, 1);                              // z puvodniho pole ho smaze, aby se pak nemohl vybrat znovu
+                 index = Math.floor(Math.random() * kopieSipky.length);
+                 this.vybraneSipky.push(kopieSipky[index]);             //vlozi vybrany obrazek do vybraneSipky
+                 kopieSipky.splice(index, 1);                              // z puvodniho pole ho smaze, aby se pak nemohl vybrat znovu
                  x++;
              } while (x <= 4)
 

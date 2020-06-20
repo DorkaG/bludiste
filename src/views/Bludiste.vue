@@ -11,16 +11,18 @@
           v-bind:src="raketa.obrazek"
           v-bind:style="umistiObjekt(raketa)">
 
-          <img class="objekt2 obrazek" alt="saturn" 
-          v-bind:src="objekt2.obrazek"
-          v-bind:style="umistiObjekt(objekt2)"
-          v-if="objekt2.zobrazen"
+          <img v-for="(objekt, index) in objekty" class="objekt2 obrazek" alt="saturn" 
+          v-bind:key="index"
+          v-bind:src="objekt.obrazek"
+          v-bind:style="umistiObjekt(objekt)"
+          
           >
+          <!-- v-if="objekt.zobrazen" -->
 
-          <img class="objekt3 obrazek" alt="ufoun" 
+          <!-- <img class="objekt3 obrazek" alt="ufoun" 
           v-bind:src="objekt3.obrazek"
           v-bind:style="umistiObjekt(objekt3)"
-          v-if="objekt3.zobrazen"
+          v-if="objekt3.zobrazen" -->
           >
 
           <img class="hvezda obrazek" alt="hvezda" 
@@ -80,6 +82,34 @@ export default {
         obrazek: require("./../assets/images/raketa_doprava60.png")
       },
 
+      objekty: [
+        {
+        x: 0, 
+        y: 0, 
+        sirka: 90, 
+        vyska: 51, 
+        nazevHry: "hra1",
+        obrazek: require("./../assets/images/objekt2.png"),
+        zobrazen: true,
+        id: 2
+        // hra: {jmeno: "hra1", obno}
+        },
+
+        {
+        x: 0, 
+        y: 0, 
+        sirka: 90, 
+        vyska: 46,
+        nazevHry: "hra2", 
+        obrazek: require("./../assets/images/objekt3.png"),
+        zobrazen: true,
+        id: 3
+        },
+
+
+
+      ],
+
       objekt2: {
         x: 0, 
         y: 0, 
@@ -133,57 +163,43 @@ export default {
 
             if (event.code === "ArrowRight") {
                 this.posun(60, -60, "doprava60", "x")
-
-                if (this.objekt2.zobrazen) {
-                  this.potkejObjekt(this.objekt2)
-                    }
-
-                if (this.objekt3.zobrazen) {
-                  this.potkejObjekt(this.objekt3)
-                    }
+                this.kontrolaObjektu();
+                
             }
 
             else if (event.code === "ArrowLeft") {
-                this.posun(-60, 60, "doleva60", "x")  
+                this.posun(-60, 60, "doleva60", "x") 
                 
-                if (this.objekt2.zobrazen) {
-                  this.potkejObjekt(this.objekt2)
-                    }
-
-                if (this.objekt3.zobrazen) {
-                  this.potkejObjekt(this.objekt3)
-                    }        
+                this.kontrolaObjektu();
+                
+                
                 }
 
             else if (event.code === "ArrowUp") { 
                           
                 this.posun(-60, 60, "nahoru60", "y") 
 
-                if (this.objekt2.zobrazen) {
-                  this.potkejObjekt(this.objekt2)
-                    }
-
-                if (this.objekt3.zobrazen) {
-                  this.potkejObjekt(this.objekt3)
-                    }      
+                this.kontrolaObjektu();
                   
                 }   
             
              else if (event.code === "ArrowDown") { 
                            
                 this.posun(60, -60, "dolu60", "y")   
-
-                if (this.objekt2.zobrazen) {
-                  this.potkejObjekt(this.objekt2)
-                    }
-
-                if (this.objekt3.zobrazen) {
-                  this.potkejObjekt(this.objekt3)
-                    }             
+                this.kontrolaObjektu();
+                        
                 }
 
                 
         }, 
+
+        kontrolaObjektu() {
+          for (let i = 0; i < this.objekty.length; i++) {
+                  if (this.objekty[i].zobrazen) {
+                  this.potkejObjekt(this.objekty[i])
+                    }}
+
+        },
 
         posun(cisloPosunu, cisloKolize, smer, osa) {
                 this.raketa[osa] += cisloPosunu;
@@ -239,8 +255,7 @@ export default {
                         objekt.x = souradniceX;
                         objekt.y = souradniceY;
                         
-                        console.log(this.objekt2.x);
-                        console.log(this.objekt3.y)
+                        
                     }
                 }
             }
@@ -255,7 +270,15 @@ export default {
         },
 
       umistiObjekt(objekt) {
-      return {   left: objekt.x + 'px', top: objekt.y + 'px'    };
+        let vis = '';
+        if (objekt.zobrazen === true) {
+          vis = 'visible'
+          
+        } else {
+          vis = 'hidden'
+        }
+
+      return {   left: objekt.x + 'px', top: objekt.y + 'px' , visibility: vis   };
         }
 
      
@@ -268,8 +291,13 @@ export default {
         window.addEventListener("keydown", this.posunRaketu),
 
         this.zjistiSouradniceZdi()
-        this.zjistiSouradniceObjektu(2, this.objekt2)
-        this.zjistiSouradniceObjektu(3, this.objekt3)
+
+        for (let i = 0; i < this.objekty.length; i++) {
+                  this.zjistiSouradniceObjektu(this.objekty[i].id, this.objekty[i])
+
+        }
+       
+        
         
         
     }

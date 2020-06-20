@@ -43,9 +43,7 @@ export default {
             this.odstartuj();
             this.odlet();
             clearTimeout(this.timeoutID);
-            this.timeoutID = setTimeout(this.vyhodnot,24000);
-
-            
+            this.timeoutID = setTimeout(this.vyhodnot,24000);   
         },
 
         odstartuj(){

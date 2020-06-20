@@ -3,7 +3,9 @@
       <router-link to='/'>Domů</router-link>
       <router-link to='/hra1'>Hra1</router-link>  <!---TOHLE VE FINALE SMAZAT-->
       <router-link to='/hra2'>Hra2</router-link>  <!---TOHLE VE FINALE SMAZAT-->
-      <router-link to='/zavod'>Zavod</router-link>
+      <router-link to='/zavod'>Zavod</router-link> |
+      {{pocetBodu}}
+
     <div class="supercontainer"> 
       <div class="container">
 
@@ -49,7 +51,10 @@
 
   <modals-container 
   
-  v-on:close="zavriHru"/>
+  
+  v-on:close="zavriHru"
+  v-on:vyhrat="vyhra"
+  />
 
     
   </div>
@@ -60,6 +65,7 @@
 <script>
 import pole from "./../assets/data.js"
 import SablonaHry from "./../components/SablonaHry.vue"
+import SablonaCile from "./../components/SablonaCile.vue"
 
 export default {
 
@@ -73,6 +79,8 @@ export default {
       hraOtevrena: false,
 
       typHry: "",
+
+      pocetBodu: 0,
 
       raketa: {   // pocatecni souradnice rakety museji odpovidat souradnicim ctverecku, jinak to nefunguje
         x: 60,
@@ -116,6 +124,17 @@ export default {
         obrazek: require("./../assets/images/objekt3.png"),
         zobrazen: true,
         id: 4
+        },
+
+        {
+        x: 0, 
+        y: 0, 
+        sirka: 90, 
+        vyska: 46,
+        cil: true, 
+        obrazek: require("./../assets/images/objekt3.png"),
+        zobrazen: true,
+        id: 9
         },
 
 
@@ -206,11 +225,14 @@ export default {
 
         potkejObjekt(objekt) {              // kontroluje, zda doslo ke kolizi rakety s objektem. Pokud ano, otevre se modalni okno, zobrazen se u objektu prehodi na false (tj. objekt se uz nebude zobrazovat, osetreno pomoci v-if) a hraOtevrena se nastavi na true (tj. nejde hybat s raketou, funkce pohybu je ukoncena pomoci return, pokud je hraOtevrena true)
           if (this.jeKolize(this.raketa, objekt)) {
-            
+            if(objekt.cil === true) {
+              this.$modal.show(SablonaCile, {body: this.pocetBodu})
+            }
+            else {
             this.$modal.show(SablonaHry, {nazevHry: objekt.nazevHry});
             
             objekt.zobrazen = false;
-            this.hraOtevrena = true;
+            this.hraOtevrena = true;}
           }
         },
 
@@ -272,6 +294,13 @@ export default {
         }
 
       return {   left: objekt.x + 'px', top: objekt.y + 'px' , visibility: vis   };
+        },
+
+
+        vyhra() {
+          this.pocetBodu++;
+
+          console.log(this.pocetBodu);
         }
 
      

@@ -119,6 +119,8 @@ export default {
 
 
         znovuNactiHru() {
+
+            this.vybraneSipky = [];
             this.vyberSipky();
             this.vyberRaketu(); 
 
@@ -180,7 +182,7 @@ export default {
 }
 
 .obrazky-sipek-hra2 {
-    height: 50%;
+    height: 35%;
     display: flex;
     margin: 0 auto;
     justify-content: center; 

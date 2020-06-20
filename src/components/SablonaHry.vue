@@ -88,6 +88,7 @@ export default {
             this.vyhra = true;              //pokud dojde k vyhre ve hre, spusti to udalost, ktera vyvola tuto fci; ta prepise vyhru na true a prohru na false (coz je jako props poslano zase zpatky do hry)
             // console.log(this.vyhra)
             this.prohra = false;
+            this.$emit("vyhrat");
         },
 
 

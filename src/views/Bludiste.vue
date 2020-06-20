@@ -12,7 +12,7 @@
           v-bind:style="umistiObjekt(raketa)">
 
           <img v-for="(objekt, index) in objekty" class="objekt2 obrazek" alt="saturn" 
-          v-bind:key="index"
+          v-bind:key="'a' + index"
           v-bind:src="objekt.obrazek"
           v-bind:style="umistiObjekt(objekt)"
           
@@ -23,7 +23,7 @@
           v-bind:src="objekt3.obrazek"
           v-bind:style="umistiObjekt(objekt3)"
           v-if="objekt3.zobrazen" -->
-          >
+          
 
           <img class="hvezda obrazek" alt="hvezda" 
           v-bind:src="hvezda.obrazek"
@@ -79,7 +79,8 @@ export default {
         y: 120,
         sirka: 60,
         vyska: 40,
-        obrazek: require("./../assets/images/raketa_doprava60.png")
+        obrazek: require("./../assets/images/raketa_doprava60.png"),
+        zobrazen: true
       },
 
       objekty: [
@@ -106,30 +107,22 @@ export default {
         id: 3
         },
 
-
-
-      ],
-
-      objekt2: {
-        x: 0, 
-        y: 0, 
-        sirka: 90, 
-        vyska: 51, 
-        nazevHry: "hra1",
-        obrazek: require("./../assets/images/objekt2.png"),
-        zobrazen: true,
-        // hra: {jmeno: "hra1", obno}
-        },
-
-      objekt3: {
+        {
         x: 0, 
         y: 0, 
         sirka: 90, 
         vyska: 46,
-        nazevHry: "hra2", 
+        nazevHry: "zavod", 
         obrazek: require("./../assets/images/objekt3.png"),
-        zobrazen: true
+        zobrazen: true,
+        id: 4
         },
+
+
+
+      ],
+
+      
       
        hvezda: {
         x: 0,

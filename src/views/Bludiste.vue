@@ -349,6 +349,7 @@ export default {
         this.zjistiSouradniceZdi()
 
         for (let i = 0; i < this.objekty.length; i++) {
+              this.objekty[i].zobrazen = true;
                   this.zjistiSouradniceObjektu(this.objekty[i].id, this.objekty[i])
 
         }
@@ -397,7 +398,7 @@ export default {
 
 .supercontainer {
   width: 1500px;
-  height: 1000px;
+  height: 800px;
   /* background-image: url("./..assets/images/vesmir.jpg"); */
   }
 

@@ -4,7 +4,7 @@
       <div class="hra">
 
       <h3>Vítej na planetě Kokosmánie!</h3>
-        <p>
+        <p class="pohadka" v-bind="precetl()">
         Pozor! Při přistávání to bude trochu skákat, protože tato planeta má trochu nestabilní i když chutné jádro. 
         Obyvateli této planety jsou Kokosky. Přátelská stvoření a je s nimi vždy legrace, pokud si ovšem neděláte legraci z kokosů… Tak opatrně.
         V chrámu z kokosových vláken je socha prastarého Kokosky, který drží posvátný Kokos. Tam by tvé kroky měly směřovat jako první. Vzdát úctu a hold této posvátné plodině. 
@@ -20,11 +20,42 @@
 </template>
 
 <script>
-export default {
 
-}
+export default {
+props: ["vyhra", "prohra", "znovuNacist"],
+
+    data(){
+        return{
+            precteno: false
+
+        }
+    },
+
+    methods: {
+
+        precetl(){
+            setTimeout(this.vyhodnot,15000);
+            this.precteno = true;
+            },
+
+
+        vyhodnot() {                   
+            if (this.precteno === true) {
+                this.$emit("vyhrani");
+                               
+            }
+            else {
+                this.$emit("prohrani");
+            }
+        }
+}}
+
 </script>
 
-<style>
+<style scope>
+
+p{
+    color: white;
+}
 
 </style>

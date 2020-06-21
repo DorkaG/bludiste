@@ -2,7 +2,7 @@
   <div class="okno">
         <hr>
         <div class="sekce">
-        <div class="hra">
+        <div class="hra5">
                 <div class="vyskakovaci-okno-vyhra" v-if="vyhra === true">Jupi, sikulka</div>   
                 <div class="vyskakovaci-okno-prohra" v-if="prohra === true">Zkus to znovu</div>     
             <img class="cil" v-bind:src="require(`./../assets/images/cil.jpg`)" alt="Cilová páska">
@@ -23,7 +23,7 @@
             <button  v-on:keyup.39="odlet()" v-on:click="start()" v-if="marginLeft !== 54">Start</button>
         </div> 
 
-        <div class="pokyny"> Hurá, čeká tě vesmírný závod! Stiskni start a mačkej rychle šipku doprava. Předleť svou lodí soupeře. </div> 
+       <!-- <div class="pokyny"> Hurá, čeká tě vesmírný závod! Stiskni start a mačkej rychle šipku doprava. Předleť svou lodí soupeře. </div> -->
         </div>           
   </div>
 </template>
@@ -123,7 +123,7 @@ export default {
 .hra {
     background-image: url("./../../src/assets/images/pozadi3.jpg");
     margin: 3% 2% 1% 3%;
-    width: 90%;
+    width: 80%;
     height: 45vh;
     background-color: white;
     border: 10px double rgb(241, 229, 159);

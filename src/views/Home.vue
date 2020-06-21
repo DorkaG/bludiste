@@ -108,14 +108,14 @@ h1 {
   width: 50px;
   position: absolute;
   margin-left: 85%;
-  margin-top: 51%;
+  margin-top: 41%;
 }
 
 .hvezda3 {
   width: 70px;
   position: absolute;
   margin-left: 9%;
-  margin-top: 45%;
+  margin-top: 40%;
 }
 
 .hvezda4 {
@@ -140,14 +140,14 @@ h1 {
 .hvezdy2 {
   width: 50px;
   position: absolute;
-  margin-left: 5%;
-  margin-top: 47%;
+  margin-left: 3%;
+  margin-top: 43%;
 }
 .hvezdy3 {
   width: 70px;
   position: absolute;
   margin-left: 35%;
-  margin-top: 50%;
+  margin-top: 42%;
 }
 .hvezdy4 {
   width: 50px;

@@ -394,6 +394,7 @@ export default {
   overflow: hidden; 
   /* background-image: linear-gradient(to right, #344c5f 0%, #071C42 100%); */
   background-image: url("./../../src/assets/images/pozadi3.jpg");
+  color: white;
 }
 
 .supercontainer {

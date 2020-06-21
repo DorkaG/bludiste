@@ -19,7 +19,7 @@
             <!--v-on:keyup.ArrowRight="odlet()" -->
             <!--v-on:keyup.enter="odlet()"-->
            
-            <button v-on:keyup.39="odlet()" v-on:click="start()">Start</button>
+            <button  v-on:keyup.39="odlet()" v-on:click="start()" v-if="marginLeft !== 54">Start</button>
             
         </div>           
   </div>
@@ -70,8 +70,9 @@ export default {
         },
 
         vyhodnot() {                   
-            if (this.marginLeft >= 54) {
-                this.$emit("vyhrani");               
+            if (this.marginLeft === 54) {
+                this.$emit("vyhrani");
+                               
             }
             else {
                 this.$emit("prohrani");

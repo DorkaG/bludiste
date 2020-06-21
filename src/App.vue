@@ -52,7 +52,7 @@
 
 p{
     padding: 15px;
-    border-top: 10px double rgb(241, 229, 159); 
+     
 
 }
 

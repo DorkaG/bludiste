@@ -46,7 +46,7 @@ export default {
 .telo{
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: 98vh;
   width: 100%;
   background-size: cover;
   /*background-repeat: no-repeat;*/
@@ -56,13 +56,14 @@ export default {
 }
 
 .uvod {
-  margin: 0 25%;
+  margin: 0 20%;
   padding: 20px;
   font-family: 'Roboto', sans-serif;
   text-align: center;
   border: 20px double rgb(235, 226, 176);
   color: white;
   font-size: 20px;
+  
 
 }
 
@@ -107,7 +108,7 @@ h1 {
   width: 50px;
   position: absolute;
   margin-left: 85%;
-  margin-top: 61%;
+  margin-top: 51%;
 }
 
 .hvezda3 {

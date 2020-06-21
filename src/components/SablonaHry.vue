@@ -33,7 +33,7 @@
         <!-- PRIDAT ELEMENT, NA KTEREM BUDOU PROPS a udalosti KAZDOU HRU -->
     
 
-        <div class="tlacitka border-grey"> 
+        <div class="tlacitka border-grey palubniDeska"> 
             <div class="hlavniTlacitka"> </div>
                 <button class="btn btn-red" v-on:click="pryc" v-bind:class="{'btn-grey': vyhra === true}"> pryč </button>
                 <button class="btn btn-yellow" v-on:click="obnov"> obnov </button>

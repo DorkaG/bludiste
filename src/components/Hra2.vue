@@ -1,6 +1,8 @@
 <template>
-    <div class="hraSPokyny-hra2"> 
-            <div class="hra2"> 
+    <div class="hraSPokyny-hra2 okno"> 
+
+            <div class="sekce">
+            <div class="hra2 hra"> 
                 <div class="vyskakovaci-okno-vyhra-hra2" v-if="vyhra === true">Jupi, sikulka</div>       <!--PRIDAT DO KAZDE HRY-->
                 <div class="vyskakovaci-okno-prohra-hra2" v-if="prohra === true">Zkus to znovu</div>     <!--PRIDAT DO KAZDE HRY -->
                 
@@ -20,7 +22,8 @@
                     
             </div>
     
-            <div class="pokyny-hra2"> Vyber šipku, která ukazuje stejným směrem, kam letí raketa. </div>
+            <div class="pokyny-hra2 pokyny"> Vyber šipku, která ukazuje stejným směrem, kam letí raketa. </div>
+            </div>
     </div>
         
 </template>

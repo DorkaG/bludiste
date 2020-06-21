@@ -349,6 +349,7 @@ export default {
         this.zjistiSouradniceZdi()
 
         for (let i = 0; i < this.objekty.length; i++) {
+              this.objekty[i].zobrazen = true;
                   this.zjistiSouradniceObjektu(this.objekty[i].id, this.objekty[i])
 
         }

@@ -1,15 +1,21 @@
 <template>
     <div class="telo-cil"> 
-        <div class="pocet-bodu-cil">
-            Ted
-            {{body}}
-            
-            Predtim
-            {{old}}
-        </div>
+        <div class="kontejner-cil">
+            <div class="pocet-bodu-cil">
+                <p> Tramtadadááá, tvá cesta vesmírem končí.</p> 
+                <p> Body získané v této hře: </p> 
+                <p>{{body}}</p>
+
+                 <p> Body z minulého kola: </p>
+                
+                <p> {{old}} </p>
+            </div>
+       
        
         <!-- <button>Chci zahrát znovu </button> -->
-        <button class="btn btn-green" v-if="jeDalsiLevel" v-on:click="dalsiLevel">Chci další level </button>
+            <button class="btn btn-green" v-if="jeDalsiLevel" v-on:click="dalsiLevel">Chci další level </button>
+            <button class="btn btn-red"> <router-link to='/'>Konec </router-link></button> 
+         </div>
     </div>
 </template>
 
@@ -42,18 +48,26 @@ export default {
 
 <style scoped>
 .telo-cil {
-    width: 100%;
+    background-color: blue;
+    height: 600px;
+    padding: 100px 0;
+}
+
+.kontejner-cil {
+    width: 600px;
     height: 500px;
-    text-align: center;
     font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: white;
     border: 20px double rgb(235, 226, 176);
+    margin: 0 auto;
+    text-align: center;
+   
 }
 
 .pocet-bodu-cil {
     
-    
-    
-    color: white;
+  
 
 }
 

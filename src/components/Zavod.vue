@@ -120,7 +120,14 @@ export default {
     height: 50%;
 }
 
-
+.hra {
+    background-image: url("./../../src/assets/images/pozadi3.jpg");
+    margin: 3% 2% 1% 3%;
+    width: 90%;
+    height: 45vh;
+    background-color: white;
+    border: 10px double rgb(241, 229, 159);
+}
 
 
 

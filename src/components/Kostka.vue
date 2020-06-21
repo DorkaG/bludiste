@@ -13,7 +13,7 @@
                         v-on:click="vyhodnot(index)"
                         >
 
-    <p>{{hod}}</p>
+    <p class="cislo">{{hod}}</p>
       </div>
       <div class="pokyny">
           <p>Hoď kostkou a podle čísla, které ti padne, vyber kartičku se stejným počtem obrázků.</p>
@@ -81,7 +81,19 @@ export default {
 }
 </script>
 
-<style>
+<style scope>
 
+.ovoce{
+    width: 120px;
+    padding-top: 40px;
+}
+
+.cislo{
+    font-size: 35px;
+    font-weight: 900;
+    color: rgb(241, 229, 159);
+    
+    
+}
 
 </style>

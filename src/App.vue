@@ -52,7 +52,7 @@
 
 p{
     padding: 15px;
-     
+    color: black;
 
 }
 

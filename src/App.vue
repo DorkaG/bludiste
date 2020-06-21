@@ -18,6 +18,7 @@
     background-color: rgb(59, 163, 233);
     font-family: 'Lato', sans-serif;
     text-align: center;
+    color: rgb(241, 229, 159);
 }
 
 .palubniDeska { 
@@ -60,8 +61,7 @@
 }
 
 p{
-    padding: 15px;
-    
+    padding: 15px;  
 }
 
 

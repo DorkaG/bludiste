@@ -82,25 +82,5 @@ export default {
 
 <style>
 
-.vyskakovaci-okno-vyhra {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 40%;
-    height: 40%; 
-    background-color: lightgreen;
-    z-index: 10;
-}
-
-.vyskakovaci-okno-prohra {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 40%;
-    height: 40%;
-    background-color: palevioletred;
-    z-index: 10;
-}
-
 
 </style>

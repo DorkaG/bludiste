@@ -193,25 +193,7 @@ export default {
     margin: 50px 15px;
 }
 
-.vyskakovaci-okno-vyhra {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%; 
-    background-color: lightgreen;
-    z-index: 10;
-}
 
-.vyskakovaci-okno-prohra {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: palevioletred;
-    z-index: 10;
-}
 
 
 

@@ -47,7 +47,6 @@ export default {
   margin: 0;
   padding: 0;
   height: 98vh;
-  width: 100%;
   background-size: cover;
   /*background-repeat: no-repeat;*/
   background-image: url("./../../src/assets/images/pozadi3.jpg");
@@ -56,7 +55,7 @@ export default {
 }
 
 .uvod {
-  margin: 0 20%;
+  margin: 0 28%;
   padding: 20px;
   font-family: 'Roboto', sans-serif;
   text-align: center;

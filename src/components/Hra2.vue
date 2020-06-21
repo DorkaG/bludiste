@@ -21,8 +21,12 @@
                 </div>
                     
             </div>
-    
-            <div class="pokyny"> Teď nás čeká trocha vesmírné akrobacie. Najdi šipku, která ukazuje stejným směrem, jako tvoje raketa.</div>
+            <div class="pokyny">
+                <h4>PALUBNÍ POKYNY</h4>
+                <p class="cara">Teď nás čeká trocha vesmírné akrobacie.</p>
+                <p>Najdi šipku, která ukazuje stejným směrem, jako tvoje raketa.</p> 
+            </div>
+
             </div>
     </div>
         

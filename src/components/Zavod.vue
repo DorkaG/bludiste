@@ -1,6 +1,6 @@
 <template>
   <div class="okno">
-        <hr>
+        
         <div class="sekce">
         <div class="hra">
                 <div class="vyskakovaci-okno-vyhra" v-if="vyhra === true">Jupi, sikulka</div>   
@@ -102,7 +102,7 @@ export default {
 
 .okno {
     text-align: left;
-    width: 100%;
+    width: 90%;
 }
 
 .zavodnik {
@@ -120,17 +120,15 @@ export default {
 .cil{
 
     position: absolute;
-    margin-top: 1%;
-    margin-left: 70vh;
-    height: 30%;
+    margin-top: 0.5%;
+    margin-left: 68vh;
+    height: 40%;
 }
 
 .hra {
-    background-image: url("./../../src/assets/images/pozadi3.jpg");
     width: 100%;
-    height: 45vh;
-    
-    border: 10px double rgb(241, 229, 159);
+    height: 30vh;
+    border: 10px double rgb(59, 163, 233);
 }
 
 

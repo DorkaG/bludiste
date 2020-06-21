@@ -21,7 +21,7 @@ export default {
     props: ["vyhra", "prohra", "znovuNacist"],
     data() {
         return {
-            hod: 0,
+            hod: null,
             obrazky: [
                 {obrazek: require(`./../assets/images/1hruska.jpg`), hodnota: 1},
                 {obrazek: require(`./../assets/images/2mrkev.jpg`), hodnota: 2},
@@ -50,6 +50,10 @@ export default {
             }
         },
 
+    },
+
+    created(){
+        this.hodKostkou();
     }
 
     

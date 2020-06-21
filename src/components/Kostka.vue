@@ -50,11 +50,23 @@ export default {
             }
         },
 
+        znovuNactiHru(){
+            this.hodKostkou;
+            this.$emit("prestan-nacitat")
+        }
+
     },
 
     created(){
         this.hodKostkou();
-    }
+    },
+
+    watch: {
+        znovuNacist(newVal) {
+            if (newVal === true) {
+            this.znovuNactiHru() }
+        }
+    },
 
     
 

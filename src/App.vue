@@ -13,50 +13,56 @@
 <style>
 
 .okno {
-    
-    width: 95%;
+    padding: 40px;
+    height: 100%;
     background-color: rgb(59, 163, 233);
     font-family: 'Lato', sans-serif;
     text-align: center;
 }
 
-.palubniDeska {
-    margin: 2% 2% 3% 3%;
-    width: 92%;
+.palubniDeska { 
+    align-items: center;
+    width: 97.5%;
     height: 15vh;
     background-color: rgb(6, 11, 36);
     border: 10px double rgb(59, 163, 233);
 }
 
-.pokyny {
-    margin: 3% 3% 1% 3%;
+.pokyny {  
     width: 30%;
-    height: 45vh;
-    background-color: white;
+    height: 40vh;
+    background-color: rgb(6, 11, 36);
     border: 10px double rgb(59, 163, 233);
+    color: rgb(241, 229, 159);
 }
 
 .hra {
-    background-image: url("./../src/assets/images/pozadi3.jpg");
-    margin: 3% 2% 1% 3%;
+    background-color: rgb(6, 11, 36);
+  /*
+    background-image: url("./../src/assets/images/pozadi3.jpg");*/
+    
     width: 70%;
-    height: 45vh;
+    height: 40vh;
     
     border: 10px double rgb(59, 163, 233);
 }
 
 .sekce {
+    margin:0;
+    padding:0;
     display: flex;
     background-color: rgb(59, 163, 233);
 }
 
 p{
     padding: 15px;
-    color: black;
+    
 
 }
 
 .sablona-kontejner {
+  margin: 0;
+  padding: 0;
   background-color: rgb(59, 163, 233);
 }
 
@@ -94,17 +100,12 @@ p{
 
 .border-grey {
   border: 10px double rgb(59, 163, 233);
-  
 
 }
 
 .border-yellow {
   border: 10px double rgb(59, 163, 233);
 
-}
-
-.vm--modal {
-  background-color: rgb(59, 163, 233);
 }
 
 .vyskakovaci-okno-vyhra{

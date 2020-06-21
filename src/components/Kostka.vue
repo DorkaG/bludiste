@@ -86,15 +86,15 @@ export default {
 
 .ovoce{
     
-    width: 120px;
-    padding: 20px 25px;
+    width: 100px;
+    padding: 20px 25px 20px 25px;
 }
 
 .cislo{
-    font-size: 35px;
+    margin:0;
+    font-size: 50px;
     font-weight: 900;
-    color: rgb(59, 163, 233);
-    
+    color: rgb(59, 163, 233); 
     
 }
 

@@ -122,11 +122,10 @@ export default {
 <style scoped>
 .tlacitka {
     /* width: 755px; */
-    margin: 20px;   
+    margin: 0;   
     height: 60px;
     display: flex;
-    justify-content: space-between;
-    
+    justify-content: space-between; 
 }
 
 

@@ -441,7 +441,7 @@ export default {
   font-size: 100px;
   position: absolute;
   top: 55px;
-  left: -100px;
+  left: -150px;
   color: rgb(59, 163, 233);
   font-weight: 900;
   /* font-family: 'Roboto', sans-serif; */

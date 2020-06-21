@@ -64,7 +64,6 @@ export default {
         pocitej(){
             if (this.marginLeft >= 54){
                 this.posunuto = false;
-                this.marginLeft = -3;
                 this.vyhodnot();
                 clearTimeout(this.timeoutID);
             }

@@ -1,5 +1,8 @@
 <template>
-  <div>
+  <div class="okno">
+      <div class="sekce">
+      <div class="hra">
+
         <div class="vyskakovaci-okno-vyhra" v-if="vyhra === true">Jupi, sikulka</div>   
         <div class="vyskakovaci-okno-prohra" v-if="prohra === true">Zkus to znovu</div>  
 
@@ -11,7 +14,11 @@
                         >
 
     <p>{{hod}}</p>
-    
+      </div>
+      <div class="pokyny">
+
+      </div>
+      </div>
 
   </div>
 </template>

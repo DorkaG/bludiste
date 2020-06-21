@@ -1,7 +1,8 @@
 <template>
-  <div>
+  <div class="okno">
         <hr>
-        <div id="let">
+        <div class="sekce">
+        <div class="hra">
                 <div class="vyskakovaci-okno-vyhra" v-if="vyhra === true">Jupi, sikulka</div>   
                 <div class="vyskakovaci-okno-prohra" v-if="prohra === true">Zkus to znovu</div>     
             <img class="cil" v-bind:src="require(`./../assets/images/cil.jpg`)" alt="Cilová páska">
@@ -20,7 +21,9 @@
             <!--v-on:keyup.enter="odlet()"-->
            
             <button  v-on:keyup.39="odlet()" v-on:click="start()" v-if="marginLeft !== 54">Start</button>
-            
+        </div> 
+
+        <div class="pokyny"> Hurá, čeká tě vesmírný závod! Stiskni start a mačkej rychle šipku doprava. Předleť svou lodí soupeře. </div> 
         </div>           
   </div>
 </template>
@@ -117,25 +120,7 @@ export default {
     height: 50%;
 }
 
-.vyskakovaci-okno-vyhra {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 40%;
-    height: 40%; 
-    background-color: lightgreen;
-    z-index: 10;
-}
 
-.vyskakovaci-okno-prohra {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 40%;
-    height: 40%;
-    background-color: palevioletred;
-    z-index: 10;
-}
 
 
 

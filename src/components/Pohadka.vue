@@ -1,5 +1,8 @@
 <template>
-  <div>
+  <div class="okno">
+      <div class="sekce">
+      <div class="hra">
+
       <h3>Vítej na planetě Kokosmánie!</h3>
         <p>
         Pozor! Při přistávání to bude trochu skákat, protože tato planeta má trochu nestabilní i když chutné jádro. 
@@ -9,6 +12,9 @@
         Při loučení s Kokoskami, obdržíš spoustu darů, pochopitelně kokosových. Kokosový klobouk nos hrdě, alespoň, než planetu opustíš. 
         Přeji příjemný průzkum.
         </p>
+      </div>
+      <div class="pokyny"></div>
+      </div>
 
   </div>
 </template>

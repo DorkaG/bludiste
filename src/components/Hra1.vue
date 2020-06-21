@@ -1,6 +1,6 @@
 <template>
-    
-        <div class="hraSPokyny"> 
+    <div class="okno">
+        <div class="sekce"> 
             <div class="hra"> 
                 <div class="vyskakovaci-okno-vyhra" v-if="vyhra === true">Jupi, sikulka</div>       <!--PRIDAT DO KAZDE HRY-->
                 <div class="vyskakovaci-okno-prohra" v-if="prohra === true">Zkus to znovu</div>     <!--PRIDAT DO KAZDE HRY-->
@@ -17,7 +17,7 @@
             </div>
             <div class="pokyny"> Vyber, který obrázek k ostatním obrázkům nepatří. </div>
         </div>
-           
+       </div>    
     
 </template>
 
@@ -167,28 +167,7 @@ export default {
     margin: 0 auto;
 } */
 
-.hraSPokyny {
-    display: flex;
-    width: 800px;
-    height: 300px;
-}
 
-.hra {
-    border: solid grey 2px;
-    margin: 20px;
-    width: 550px;
-    height: 90%;
-    position: relative;
-
-}
-
-.pokyny {
-    border: solid grey 2px;
-    margin: 20px 20px 20px 0;
-    width: 200px;
-    height: 90%;
-
-}
 
 
 /* .tlacitka {

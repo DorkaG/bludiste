@@ -15,7 +15,7 @@
 .okno {
     
     width: 95%;
-    background-color: rgb(241, 229, 159);
+    background-color: rgb(59, 163, 233);
     font-family: 'Lato', sans-serif;
     text-align: center;
 }
@@ -25,7 +25,7 @@
     width: 92%;
     height: 15vh;
     background-color: rgb(6, 11, 36);
-    border: 10px double rgb(241, 229, 159);
+    border: 10px double rgb(59, 163, 233);
 }
 
 .pokyny {
@@ -33,7 +33,7 @@
     width: 30%;
     height: 45vh;
     background-color: white;
-    border: 10px double rgb(241, 229, 159);
+    border: 10px double rgb(59, 163, 233);
 }
 
 .hra {
@@ -41,13 +41,13 @@
     margin: 3% 2% 1% 3%;
     width: 70%;
     height: 45vh;
-    background-color: white;
-    border: 10px double rgb(241, 229, 159);
+    
+    border: 10px double rgb(59, 163, 233);
 }
 
 .sekce {
     display: flex;
-    background-color: rgb(241, 229, 159);
+    background-color: rgb(59, 163, 233);
 }
 
 p{
@@ -57,16 +57,16 @@ p{
 }
 
 .sablona-kontejner {
-  background-color: rgb(241, 229, 159);
+  background-color: rgb(59, 163, 233);
 }
 
 
 .body {
-  background-color: rgb(241, 229, 159);
+  background-color: rgb(59, 163, 233);
 }
 
 .btn {
-  background-color: rgb(241, 229, 159);
+  background-color: rgb(59, 163, 233);
 }
 
 .btn-green {
@@ -93,14 +93,18 @@ p{
 }
 
 .border-grey {
-  border: solid 5px grey;
+  border: 10px double rgb(59, 163, 233);
   
 
 }
 
 .border-yellow {
-  border: solid 5px rgb(241, 229, 159);
+  border: 10px double rgb(59, 163, 233);
 
+}
+
+.vm--modal {
+  background-color: rgb(59, 163, 233);
 }
 
 .vyskakovaci-okno-vyhra{

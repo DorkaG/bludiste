@@ -52,7 +52,7 @@ props: ["vyhra", "prohra", "znovuNacist"],
 
 </script>
 
-<style scope>
+<style scoped>
 
 p{
     color: white;

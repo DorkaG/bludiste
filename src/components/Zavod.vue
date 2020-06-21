@@ -98,7 +98,7 @@ export default {
 }
 </script>
 
-<style scope>
+<style scoped>
 
 .okno {
     text-align: left;
@@ -127,10 +127,9 @@ export default {
 
 .hra {
     background-image: url("./../../src/assets/images/pozadi3.jpg");
-
     width: 100%;
     height: 45vh;
-    background-color: white;
+    
     border: 10px double rgb(241, 229, 159);
 }
 

@@ -81,7 +81,7 @@ export default {
 }
 </script>
 
-<style scope>
+<style scoped>
 
 
 .ovoce{
@@ -93,7 +93,7 @@ export default {
 .cislo{
     font-size: 35px;
     font-weight: 900;
-    color: rgb(241, 229, 159);
+    color: rgb(59, 163, 233);
     
     
 }

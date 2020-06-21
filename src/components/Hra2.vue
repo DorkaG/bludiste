@@ -22,7 +22,7 @@
                     
             </div>
     
-            <div class="pokyny"> Vyber šipku, která ukazuje stejným směrem, kam letí raketa. </div>
+            <div class="pokyny"> Teď nás čeká trocha vesmírné akrobacie. Najdi šipku, která ukazuje stejným směrem, jako tvoje raketa.</div>
             </div>
     </div>
         

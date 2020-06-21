@@ -16,6 +16,7 @@
     <p>{{hod}}</p>
       </div>
       <div class="pokyny">
+          <p>Hoď kostkou a podle čísla, které ti padne, vyber kartičku se stejným počtem obrázků.</p>
 
       </div>
       </div>

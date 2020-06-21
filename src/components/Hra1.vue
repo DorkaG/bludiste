@@ -15,7 +15,7 @@
                     
                 </div>
             </div>
-            <div class="pokyny"> Vyber, který obrázek k ostatním obrázkům nepatří. </div>
+            <div class="pokyny"> Ale ne, narazil jsi na planetu, která je plná tajemných obrazců. Vyber, který z těchto obrázků mezi ostatní nepatří.  </div>
         </div>
        </div>    
     

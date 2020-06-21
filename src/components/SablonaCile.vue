@@ -14,7 +14,7 @@
        
         <!-- <button>Chci zahrát znovu </button> -->
             <button class="btn btn-green" v-if="jeDalsiLevel" v-on:click="dalsiLevel">Chci další level </button>
-            <button class="btn btn-red"> <router-link to='/'>Konec </router-link></button> 
+            <!-- <button class="btn btn-red"> <router-link to='/'>Konec </router-link></button>  -->
          </div>
     </div>
 </template>

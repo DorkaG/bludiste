@@ -15,7 +15,6 @@
 .okno {
     
     width: 95%;
-    height: 75vh;
     background-color: rgb(241, 229, 159);
     font-family: 'Lato', sans-serif;
     text-align: center;

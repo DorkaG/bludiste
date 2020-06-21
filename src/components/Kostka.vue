@@ -83,9 +83,11 @@ export default {
 
 <style scope>
 
+
 .ovoce{
+    
     width: 120px;
-    padding: 20px;
+    padding: 20px 25px;
 }
 
 .cislo{

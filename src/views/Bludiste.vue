@@ -5,13 +5,13 @@
       <router-link to='/hra2'>Hra2</router-link>  
       <router-link to='/zavod'>Zavod</router-link> 
       <router-link to='/kostka'>Kostka</router-link>|
-      <router-link to='/pohadka'>Pohadka</router-link>| -->
-      
-
+      <router-link to='/pohadka'>Pohadka</router-link>| --> <!-- Tlačítka pro vývoj -->
+    <img class="rybar" v-bind:src="require(`./../assets/images/rybar.png`)" alt="Vesmírný rybář">
+    
     <div class="supercontainer"> 
       <div class="container">
         <div class="pocet-bodu">{{pocetBodu}}</div>
-
+<div class="ramec">
           <img class="raketa obrazek" alt="raketa" 
           v-bind:src="raketa.obrazek"
           v-bind:style="umistiObjekt(raketa)">
@@ -28,18 +28,7 @@
           v-bind:src="objekt3.obrazek"
           v-bind:style="umistiObjekt(objekt3)"
           v-if="objekt3.zobrazen" -->
-          
-
-          <img class="hvezda obrazek" alt="hvezda" 
-          v-bind:src="hvezda.obrazek"
-          v-bind:style="umistiObjekt(hvezda)">
-
-          <img class="hvezda2 obrazek" alt="hvezda" 
-          v-bind:src="hvezda2.obrazek"
-          v-bind:style="umistiObjekt(hvezda2)">
-
-          
-
+        
           <div class="radek" v-for="(radek, indexRadku) in bludiste"
           v-bind:key="indexRadku" >
               <div class="ctverecek" v-for="(ctverec, indexCtverce) in bludiste[indexRadku]"
@@ -49,7 +38,7 @@
               
           </div>
       </div>
-
+      </div>
     </div>
 
   <modals-container 
@@ -374,20 +363,13 @@ export default {
         for (let i = 0; i < this.objekty.length; i++) {
                   this.zjistiSouradniceObjektu(this.objekty[i].id, this.objekty[i])
 
-        }
-       
-        
-        
+        }       
         
     }
   
 }
 
 </script>
-
-
-
-
 
 <style scoped>
 
@@ -404,13 +386,19 @@ export default {
   width: 1500px;
   height: 800px;
   /* background-image: url("./..assets/images/vesmir.jpg"); */
+  
   }
 
 .container { 
     position: relative;
     left: calc((100% - 1055px)/2);
     top: 5%;
-    
+      
+}
+
+.ramec {
+  position: absolute;
+  border: 7px double rgb(241, 229, 159);
 }
 
 .ctverecek {
@@ -453,7 +441,7 @@ export default {
   font-size: 100px;
   position: absolute;
   top: 70px;
-  left: -50px;
+  left: -100px;
   color: rgb(241, 220, 98);
   font-weight: 900;
   /* font-family: 'Roboto', sans-serif; */
@@ -461,6 +449,12 @@ export default {
 
 }
 
+.rybar {
+  position: absolute;
+  width: 200px;
+  margin-top: 21%;
+  margin-left: 1%;
+}
 
 
 </style>

@@ -397,7 +397,7 @@ export default {
 
 .supercontainer {
   width: 1500px;
-  height: 1000px;
+  height: 800px;
   /* background-image: url("./..assets/images/vesmir.jpg"); */
   }
 

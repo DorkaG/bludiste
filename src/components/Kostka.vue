@@ -3,8 +3,14 @@
       <div class="sekce">
       <div class="hra">
 
-        <div class="vyskakovaci-okno-vyhra" v-if="vyhra === true">Jupi, sikulka</div>   
-        <div class="vyskakovaci-okno-prohra" v-if="prohra === true">Zkus to znovu</div>  
+        <div class="vyskakovaci-okno-vyhra" v-if="vyhra === true"><img class="vesely" v-bind:src="require(`./../assets/images/smile.png`)" alt="Veselá tvář">
+        <div class="vyhodnoceni">
+            <h5>HURÁ</h5>
+            <p> Získáváš BOD a můžeš pokračovat dál. Nebo si klidně zahraj znovu.</p></div></div>   
+        <div class="vyskakovaci-okno-prohra" v-if="prohra === true"><img class="smutny" v-bind:src="require(`./../assets/images/neutral.png`)" alt="Smutná tvář">
+        <div class="vyhodnoceni">
+            <h5>A JÉJE</h5>
+            <p> To se úplně nepovedlo, ale můžeš to zkusit znovu.</p></div></div>
 
 
       <img class="ovoce" v-for="(polozka, index) in obrazky"

@@ -103,27 +103,48 @@ p{
 
 .border-yellow {
   border: 10px double rgb(59, 163, 233);
+  
 
 }
 
+.vesely, .smutny{
+  width: 200px;
+  position: absolute;
+  left: 100px;
+  top: 100px;
+
+}
+
+.vyhodnoceni {
+  position: absolute;
+  border: 10px double rgb(59, 163, 233);
+  right: 100px;
+  top: 100px;
+  width: 200px;
+}
+
+
 .vyskakovaci-okno-vyhra{
     position: absolute;
-    left: 0;
-    top: 0;
-    width: 50%;
-    height: 50%; 
-    background-color: rgb(46, 139, 46);
+    left: 30px;
+    top: 30px;
+    width: 90%;
+    height: 73%; 
+    background-color: rgb(6, 11, 36);
+    border: 10px double rgb(59, 163, 233);
     z-index: 10;
 
 }
 
 .vyskakovaci-okno-prohra{
+    display: flex;
     position: absolute;
-    left: 0;
-    top: 0;
-    width: 50%;
-    height: 50%;
-    background-color: rgb(212, 50, 104);
+    left: 30px;
+    top: 30px;
+    width: 90%;
+    height: 73%;
+    background-color: rgb(6, 11, 36);
+    border: 10px double rgb(59, 163, 233);
     z-index: 10;
 
 }

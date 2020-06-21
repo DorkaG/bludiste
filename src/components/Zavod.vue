@@ -20,7 +20,7 @@
             <!--v-on:keyup.enter="odlet()"-->
            
             <button v-on:keyup.39="odlet()" v-on:click="start()">Start</button>
-            <button v-on:click="restartuj">Znovu</button>
+            
         </div>           
   </div>
 </template>
@@ -78,7 +78,19 @@ export default {
             }
         },
 
-    }
+        znovuNactiHru(){
+            this.restartuj();
+            this.$emit("prestan-nacitat")
+        }
+
+    },
+
+    watch: {
+        znovuNacist(newVal) {
+            if (newVal === true) {
+            this.znovuNactiHru() }
+        }
+    },
 }
 </script>
 

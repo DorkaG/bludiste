@@ -11,7 +11,7 @@
                         >
 
     <p>{{hod}}</p>
-    <button v-on:click="hodKostkou()">HOĎ KOSTKOU</button>
+    
 
   </div>
 </template>
@@ -51,7 +51,7 @@ export default {
         },
 
         znovuNactiHru(){
-            this.hodKostkou;
+            this.hodKostkou();
             this.$emit("prestan-nacitat")
         }
 

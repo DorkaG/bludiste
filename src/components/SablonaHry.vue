@@ -126,6 +126,7 @@ export default {
     height: 60px;
     display: flex;
     justify-content: space-between;
+    
 }
 
 

@@ -17,7 +17,7 @@
     
     width: 75%;
     height: 75vh;
-    background-image: url("./../src/assets/images/pozadi3.jpg");
+    background-color: rgb(241, 229, 159);
     font-family: 'Lato', sans-serif;
     text-align: center;
 }
@@ -39,6 +39,7 @@
 }
 
 .hra {
+    background-image: url("./../src/assets/images/pozadi3.jpg");
     margin: 3% 2% 1% 3%;
     width: 70%;
     height: 45vh;
@@ -48,22 +49,27 @@
 
 .sekce {
     display: flex;
+    background-color: rgb(241, 229, 159);
 }
 
 p{
     padding: 15px;
-    border-top: 10px double rgb(223, 197, 49); 
+    border-top: 10px double rgb(241, 229, 159); 
 
+}
+
+.sablona-kontejner {
+  background-color: rgb(241, 229, 159);
 }
 
 
 
 .body {
-  
+  background-color: rgb(241, 229, 159);
 }
 
 .btn {
-
+  background-color: rgb(241, 229, 159);
 }
 
 .btn-green {
@@ -91,12 +97,13 @@ p{
 
 
 .border-grey {
-  border: solid 5px grey
+  border: solid 5px grey;
+  
 
 }
 
 .border-yellow {
-  border: solid 5px gold
+  border: solid 5px rgb(241, 229, 159);
 
 }
 

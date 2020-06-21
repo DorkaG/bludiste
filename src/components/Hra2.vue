@@ -1,10 +1,10 @@
 <template>
-    <div class="hraSPokyny-hra2 okno"> 
+    <div class="okno"> 
 
             <div class="sekce">
-            <div class="hra2 hra"> 
-                <div class="vyskakovaci-okno-vyhra-hra2" v-if="vyhra === true">Jupi, sikulka</div>       <!--PRIDAT DO KAZDE HRY-->
-                <div class="vyskakovaci-okno-prohra-hra2" v-if="prohra === true">Zkus to znovu</div>     <!--PRIDAT DO KAZDE HRY -->
+            <div class="hra"> 
+                <div class="vyskakovaci-okno-vyhra" v-if="vyhra === true">Jupi, sikulka</div>       <!--PRIDAT DO KAZDE HRY-->
+                <div class="vyskakovaci-okno-prohra" v-if="prohra === true">Zkus to znovu</div>     <!--PRIDAT DO KAZDE HRY -->
                 
                 <div class="obrazky-hra2"> 
                     <div class="obrazek-raketa_konetejner-hra2">
@@ -22,7 +22,7 @@
                     
             </div>
     
-            <div class="pokyny-hra2 pokyny"> Vyber šipku, která ukazuje stejným směrem, kam letí raketa. </div>
+            <div class="pokyny"> Vyber šipku, která ukazuje stejným směrem, kam letí raketa. </div>
             </div>
     </div>
         
@@ -158,26 +158,6 @@ export default {
 
 <style scoped>
 
-.hraSPokyny-hra2 {
-    display: flex;
-    width: 800px;
-    height: 300px;
-}
-
-.hra2 {
-    border: solid grey 2px;
-    margin: 20px;
-    width: 550px;
-    height: 90%;
-    position: relative;
-}
-
-.pokyny-hra2 {
-    border: solid grey 2px;
-    margin: 20px 20px 20px 0;
-    width: 200px;
-    height: 90%;
-}
 
 .obrazky-hra2 {
     width: 550px;
@@ -209,7 +189,7 @@ export default {
     margin-left: 230px;
 }
 
-.vyskakovaci-okno-vyhra-hra2 {
+.vyskakovaci-okno-vyhra {
     position: absolute;
     left: 0;
     top: 0;
@@ -219,7 +199,7 @@ export default {
     z-index: 10;
 }
 
-.vyskakovaci-okno-prohra-hra2 {
+.vyskakovaci-okno-prohra {
     position: absolute;
     left: 0;
     top: 0;

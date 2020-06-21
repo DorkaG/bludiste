@@ -1,12 +1,13 @@
 <template>
-    <div> 
-        Ted
-        {{body}}
-        <br>
-        Predtim
-        {{old}}
-        <br>
-        <br>
+    <div class="telo-cil"> 
+        <div class="pocet-bodu-cil">
+            Ted
+            {{body}}
+            
+            Predtim
+            {{old}}
+        </div>
+       
         <!-- <button>Chci zahrát znovu </button> -->
         <button class="btn btn-green" v-if="jeDalsiLevel" v-on:click="dalsiLevel">Chci další level </button>
     </div>
@@ -40,5 +41,20 @@ export default {
 
 
 <style scoped>
+.telo-cil {
+    width: 100%;
+    height: 500px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    border: 20px double rgb(235, 226, 176);
+}
+
+.pocet-bodu-cil {
+    
+    
+    
+    color: white;
+
+}
 
 </style>

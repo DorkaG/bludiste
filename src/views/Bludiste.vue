@@ -398,7 +398,7 @@ export default {
 
 .ramec {
   position: absolute;
-  border: 7px double rgb(241, 229, 159);
+  border: 7px double rgb(59, 163, 233); /*rgb(241, 229, 159) nebo rgb(59, 163, 233) nebo rgb(108, 125, 136)*/ 
 }
 
 .ctverecek {
@@ -440,9 +440,9 @@ export default {
 .pocet-bodu {
   font-size: 100px;
   position: absolute;
-  top: 70px;
+  top: 55px;
   left: -100px;
-  color: rgb(241, 220, 98);
+  color: rgb(59, 163, 233);
   font-weight: 900;
   /* font-family: 'Roboto', sans-serif; */
   font-family: 'Lato', sans-serif;;

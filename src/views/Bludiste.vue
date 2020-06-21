@@ -1,15 +1,16 @@
 <template>
   <div id="app">
-      <router-link to='/'>Domů</router-link>
-      <router-link to='/hra1'>Hra1</router-link>  <!---TOHLE VE FINALE SMAZAT-->
-      <router-link to='/hra2'>Hra2</router-link>  <!---TOHLE VE FINALE SMAZAT-->
+      <!-- <router-link to='/'>Domů</router-link>
+      <router-link to='/hra1'>Hra1</router-link>  
+      <router-link to='/hra2'>Hra2</router-link>  
       <router-link to='/zavod'>Zavod</router-link> 
       <router-link to='/kostka'>Kostka</router-link>|
-      <router-link to='/pohadka'>Pohadka</router-link>|
-      {{pocetBodu}}
+      <router-link to='/pohadka'>Pohadka</router-link>| -->
+      
 
     <div class="supercontainer"> 
       <div class="container">
+        <div class="pocet-bodu">{{pocetBodu}}</div>
 
           <img class="raketa obrazek" alt="raketa" 
           v-bind:src="raketa.obrazek"
@@ -260,9 +261,10 @@ export default {
 
         potkejObjekt(objekt) {              // kontroluje, zda doslo ke kolizi rakety s objektem. Pokud ano, otevre se modalni okno, zobrazen se u objektu prehodi na false (tj. objekt se uz nebude zobrazovat, osetreno pomoci v-if) a hraOtevrena se nastavi na true (tj. nejde hybat s raketou, funkce pohybu je ukoncena pomoci return, pokud je hraOtevrena true)
           if (this.jeKolize(this.raketa, objekt)) {
-            if(objekt.cil === true) {
+            if(objekt.cil === true) {                                     //pokud dojde ke kolizi s cilovym objektem, otevre se cilovy modal. S tlacitkem pokracovat do dalsiho levelu, pokud soucasnz level neni posledni
               var neniposledni = (pole[this.level+1] !== undefined)
               this.$modal.show(SablonaCile, {body: this.pocetBodu, jeDalsiLevel: neniposledni})
+              this.pocetBodu = 0;
             }
             else {
             this.$modal.show(SablonaHry, {nazevHry: objekt.nazevHry});
@@ -444,6 +446,18 @@ export default {
     background-color: rgb(241, 229, 159);
     position: absolute;
    
+}
+
+.pocet-bodu {
+  font-size: 60px;
+  position: absolute;
+  top: 110px;
+  left: -50px;
+  color: rgb(241, 220, 98);
+  font-weight: 900;
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'Lato', sans-serif;;
+
 }
 
 

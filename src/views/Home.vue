@@ -48,8 +48,10 @@ export default {
   padding: 0;
   height: 100vh;
   width: 100%;
-  background-repeat: no-repeat;
-  background-image: linear-gradient(to right, #344c5f 0%, #071C42 100%);
+  background-size: cover;
+  /*background-repeat: no-repeat;*/
+  background-image: url("./../../src/assets/images/pozadi3.jpg");
+  /*background-image: linear-gradient(to right, #344c5f 0%, #071C42 100%);*/
   
 }
 
@@ -58,7 +60,7 @@ export default {
   padding: 20px;
   font-family: 'Roboto', sans-serif;
   text-align: center;
-  border: 20px double rgb(241, 229, 159);
+  border: 20px double rgb(235, 226, 176);
   color: white;
   font-size: 20px;
 
@@ -66,7 +68,7 @@ export default {
 
 h1 {
     margin:0;
-    color: rgb(241, 229, 159);
+    color: rgb(235, 226, 176);
     text-transform: uppercase;
     text-align: center;
     font-size: 65px;
@@ -76,11 +78,12 @@ h1 {
 
 .textUvod {
   padding: 0 35px;
+
 }
 
 .textSabina {
   width: 60%;
-  border: 3px double rgb(241, 229, 159);
+  border: 3px double rgb(235, 226, 176);
   padding: 13px;
   margin-left: 20%;
   margin-right: 20%;
@@ -156,11 +159,11 @@ h1 {
 button {
   height: 80px;
   width: 250px;
-  background-color: rgb(241, 229, 159);
+  background-color: rgb(235, 226, 176);
   font-size: 40px;
   font-family: 'Bitter', serif;
   font-weight: 800;
-  color: #344c5f;
+  color: #09365a;
   margin-top: 3%;
 }
 

@@ -49,7 +49,7 @@ export default {
   height: 98vh;
   background-size: cover;
   /*background-repeat: no-repeat;*/
-  background-image: url("./../../src/assets/images/pozadi3.jpg");
+  background-image: url("./../../src/assets/images/pozadi5.jpg");
   /*background-image: linear-gradient(to right, #344c5f 0%, #071C42 100%);*/
   
 }

@@ -395,8 +395,9 @@ export default {
   /* width: 880; */
   overflow: hidden; 
   /* background-image: linear-gradient(to right, #344c5f 0%, #071C42 100%); */
-  background-image: url("./../../src/assets/images/pozadi3.jpg");
-  color: white;
+  background-image: url("./../../src/assets/images/pozadi4.jpg");
+  height: 98vh;
+  width: 100%;
 }
 
 .supercontainer {
@@ -449,9 +450,9 @@ export default {
 }
 
 .pocet-bodu {
-  font-size: 60px;
+  font-size: 100px;
   position: absolute;
-  top: 110px;
+  top: 70px;
   left: -50px;
   color: rgb(241, 220, 98);
   font-weight: 900;

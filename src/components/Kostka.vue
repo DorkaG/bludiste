@@ -16,6 +16,8 @@
     <p class="cislo">{{hod}}</p>
       </div>
       <div class="pokyny">
+          <h4>PALUBNÍ POKYNY</h4>
+          <p class="cara">Ovocný koktejl s vesmírnou mlhou.</p>
           <p>Hoď kostkou a podle čísla, které ti padne, vyber kartičku se stejným počtem obrázků.</p>
 
       </div>

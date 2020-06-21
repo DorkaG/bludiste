@@ -36,6 +36,11 @@
     color: rgb(241, 229, 159);
 }
 
+.cara{
+  
+  border-top: 10px double rgb(59, 163, 233);
+}
+
 .hra {
     background-color: rgb(6, 11, 36);
   /*
@@ -57,13 +62,6 @@
 p{
     padding: 15px;
     
-
-}
-
-.sablona-kontejner {
-  margin: 0;
-  padding: 0;
-  background-color: rgb(59, 163, 233);
 }
 
 

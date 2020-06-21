@@ -15,7 +15,11 @@
                     
                 </div>
             </div>
-            <div class="pokyny"> Ale ne, narazil jsi na planetu, která je plná tajemných obrazců. Vyber, který z těchto obrázků mezi ostatní nepatří.  </div>
+            <div class="pokyny">
+                <h4>PALUBNÍ POKYNY</h4>
+                <p class="cara">Ale ne, narazil jsi na planetu, která je plná tajemných obrazců.</p>
+                <p> Vyber, který z těchto obrázků mezi ostatní nepatří. </p> 
+            </div>
         </div>
        </div>    
     

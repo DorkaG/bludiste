@@ -85,7 +85,7 @@ export default {
 
 .ovoce{
     width: 120px;
-    padding-top: 40px;
+    padding: 20px;
 }
 
 .cislo{

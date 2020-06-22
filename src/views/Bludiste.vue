@@ -295,11 +295,13 @@
         background-image: url("./../../src/assets/images/pozadi4.jpg");
         height: 98vh;
         width: 100%;
+       
     }
 
     .supercontainer {
         width: 1500px;
         height: 800px;
+        margin: 0 auto;
         /* background-image: url("./..assets/images/vesmir.jpg"); */
     }
 

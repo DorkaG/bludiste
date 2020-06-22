@@ -38,7 +38,6 @@
 }
 
 .cara{
-  
   border-top: 10px double rgb(59, 163, 233);
 }
 
@@ -104,7 +103,6 @@ p{
 .border-yellow {
   border: 10px double rgb(59, 163, 233);
   
-
 }
 
 .vesely, .smutny{
@@ -137,7 +135,6 @@ p{
 }
 
 .vyskakovaci-okno-prohra{
-    display: flex;
     position: absolute;
     left: 30px;
     top: 30px;

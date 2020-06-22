@@ -33,6 +33,10 @@
                 <h4>PALUBNÍ POKYNY</h4>
                 <p class="cara">Ale ne, narazil jsi na planetu, která je plná tajemných obrazců.</p>
                 <p> Vyber, který z těchto obrázků mezi ostatní nepatří. </p>
+                <div class="zvukovaStopa">
+                    <button v-on:click="play" >Nápověda</button>
+                    <audio ref="audioElm" src='./../assets/zvuky/hra1.mp3'></audio>
+               </div>
             </div>
         </div>
     </div>
@@ -45,7 +49,6 @@
         props: ["vyhra", "prohra", "znovuNacist"],             //PRIDAT DO KAZDE HRY
         data() {
             return {
-                zvuk: {nahravka: require("./../assets/zvuky/hra1.mp3"), id: "hra1"},
                 patri: [
                     [
                         {obrazek: require("./../assets/images/banan.jpg")},
@@ -107,6 +110,11 @@
                 this.vyberPoleObrazkuPatri();
                 this.pridejObrazekNepatri();
                 this.$emit("prestan-nacitat")
+            },
+
+            play: function(){
+                this.$refs.audioElm.play();
+                
             }
         },
         watch: {

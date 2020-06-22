@@ -31,6 +31,10 @@
                 <h4>PALUBNÍ POKYNY</h4>
                 <p class="cara">Ovocný koktejl s vesmírnou mlhou.</p>
                 <p>Hoď kostkou a podle čísla, které ti padne, vyber kartičku se stejným počtem obrázků.</p>
+                <div class="zvukovaStopa">
+                    <button v-on:click="play" >Nápověda</button>
+                    <audio ref="audioElm" src='./../assets/zvuky/kostka.mp3'></audio>
+               </div>
 
             </div>
         </div>
@@ -43,8 +47,6 @@
         props: ["vyhra", "prohra", "znovuNacist"],
         data() {
             return {
-                zvuk: {nahravka: require("./../assets/zvuky/kostka.mp3"), id: "kostka"},
-                id:"kostka",
                 hod: null,
                 obrazky: [
                     {obrazek: require(`./../assets/images/1hruska.jpg`), hodnota: 1},
@@ -63,31 +65,32 @@
             vyhodnot(index) {
                 if (this.hod === this.obrazky[index].hodnota) {
                     this.$emit("vyhrani");
-                    console.log("vyhra")
+                    console.log("vyhra");
                 } else {
                     this.$emit("prohrani");
-                    console.log("prohra")
+                    console.log("prohra");
                 }
             },
             znovuNactiHru() {
                 this.hodKostkou();
-                this.$emit("prestan-nacitat")
+                this.$emit("prestan-nacitat");
+            },
+
+           play: function(){
+                this.$refs.audioElm.play();
             }
         },
         created() {
             this.hodKostkou();
         },
+
+    
         watch: {
             znovuNacist(newVal) {
                 if (newVal === true) {
                     this.znovuNactiHru()
                 }
             },
-
-            prehraje() {
-                this.$emit("zvuk")
-            }
-
         }
 
         

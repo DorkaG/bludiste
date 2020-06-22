@@ -23,6 +23,10 @@
             </div>
             <div class="pokyny">
                 <img class="kokosak" v-bind:src="require(`./../assets/images/coconut.png`)" alt="Posvátný kokos">
+                <div class="zvukovaStopa">
+                    <button v-on:click="play" >Nápověda</button>
+                    <audio ref="audioElm" src='./../assets/zvuky/pohadka-1.mp3'></audio>
+               </div>
 
             </div>
         </div>
@@ -52,6 +56,9 @@
                     this.$emit("prohrani");
                 }
             },
+            play: function(){
+                this.$refs.audioElm.play();
+            }
 
         }
     }

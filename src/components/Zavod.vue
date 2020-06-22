@@ -41,9 +41,15 @@
 
             <button class="startovaci" v-on:keyup.39="odlet()" v-on:click="start()" v-if="marginLeft !== 52">START
             </button>
-            <div class="pravidla">Hurá, čeká tě vesmírný závod! Stiskni start a mačkej rychle šipku doprava <span
-                    class="sipka">→</span> a předleť svou lodí soupeře.
+            <div class="pravidla"><p>Hurá, čeká tě vesmírný závod! Stiskni start a mačkej rychle šipku doprava<span
+                    class="sipka">→</span> a předleť svou lodí soupeře.</p>
             </div>
+            <div class="zvukovaStopa">
+                    <button v-on:click="play" >Nápověda</button>
+                    <audio ref="audioElm" src='./../assets/zvuky/zavod.mp3'></audio>
+            </div>
+
+
         </div>
 
 
@@ -98,6 +104,10 @@
             znovuNactiHru() {
                 this.restartuj();
                 this.$emit("prestan-nacitat")
+            },
+
+            play: function(){
+                this.$refs.audioElm.play();
             }
         },
         watch: {

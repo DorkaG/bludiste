@@ -50,7 +50,8 @@
                         {obrazek: require("./../assets/images/banan.jpg")},
                         {obrazek: require("./../assets/images/jablko.jpg")},
                         {obrazek: require("./../assets/images/kokos.jpg")},
-                        {obrazek: require("./../assets/images/meloun.jpg")}
+                        {obrazek: require("./../assets/images/meloun.jpg")},
+                        {obrazek: require("./../assets/images/1hruska.jpg")}
                     ],
                     [
                         {obrazek: require("./../assets/images/auto.jpg")},
@@ -69,7 +70,6 @@
                     {obrazek: require("./../assets/images/kvetina.jpg")},
                     {obrazek: require("./../assets/images/mic.jpg")},
                     {obrazek: require("./../assets/images/pizza.jpg")},
-                    {obrazek: require("./../assets/images/ufo.jpg")},
                     {obrazek: require("./../assets/images/ufon.jpg")}
                 ],
                 poleObrazku: [],

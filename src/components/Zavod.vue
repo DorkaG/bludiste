@@ -25,7 +25,7 @@
         </div>
         <div class="zavodni">
 
-            <button class="startovaci" v-on:keyup.39="odlet()" v-on:click="start()" v-if="marginLeft !== 54">START
+            <button class="startovaci" v-on:keyup.39="odlet()" v-on:click="start()" v-if="marginLeft !== 52">START
             </button>
             <div class="pravidla">Hurá, čeká tě vesmírný závod! Stiskni start a mačkej rychle šipku doprava <span
                     class="sipka">→</span> a předleť svou lodí soupeře.

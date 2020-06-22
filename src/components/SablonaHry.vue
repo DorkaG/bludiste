@@ -71,17 +71,7 @@
                 vyhra: false,
                 prohra: false,
                 znovuNactiHru: false,
-                id: "",
-                zvuk: "",
 
-                zvuky: [
-                    {nahravka: require("./../assets/zvuky/hra1.mp3"), id: "hra1"},
-                    {nahravka: require("./../assets/zvuky/hra2.mp3"), id: "hra2"},
-                    {nahravka: require("./../assets/zvuky/kostka.mp3"), id: "kostka"},
-                    {nahravka: require("./../assets/zvuky/zavod.mp3"), id: "zavod"},
-                    {nahravka: require("./../assets/zvuky/pohadka-1.mp3"), id: "pohadka1"},
-                    {nahravka: require("./../assets/zvuky/pohadka-2.mp3"), id: "pohadka2"},
-                ] 
             }
         },
         methods: {

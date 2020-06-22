@@ -51,7 +51,8 @@
                 } else {
                     this.$emit("prohrani");
                 }
-            }
+            },
+
         }
     }
 

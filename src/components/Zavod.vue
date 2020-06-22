@@ -39,13 +39,13 @@
         </div>
         <div class="zavodni">
 
-            <button class="startovaci" v-on:keyup.39="odlet()" v-on:click="start()" v-if="marginLeft !== 52">START
+            <button class="zavodniTlacitka" v-on:keyup.39="odlet()" v-on:click="start()" v-if="marginLeft !== 52">START
             </button>
-            <div class="pravidla"><p>Hurá, čeká tě vesmírný závod! Stiskni start a mačkej rychle šipku doprava<span
+            <div class="pravidla"><p class=textPravidla>Hurá, čeká tě vesmírný závod! Stiskni start a mačkej rychle šipku doprava<span
                     class="sipka">→</span> a předleť svou lodí soupeře.</p>
             </div>
             <div class="zvukovaStopa">
-                    <button v-on:click="play" >Nápověda</button>
+                    <button class="zavodniTlacitka" v-on:click="play" >NÁPOVĚDA</button>
                     <audio ref="audioElm" src='./../assets/zvuky/zavod.mp3'></audio>
             </div>
 
@@ -122,6 +122,11 @@
 
 <style scoped>
 
+    .textPravidla{
+        margin: 0;
+        padding: 0;
+    }
+
     .okno {
         text-align: left;
         width: 90%;
@@ -150,7 +155,7 @@
         border: 10px double rgb(59, 163, 233);
     }
 
-    .startovaci {
+    .zavodniTlacitka {
         width: 150px;
         background-color: rgb(6, 11, 36);
         border: 10px double rgb(59, 163, 233);

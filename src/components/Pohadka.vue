@@ -24,7 +24,7 @@
             <div class="pokyny">
                 <img class="kokosak" v-bind:src="require(`./../assets/images/coconut.png`)" alt="Posvátný kokos">
                 <div class="zvukovaStopa">
-                    <button v-on:click="play" >Nápověda</button>
+                    <button v-on:click="play">KOKOSMÁNIE</button>
                     <audio ref="audioElm" src='./../assets/zvuky/pohadka-1.mp3'></audio>
                </div>
 

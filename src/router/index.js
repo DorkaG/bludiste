@@ -11,56 +11,50 @@ import Pohadka from '../components/Pohadka.vue'
 
 Vue.use(VueRouter)
 
-  const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/bludiste',
-    name: 'Bludiste',
-    component: Bludiste
-    
-  },
+const routes = [
+    {
+        path: '/',
+        name: 'Home',
+        component: Home
+    },
+    {
+        path: '/bludiste',
+        name: 'Bludiste',
+        component: Bludiste
+    },
 
-  {                               //TOHLE VE FINALE SMAZAT
-    path: '/hra1',
-    name: 'Hra1',
-    component: Hra1
-    
-  },
+    {                               //TOHLE VE FINALE SMAZAT
+        path: '/hra1',
+        name: 'Hra1',
+        component: Hra1
+    },
 
-  {                               //TOHLE VE FINALE SMAZAT
-    path: '/hra2',
-    name: 'Hra2',
-    component: Hra2
-    
-  },
-  {
-    path: '/zavod',
-    name: 'Zavod',
-    component: Zavod
-    
-  },
-  {
-    path: '/kostka',
-    name: 'Kostka',
-    component: Kostka
-    
-  },
-  {
-    path: '/pohadka',
-    name: 'Pohadka',
-    component: Pohadka
-    
-  },
+    {                               //TOHLE VE FINALE SMAZAT
+        path: '/hra2',
+        name: 'Hra2',
+        component: Hra2
+    },
+    {
+        path: '/zavod',
+        name: 'Zavod',
+        component: Zavod
+    },
+    {
+        path: '/kostka',
+        name: 'Kostka',
+        component: Kostka
+    },
+    {
+        path: '/pohadka',
+        name: 'Pohadka',
+        component: Pohadka
+    },
 ]
 
 const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes
+    mode: 'history',
+    base: process.env.BASE_URL,
+    routes
 })
 
 export default router

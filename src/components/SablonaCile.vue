@@ -1,74 +1,70 @@
 <template>
-    <div class="telo-cil"> 
+    <div class="telo-cil">
         <div class="kontejner-cil">
             <div class="pocet-bodu-cil">
-                <p> Tramtadadááá, tvá cesta vesmírem končí.</p> 
-                <p> Body získané v této hře: </p> 
+                <p> Tramtadadááá, tvá cesta vesmírem končí.</p>
+                <p> Body získané v této hře: </p>
                 <p>{{body}}</p>
 
-                 <p> Body z minulého kola: </p>
-                
+                <p> Body z minulého kola: </p>
+
                 <p> {{old}} </p>
             </div>
-       
-       
-        <!-- <button>Chci zahrát znovu </button> -->
-            <button class="btn btn-green" v-if="jeDalsiLevel" v-on:click="dalsiLevel">Chci další level </button>
+
+
+            <!-- <button>Chci zahrát znovu </button> -->
+            <button class="btn btn-green" v-if="jeDalsiLevel" v-on:click="dalsiLevel">Chci další level</button>
             <!-- <button class="btn btn-red"> <router-link to='/'>Konec </router-link></button>  -->
-         </div>
+        </div>
     </div>
 </template>
 
 
 <script>
-export default {
-    props: ["body", "jeDalsiLevel"],
-    data() {
-        return {
-            old: 0
-        }
-    },
+    export default {
+        props: ["body", "jeDalsiLevel"],
+        data() {
+            return {
+                old: 0
+            }
+        },
+        methods: {
+            dalsiLevel() {
+                this.$emit("dalsi-level");
+                this.$emit("close");
+            }
 
-    methods: {
-        dalsiLevel() {
-            this.$emit("dalsi-level");
-            this.$emit("close");
-        }
-
-    }, 
-
-    created() {
-        this.old = localStorage.getItem('predchozi')
-        localStorage.setItem('predchozi', this.body)
-    },
-}
+        },
+        created() {
+            this.old = localStorage.getItem('predchozi')
+            localStorage.setItem('predchozi', this.body)
+        },
+    }
 </script>
 
 
-
 <style scoped>
-.telo-cil {
-    background-color: blue;
-    height: 600px;
-    padding: 100px 0;
-}
+    .telo-cil {
+        background-color: blue;
+        height: 600px;
+        padding: 100px 0;
+    }
 
-.kontejner-cil {
-    width: 600px;
-    height: 500px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    color: white;
-    border: 20px double rgb(235, 226, 176);
-    margin: 0 auto;
-    text-align: center;
-   
-}
+    .kontejner-cil {
+        width: 600px;
+        height: 500px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        color: white;
+        border: 20px double rgb(235, 226, 176);
+        margin: 0 auto;
+        text-align: center;
 
-.pocet-bodu-cil {
-    
-  
+    }
 
-}
+    .pocet-bodu-cil {
+
+
+    }
 
 </style>

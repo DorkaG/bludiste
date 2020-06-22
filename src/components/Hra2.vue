@@ -163,15 +163,13 @@
         margin: 0 15px;
     }
 
-
     .obrazek-raketa_konetejner-hra2 {
         height: 50%;
     }
 
-
     .obrazek-raketa-hra2 {
         margin-top: 30px;
-        margin-left: 230px;
+        
     }
 
 

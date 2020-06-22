@@ -112,7 +112,8 @@
         font-size: 50px;
         font-weight: 900;
         color: rgb(59, 163, 233);
-
     }
+
+
 
 </style>

@@ -81,6 +81,10 @@ p{
   background-color:rgb(243, 229, 38);
 
 }
+.btn-kostka {
+  background-color:rgb(243, 38, 216);
+
+}
 
 .btn-red {
   background-color: rgb(199, 6, 6);

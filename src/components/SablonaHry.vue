@@ -36,7 +36,8 @@
         <div class="tlacitka border-grey palubniDeska">
             
             <button class="btn btn-red" v-on:click="pryc" v-bind:class="{'btn-grey': vyhra === true}"> pryč</button>
-            <button class="btn btn-yellow" v-on:click="obnov" v-bind:class="{'btn-grey': nazevHry === 'pohadka'}"> obnov</button>
+            <button class="btn btn-yellow" v-on:click="obnov" v-bind:class="{'btn-grey': nazevHry === 'pohadka', 'btn-kostka': nazevHry === 'kostka'}" 
+            > obnov</button>
             <button class="btn btn-green" v-on:click="dal" v-bind:class="{'btn-grey': vyhra === false}"> dál</button>
 
          

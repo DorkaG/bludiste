@@ -132,6 +132,10 @@
         width: 90%;
     }
 
+    .vyhodnoceni{
+        text-align: center;
+    }
+
     .zavodnik {
         transition: all 35s ease;
         transform: translateX(61vh);
@@ -157,6 +161,7 @@
 
     .zavodniTlacitka {
         width: 150px;
+        height: 16vh;
         background-color: rgb(6, 11, 36);
         border: 10px double rgb(59, 163, 233);
         color: rgb(241, 229, 159);

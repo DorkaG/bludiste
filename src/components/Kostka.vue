@@ -103,11 +103,12 @@
     .ovoce {
 
         width: 100px;
-        padding: 20px 25px 20px 25px;
+        padding: 20px 25px 0px 25px;
     }
 
     .cislo {
-        margin: 0;
+        padding: 0px;
+        margin: 0px;
         font-size: 50px;
         font-weight: 900;
         color: rgb(59, 163, 233);

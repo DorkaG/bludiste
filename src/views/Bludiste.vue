@@ -158,6 +158,7 @@
         computed: {
             bludiste() {
                 return pole[this.level].mapa
+
             }
         },
         methods: {

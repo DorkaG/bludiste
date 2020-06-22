@@ -36,6 +36,7 @@
         props: ["vyhra", "prohra", "znovuNacist"],
         data() {
             return {
+                zvuk: {nahravka: require("./../assets/zvuky/pohadka-1.mp3"), id: "pohadka"},
                 precteno: false
             }
         },

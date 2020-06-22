@@ -45,6 +45,7 @@
         props: ["vyhra", "prohra", "znovuNacist"],             //PRIDAT DO KAZDE HRY
         data() {
             return {
+                zvuk: {nahravka: require("./../assets/zvuky/hra1.mp3"), id: "hra1"},
                 patri: [
                     [
                         {obrazek: require("./../assets/images/banan.jpg")},

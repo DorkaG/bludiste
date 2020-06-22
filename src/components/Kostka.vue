@@ -43,6 +43,8 @@
         props: ["vyhra", "prohra", "znovuNacist"],
         data() {
             return {
+                zvuk: {nahravka: require("./../assets/zvuky/kostka.mp3"), id: "kostka"},
+                id:"kostka",
                 hod: null,
                 obrazky: [
                     {obrazek: require(`./../assets/images/1hruska.jpg`), hodnota: 1},
@@ -80,8 +82,15 @@
                 if (newVal === true) {
                     this.znovuNactiHru()
                 }
+            },
+
+            prehraje() {
+                this.$emit("zvuk")
             }
-        },
+
+        }
+
+        
     }
 </script>
 

@@ -39,7 +39,9 @@
             <button class="btn btn-yellow" v-on:click="obnov" v-bind:class="{'btn-grey': nazevHry === 'pohadka'}"> obnov</button>
             <button class="btn btn-green" v-on:click="dal" v-bind:class="{'btn-grey': vyhra === false}"> dál</button>
             <div class="sound"></div>
-            <button class="btn btn-blue"> zvuk</button>
+            <button class="btn btn-blue" > zvuk</button>
+         
+            
         </div>
 
     </div>
@@ -69,14 +71,16 @@
                 vyhra: false,
                 prohra: false,
                 znovuNactiHru: false,
+                id: "",
+                zvuk: "",
 
                 zvuky: [
-                    {zvuk: require("./../assets/zvuky/hra1.mp3"), druh: "hra1"},
-                    {zvuk: require("./../assets/zvuky/hra2.mp3"), druh: "hra2"},
-                    {zvuk: require("./../assets/zvuky/kostka.mp3"), druh: "kostka"},
-                    {zvuk: require("./../assets/zvuky/zavod.mp3"), druh: "zavod"},
-                    {zvuk: require("./../assets/zvuky/pohadka-1.mp3"), druh: "pohadka1"},
-                    {zvuk: require("./../assets/zvuky/pohadka-2.mp3"), druh: "pohadka2"},
+                    {nahravka: require("./../assets/zvuky/hra1.mp3"), id: "hra1"},
+                    {nahravka: require("./../assets/zvuky/hra2.mp3"), id: "hra2"},
+                    {nahravka: require("./../assets/zvuky/kostka.mp3"), id: "kostka"},
+                    {nahravka: require("./../assets/zvuky/zavod.mp3"), id: "zavod"},
+                    {nahravka: require("./../assets/zvuky/pohadka-1.mp3"), id: "pohadka1"},
+                    {nahravka: require("./../assets/zvuky/pohadka-2.mp3"), id: "pohadka2"},
                 ] 
             }
         },
@@ -110,7 +114,8 @@
             },
             prestanNacitat() {                  //NEFUNGUJE, DODELAT znovuNacistHru se vyresetuje na false
                 this.znovuNactiHru = false;
-            }
+            },
+
         }
     }
 </script>

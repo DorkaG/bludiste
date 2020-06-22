@@ -51,6 +51,7 @@
         props: ["vyhra", "prohra", "znovuNacist"],
         data() {
             return {
+                zvuk: {nahravka: require("./../assets/zvuky/hra2.mp3"), id: "hra2"},
                 rakety: [{obrazek: require("./../assets/images/raketa_doprava.png"), smer: "doprava"},
                     {obrazek: require("./../assets/images/raketa_doleva.png"), smer: "doleva"},
                     {obrazek: require("./../assets/images/raketa_nahoru.png"), smer: "nahoru"},

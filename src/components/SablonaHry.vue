@@ -68,7 +68,16 @@
             return {
                 vyhra: false,
                 prohra: false,
-                znovuNactiHru: false
+                znovuNactiHru: false,
+
+                zvuky: [
+                    {zvuk: require("./../assets/zvuky/hra1.mp3"), druh: "hra1"},
+                    {zvuk: require("./../assets/zvuky/hra2.mp3"), druh: "hra2"},
+                    {zvuk: require("./../assets/zvuky/kostka.mp3"), druh: "kostka"},
+                    {zvuk: require("./../assets/zvuky/zavod.mp3"), druh: "zavod"},
+                    {zvuk: require("./../assets/zvuky/pohadka-1.mp3"), druh: "pohadka1"},
+                    {zvuk: require("./../assets/zvuky/pohadka-2.mp3"), druh: "pohadka2"},
+                ] 
             }
         },
         methods: {

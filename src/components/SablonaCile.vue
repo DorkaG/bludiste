@@ -52,7 +52,7 @@
     .kontejner-cil {
         width: 600px;
         height: 500px;
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Turret Road', cursive;
         font-size: 16;
         color: rgb(235, 226, 176);
         border: 20px double rgb(235, 226, 176);

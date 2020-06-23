@@ -57,7 +57,7 @@ export default {
 .uvod {
   margin: 0 28%;
   padding: 20px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Turret Road', cursive;
   text-align: center;
   border: 20px double rgb(235, 226, 176);
   color: white;
@@ -73,7 +73,7 @@ h1 {
     text-align: center;
     font-size: 65px;
     padding-top: 10%;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Turret Road', cursive;
 }
 
 .textUvod {

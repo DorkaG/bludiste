@@ -11,12 +11,13 @@
 
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Turret+Road:wght@200;400;700;800&display=swap');
 
 .okno {
     padding: 40px;
     height: 100%;
     background-color: rgb(59, 163, 233);
-    font-family: 'Lato', sans-serif;
+    font-family: 'Turret Road', cursive;
     text-align: center;
     color: rgb(241, 229, 159);
 }

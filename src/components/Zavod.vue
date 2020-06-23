@@ -72,7 +72,7 @@
                 this.odstartuj();
                 this.odlet();
                 clearTimeout(this.timeoutID);
-                this.timeoutID = setTimeout(this.vyhodnot, 28000);
+                this.timeoutID = setTimeout(this.vyhodnot, 27500);
             },
             odstartuj() {
                 this.posunuto = !this.posunuto
@@ -138,7 +138,7 @@
 
     .zavodnik {
         transition: all 35s ease;
-        transform: translateX(63vh);
+        transform: translateX(585px);
     }
 
     .odstartuj {

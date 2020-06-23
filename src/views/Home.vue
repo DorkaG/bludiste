@@ -161,7 +161,7 @@ button {
   width: 250px;
   background-color: rgb(235, 226, 176);
   font-size: 40px;
-  font-family: 'Bitter', serif;
+  font-family: 'Turret Road', cursive;
   font-weight: 800;
   color: #09365a;
   margin-top: 3%;

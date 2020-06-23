@@ -39,7 +39,7 @@
         </div>
         <div class="zavodni">
 
-            <button class="zavodniTlacitka" v-on:keyup.39="odlet()" v-on:click="start()" v-if="marginLeft !== 52">START
+            <button class="zavodniTlacitka" v-on:keyup.39="odlet()" v-on:click="start()" v-if="marginLeft !== 54">START
             </button>
             <div class="pravidla"><p class=textPravidla>Hurá, čeká tě vesmírný závod! Stiskni start a mačkej rychle šipku doprava<span
                     class="sipka">→</span> a předleť svou lodí soupeře.</p>
@@ -87,14 +87,14 @@
                 clearTimeout(this.timeoutID);
             },
             pocitej() {
-                if (this.marginLeft >= 52) {
+                if (this.marginLeft >= 54) {
                     this.posunuto = false;
                     this.vyhodnot();
                     clearTimeout(this.timeoutID);
                 }
             },
             vyhodnot() {
-                if (this.marginLeft === 52) {
+                if (this.marginLeft === 54) {
                     this.$emit("vyhrani");
 
                 } else {
@@ -138,7 +138,7 @@
 
     .zavodnik {
         transition: all 35s ease;
-        transform: translateX(61vh);
+        transform: translateX(63vh);
     }
 
     .odstartuj {

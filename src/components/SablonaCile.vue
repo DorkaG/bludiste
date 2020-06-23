@@ -3,7 +3,7 @@
         <div class="kontejner-cil">
             <div class="pocet-bodu-cil">
                 <h3>Gratulujeme, tvá cesta vesmírem je u konce.</h3> 
-                <p>Doma na Zemi se všichni těší, na tvé vesmírné vyprávění. </p>
+                <p>Doma na Zemi se všichni těší na tvé vesmírné vyprávění. </p>
                 <p>V této hře ti naše vesmírná kalkulačka počítala body.</p> 
                 <p>Tady jsou: </p>
                 <p>{{body}} </p>

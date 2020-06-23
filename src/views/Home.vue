@@ -43,6 +43,10 @@ export default {
 
 <style scoped>
 
+.body{
+  height: 98vh;
+}
+
 .telo{
   margin: 0;
   padding: 0;
@@ -51,7 +55,6 @@ export default {
   /*background-repeat: no-repeat;*/
   background-image: url("./../../src/assets/images/pozadi6.jpg");
   /*background-image: linear-gradient(to right, #344c5f 0%, #071C42 100%);*/
-  
 }
 
 .uvod {
@@ -62,8 +65,6 @@ export default {
   border: 20px double rgb(235, 226, 176);
   color: white;
   font-size: 20px;
-  
-
 }
 
 h1 {

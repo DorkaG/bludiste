@@ -298,7 +298,7 @@
     .container {
         position: relative;
         left: calc((100% - 1055px) / 2);
-        top: 5%;
+        top: 3%;
     }
 
     .ramec {
@@ -342,7 +342,7 @@
         font-size: 100px;
         position: absolute;
         top: 55px;
-        left: -150px;
+        left: -180px;
         color: rgb(59, 163, 233);
         font-weight: 900;
         /* font-family: 'Roboto', sans-serif; */
@@ -353,7 +353,7 @@
         position: absolute;
         width: 200px;
         margin-top: 21%;
-        margin-left: 1%;
+        margin-left: 2%;
     }
 
 

@@ -56,7 +56,7 @@ export default {
 
 .uvod {
   margin: 0 28%;
-  padding: 20px;
+  padding: 10px;
   font-family: 'Turret Road', cursive;
   text-align: center;
   border: 20px double rgb(235, 226, 176);
@@ -70,7 +70,7 @@ h1 {
     text-transform: uppercase;
     text-align: center;
     font-size: 65px;
-    padding-top: 10%;
+    padding-top: 5%;
     font-family: 'Turret Road', cursive;
 }
 
@@ -96,7 +96,7 @@ p{
 .astronautka {
   width: 100px;
   position: absolute;
-  margin-left: -13%;
+  margin-left: -10%;
 }
 
 .hvezda1 {

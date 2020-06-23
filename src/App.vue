@@ -98,20 +98,21 @@ p{
 }
 
 .btn-green {
-  background-color: rgb(75, 240, 75);
+  background-color: rgb(73, 151, 73);
 
 }
 
 .btn-yellow {
-  background-color:rgb(243, 229, 38);
+  background-color:rgb(241, 229, 159);
 
 }
 .btn-kostka {
   background-color:white;
+  
 }
 
 .btn-red {
-  background-color: rgb(199, 6, 6);
+  background-color: rgb(182, 58, 58);
 }
 
 .btn-blue {

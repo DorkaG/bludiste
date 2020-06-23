@@ -13,10 +13,10 @@
 
         <div class="tlacitka border-grey palubniDeska">
             
-            <button class="btn btn-red" v-on:click="pryc" v-bind:class="{'btn-grey': vyhra === true}">🠜 odleťet </button>
+            <button class="btn btn-red" v-on:click="pryc" v-bind:class="{'btn-grey': vyhra === true}">🠜 ODEJÍT </button>
             <button class="btn btn-yellow" v-on:click="obnov" v-bind:class="{'btn btn-grey': nazevHry === 'pohadka', 'btn btn-kostka': nazevHry === 'kostka'}" 
             ><span v-if="nazevHry != 'kostka'">⟲</span><span v-else-if="nazevHry === 'kostka'">⚄</span></button>
-            <button class="btn btn-green" v-on:click="dal" v-bind:class="{'btn-grey': vyhra === false}"> leťet dál 🠞</button>
+            <button class="btn btn-green" v-on:click="dal" v-bind:class="{'btn-grey': vyhra === false}"> POKRAČOVAT 🠞</button>
 
          
             

@@ -72,16 +72,16 @@
                     x: 60,
                     y: 120,
                     sirka: 60,
-                    vyska: 40,
-                    obrazek: require("./../assets/images/raketa_doprava60.png"),
+                    vyska: 60,
+                    obrazek: require("./../assets/images/raketa_doprava60_2.png"),
                     zobrazen: true
                 },
                 objekty: [
                     {
                         x: 0,
                         y: 0,
-                        sirka: 90,
-                        vyska: 51,
+                        sirka: 60,
+                        vyska: 60,
                         nazevHry: "hra1",
                         obrazek: require("./../assets/images/slunecnisoustava.png"),
                         zobrazen: true,
@@ -91,8 +91,8 @@
                     {
                         x: 0,
                         y: 0,
-                        sirka: 90,
-                        vyska: 46,
+                        sirka: 60,
+                        vyska: 60,
                         nazevHry: "hra2",
                         obrazek: require("./../assets/images/planeta.png"),
                         zobrazen: true,
@@ -101,8 +101,8 @@
                     {
                         x: 0,
                         y: 0,
-                        sirka: 90,
-                        vyska: 46,
+                        sirka: 60,
+                        vyska: 60,
                         nazevHry: "zavod",
                         obrazek: require("./../assets/images/kometa.png"),
                         zobrazen: true,
@@ -111,8 +111,8 @@
                     {
                         x: 0,
                         y: 0,
-                        sirka: 90,
-                        vyska: 46,
+                        sirka: 60,
+                        vyska: 60,
                         nazevHry: "kostka",
                         obrazek: require("./../assets/images/uforuzove.png"),
                         zobrazen: true,
@@ -121,8 +121,8 @@
                     {
                         x: 0,
                         y: 0,
-                        sirka: 90,
-                        vyska: 46,
+                        sirka: 60,
+                        vyska: 60,
                         nazevHry: "pohadka",
                         obrazek: require("./../assets/images/kokos.png"),
                         zobrazen: true,
@@ -131,8 +131,8 @@
                     {
                         x: 0,
                         y: 0,
-                        sirka: 90,
-                        vyska: 46,
+                        sirka: 60,
+                        vyska: 60,
                         cil: true,
                         obrazek: require("./../assets/images/zeme.png"),
                         zobrazen: true,
@@ -167,16 +167,16 @@
                     return
                 }
                 if (event.code === "ArrowRight") {
-                    this.posun(60, -60, "doprava60", "x")
+                    this.posun(60, -60, "doprava60_2", "x")
                     this.kontrolaObjektu();
                 } else if (event.code === "ArrowLeft") {
-                    this.posun(-60, 60, "doleva60", "x")
+                    this.posun(-60, 60, "doleva60_2", "x")
                     this.kontrolaObjektu();
                 } else if (event.code === "ArrowUp") {
-                    this.posun(-60, 60, "nahoru60", "y")
+                    this.posun(-60, 60, "nahoru60_2", "y")
                     this.kontrolaObjektu();
                 } else if (event.code === "ArrowDown") {
-                    this.posun(60, -60, "dolu60", "y")
+                    this.posun(60, -60, "dolu60_2", "y")
                     this.kontrolaObjektu();
                 }
             },

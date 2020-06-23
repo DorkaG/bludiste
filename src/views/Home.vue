@@ -43,9 +43,6 @@ export default {
 
 <style scoped>
 
-.body{
-  height: 98vh;
-}
 
 .telo{
   margin: 0;
@@ -63,7 +60,7 @@ export default {
   font-family: 'Turret Road', cursive;
   text-align: center;
   border: 20px double rgb(235, 226, 176);
-  color: white;
+  color: rgb(232, 235, 217);
   font-size: 20px;
 }
 
@@ -77,8 +74,13 @@ h1 {
     font-family: 'Turret Road', cursive;
 }
 
+p{
+  font-size: 16px;
+}
+
 .textUvod {
   padding: 0 35px;
+
 
 }
 

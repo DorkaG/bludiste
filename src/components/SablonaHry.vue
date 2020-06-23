@@ -15,7 +15,7 @@
             
             <button class="btn btn-red" v-on:click="pryc" v-bind:class="{'btn-grey': vyhra === true}"> pryč</button>
             <button class="btn btn-yellow" v-on:click="obnov" v-bind:class="{'btn-grey': nazevHry === 'pohadka', 'btn-kostka': nazevHry === 'kostka'}" 
-            > obnov</button>
+            ></button>
             <button class="btn btn-green" v-on:click="dal" v-bind:class="{'btn-grey': vyhra === false}"> dál</button>
 
          
@@ -47,8 +47,11 @@
                 vyhra: false,
                 prohra: false,
                 znovuNactiHru: false,
-                zvuk: "",
-                id: ""
+                tlacitka: [
+                    {label: "btn-grey", icona: "mdi-island"},
+                    {label: "K sousedovi", icona: "mdi-ferry"},
+                    {label: "O mě", icona: "mdi-information-outline"},
+                    {label: "Do mě", icona: "mdi-coffee"}]
 
             }
         },

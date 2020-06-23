@@ -11,8 +11,8 @@
                     neděláte legraci z kokosů… Tak opatrně.</p>
 
                 <p>V chrámu z kokosových vláken je socha prastarého Kokosky, který drží posvátný Kokos. Tam by tvé kroky
-                    měly směřovat jako první. Vzdát úctu a hold této posvátné plodině.</p>
-                <p>Na hostině, kterou ti Kokosky připraví, se najíš určitě dosyta. A až ti bude lézt kokos i ušima,
+                    měly směřovat jako první. Vzdát úctu a hold této posvátné plodině.
+                    Na hostině, kterou ti Kokosky připraví, se najíš určitě dosyta. A až ti bude lézt kokos i ušima,
                     spláchni ho dobře vychlazeným kokosovým mlékem. Není nic více osvěžujícího.</p>
 
                 <p>Při loučení s Kokoskami obdržíš spoustu darů, pochopitelně kokosových. Kokosový klobouk nos hrdě,
@@ -68,16 +68,18 @@
 <style scoped>
 
     .kokosak {
-        margin-top: 120px;
+        margin-top: 100px;
     }
 
-
+    h3{
+        margin: 10px;
+    }
     p {
-        color: rgb(241, 229, 159);
+        color: rgb(232, 235, 217);
         margin: 0 15px;
-        padding: 3.5px;
+        padding: 1px;
         text-align: justify;
-        font-size: 14px;;
+        font-size: 13px;;
     }
 
 </style>

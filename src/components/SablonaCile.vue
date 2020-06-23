@@ -47,22 +47,23 @@
         background-color: rgb(4, 8, 27);
         height: 600px;
         padding: 100px 0;
+        margin: 0;
     }
 
     .kontejner-cil {
         width: 600px;
         height: 500px;
         font-family: 'Turret Road', cursive;
-        font-size: 16;
-        color: rgb(235, 226, 176);
+        font-size: 14px;
+        color: rgb(232, 235, 217);;
         border: 20px double rgb(235, 226, 176);
         margin: 0 auto;
         text-align: center;
-
     }
 
     .pocet-bodu-cil {
-
+        padding: 0;
+        margin: 0;
 
     }
 

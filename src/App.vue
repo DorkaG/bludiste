@@ -12,14 +12,29 @@
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Turret+Road:wght@200;400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;600;700&display=swap');
+ .vm--overlay {
+        background: rgba(0, 0, 0, 0.6) !important;
+    }
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Turret Road', cursive;
+  color: rgb(235, 226, 176);
+}
+
+p{
+  font-family: 'Mitr', sans-serif;
+  padding: 15px;
+  color: rgb(232, 235, 217);
+  font-size: 14px;
+}
+
 
 .okno {
     padding: 40px;
     height: 100%;
     background-color: rgb(59, 163, 233);
-    font-family: 'Turret Road', cursive;
     text-align: center;
-    color: rgb(241, 229, 159);
 }
 
 .palubniDeska { 
@@ -70,10 +85,6 @@
     padding:0;
     display: flex;
     background-color: rgb(59, 163, 233);
-}
-
-p{
-    padding: 15px;  
 }
 
 

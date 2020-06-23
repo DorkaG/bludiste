@@ -2,16 +2,17 @@
     <div class="telo-cil">
         <div class="kontejner-cil">
             <div class="pocet-bodu-cil">
-                <p> Tramtadadááá, tvá cesta vesmírem končí.</p>
-                <p> Body získané v této hře: </p>
-                <p>{{body}}</p>
+                <p> Gratulujeme, tvá cesta vesmírem je u konce.</p> 
+                <p>Doma na Zemi, se všichni těší na tvé vesmírné vyprávění. </p>
+                <p> V této hře se ti podařilo získat: </p>
+                <p>{{body}} bodů.</p>
 
-                <p> Body z minulého kola: </p>
+                <p> V minulém kole to bylo: </p>
 
-                <p> {{old}} </p>
+                <p> {{old}} bodů. </p>
             </div>
 
-            <button class="btn btn-green" v-if="jeDalsiLevel" v-on:click="dalsiLevel">Chci další level</button>
+            <button class="btn btn-green" v-if="jeDalsiLevel" v-on:click="dalsiLevel">Ledaže ... chceš další bludiště.</button>
         </div>
     </div>
 </template>

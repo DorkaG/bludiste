@@ -11,28 +11,6 @@
 
         />
 
-
-        <!-- <hra1
-        v-bind:vyhra="vyhra"
-        v-bind:prohra="prohra"
-        v-bind:znovuNacist="znovuNactiHru"
-
-        v-on:vyhrani="vyhrat"
-        v-on:prohrani="prohrat"
-        v-on:prestan-nacitat="prestanNacitat"
-        /> -->
-
-
-        <!-- <hra2
-        v-bind:vyhra="vyhra"
-        v-bind:prohra="prohra"
-
-        v-on:vyhrani="vyhrat"
-        v-on:prohrani="prohrat"
-        />  -->
-        <!-- PRIDAT ELEMENT, NA KTEREM BUDOU PROPS a udalosti KAZDOU HRU -->
-
-
         <div class="tlacitka border-grey palubniDeska">
             
             <button class="btn btn-red" v-on:click="pryc" v-bind:class="{'btn-grey': vyhra === true}"> pryč</button>
@@ -63,8 +41,6 @@
             zavod: Zavod,
             kostka: Kostka,
             pohadka: Pohadka
-            // zavod: Zavod
-            // hra2: Hra2
         },
         data() {
             return {
@@ -88,23 +64,20 @@
                 }
             },
             vyhrat() {
-                this.vyhra = true;              //pokud dojde k vyhre ve hre, spusti to udalost, ktera vyvola tuto fci; ta prepise vyhru na true a prohru na false (coz je jako props poslano zase zpatky do hry)
-                // console.log(this.vyhra)
+                this.vyhra = true;              //pokud dojde k vyhre ve hre, spusti to udalost, ktera vyvola tuto fci; ta prepise vyhru na true a prohru na false (coz je jako props poslano zase zpatky do hry); plus emituje udalost vyhrat, ktera pak v Bludiste.vue spusti funkci na pricteni bodu
                 this.prohra = false;
                 this.$emit("vyhrat");
             },
             prohrat() {             //pokud dojde k prohre ve hre, spusti to udalost, ktera vyvola tuto fci; ta prepise prohru na true a vyhru na false (coz je jako props poslano zase zpatky do hry)
                 this.prohra = true;
-                // console.log(this.prohra)
                 this.vyhra = false;
             },
-            obnov() {                       //NEFUNGUJE, DODELAT vyresetuje vyhru a prohru na false, znovuNactiHru da na true, coz bude jako props i ve hre. Tam, pokud je toto props true, se znovu nactou obrazky a pak se vyvola udalost, ktera zavola fci prestan Nacitat
+            obnov() {                       //vyresetuje vyhru a prohru na false, znovuNactiHru da na true, coz bude jako props i ve hre. Tam, pokud je toto props true, se znovu nactou obrazky a pak se vyvola udalost, ktera zavola fci prestan Nacitat
                 this.vyhra = false;
                 this.prohra = false;
                 this.znovuNactiHru = true;
-                console.log(this.znovuNactiHru);
             },
-            prestanNacitat() {                  //NEFUNGUJE, DODELAT znovuNacistHru se vyresetuje na false
+            prestanNacitat() {                  //znovuNactiHru se vyresetuje na false
                 this.znovuNactiHru = false;
             },
 

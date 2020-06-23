@@ -82,7 +82,7 @@
         },
         methods: {
             vyberPoleObrazkuPatri() {           //vygeneruje nahodne pole o trech obrazcich, ktere k sobe tematicky patri
-                let kopiePatri = JSON.parse(JSON.stringify(this.patri)); //zkopiruju si uvodni pole patri (abych si je nize nepromazavala) - TOM!!!!!
+                let kopiePatri = JSON.parse(JSON.stringify(this.patri)); //zkopiruju si uvodni pole patri (abych si je nize nepromazavala)
                 let indexTematu = Math.floor(Math.random() * kopiePatri.length);  //nahodny vyber pole v poli
                 let x = 1;
                 let index = 0;                          //index obrazku ve vybranem poli

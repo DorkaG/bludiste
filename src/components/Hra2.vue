@@ -82,7 +82,6 @@
         methods: {
             vyberSipky() {
                 let kopieSipky = JSON.parse(JSON.stringify(this.sipky));
-                console.log(kopieSipky);
                 let x = 1;
                 let index = 0;
                 do {
@@ -101,17 +100,13 @@
                         }
                     }
                 }
-                console.log(predvybraneRakety);
                 this.vybranaRaketa = predvybraneRakety[Math.floor(Math.random() * predvybraneRakety.length)]     //do vybranaRaketa se ulozi nahodne vygenrovana raketa z pole predvybraneRakety
-                console.log(this.vybranaRaketa);
             },
             vyhodnot(index) {                               //PRIDAT DO KAZDE HRY
                 if (this.vybraneSipky[index].smer === this.vybranaRaketa.smer) {
                     this.$emit("vyhrani");
-                    console.log("vyhra")
                 } else {
                     this.$emit("prohrani");
-                    console.log("prohra")
                 }
             },
             znovuNactiHru() {

@@ -16,18 +16,12 @@
                          v-bind:src="raketa.obrazek"
                          v-bind:style="umistiObjekt(raketa)">
 
-                    <img v-for="(objekt, index) in objekty" class="objekt2 obrazek" alt="saturn"
+                    <img v-for="(objekt, index) in objekty" class="obrazek" alt="saturn"
                          v-bind:key="'a' + index"
                          v-bind:src="objekt.obrazek"
                          v-bind:style="umistiObjekt(objekt)"
 
                     >
-                    <!-- v-if="objekt.zobrazen" -->
-
-                    <!-- <img class="objekt3 obrazek" alt="ufoun"
-                    v-bind:src="objekt3.obrazek"
-                    v-bind:style="umistiObjekt(objekt3)"
-                    v-if="objekt3.zobrazen" -->
 
                     <div class="radek" v-for="(radek, indexRadku) in bludiste"
                          v-bind:key="indexRadku">
@@ -46,7 +40,6 @@
                 v-on:vyhrat="vyhra"
                 v-on:dalsi-level="dalsiLevel"
         />
-        <!--  -->
 
 
     </div>
@@ -63,12 +56,11 @@
         data() {
             return {
                 level: 0,
-                // bludiste: pole[this.level].mapa,
                 zdi: [],
                 hraOtevrena: false,
                 typHry: "",
                 pocetBodu: 0,
-                raketa: {   // pocatecni souradnice rakety museji odpovidat souradnicim ctverecku, jinak to nefunguje
+                raketa: {   // pocatecni souradnice rakety museji odpovidat souradnicim ctverecku
                     x: 60,
                     y: 120,
                     sirka: 60,
@@ -86,7 +78,6 @@
                         obrazek: require("./../assets/images/slunecnisoustava.png"),
                         zobrazen: true,
                         id: 2
-                        // hra: {jmeno: "hra1", obno}
                     },
                     {
                         x: 0,
@@ -196,9 +187,9 @@
                     }
                 }
             },
-            potkejObjekt(objekt) {              // kontroluje, zda doslo ke kolizi rakety s objektem. Pokud ano, otevre se modalni okno, zobrazen se u objektu prehodi na false (tj. objekt se uz nebude zobrazovat, osetreno pomoci v-if) a hraOtevrena se nastavi na true (tj. nejde hybat s raketou, funkce pohybu je ukoncena pomoci return, pokud je hraOtevrena true)
+            potkejObjekt(objekt) {              // kontroluje, zda doslo ke kolizi rakety s objektem. Pokud ano, otevre se modalni okno, zobrazen se u objektu prehodi na false (tj. objekt se uz nebude zobrazovat, osetreno pomoci v-if) a hraOtevrena se nastavi na true (tj. nejde hybat s raketou -  funkce posunRaketu je ukoncena pomoci return, pokud je hraOtevrena true)
                 if (this.jeKolize(this.raketa, objekt)) {
-                    if (objekt.cil === true) {                                     //pokud dojde ke kolizi s cilovym objektem, otevre se cilovy modal. S tlacitkem pokracovat do dalsiho levelu, pokud soucasnz level neni posledni
+                    if (objekt.cil === true) {                                     //pokud dojde ke kolizi s cilovym objektem, otevre se cilovy modal. S tlacitkem pokracovat do dalsiho levelu, pokud soucasny level neni posledni
                         var neniposledni = (pole[this.level + 1] !== undefined)
                         this.$modal.show(SablonaCile, {body: this.pocetBodu, jeDalsiLevel: neniposledni})
                         this.pocetBodu = 0;
@@ -210,7 +201,7 @@
                     }
                 }
             },
-            zavriHru() {                  //fce reagujici na udalost v-on:close, ktera jse pridana na modalu. Dojde k ni tehdy, kdyz se v SabloneHry klikne na tlacitko pryc nebo dal(emit). Zavre se okno s hrou, hraOtevrena je false, tj. jde znovu hybat raketou
+            zavriHru() {                  //fce reagujici na udalost v-on:close, ktera je pridana na modalu. Dojde k ni tehdy, kdyz se v SabloneHry klikne na tlacitko pryc nebo dal(emit). Zavre se okno s hrou, hraOtevrena je false, tj. jde znovu hybat raketou
                 this.$modal.hide(SablonaHry);
                 this.hraOtevrena = false;
             },
@@ -225,7 +216,6 @@
                         }
                     }
                 }
-                console.log(this.zdi);
             },
             zjistiSouradniceObjektu(cislo, objekt) {
                 for (let i = 0; i < this.bludiste.length; i++) {
@@ -260,7 +250,6 @@
             },
             vyhra() {
                 this.pocetBodu++;
-                console.log(this.pocetBodu);
             },
             dalsiLevel() {
                 this.$modal.hide(SablonaCile);

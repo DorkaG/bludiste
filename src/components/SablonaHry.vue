@@ -13,10 +13,10 @@
 
         <div class="tlacitka border-grey palubniDeska">
             
-            <button class="btn btn-red" v-on:click="pryc" v-bind:class="{'btn-grey': vyhra === true}"> pryč</button>
-            <button class="btn btn-yellow" v-on:click="obnov" v-bind:class="{'btn-grey': nazevHry === 'pohadka', 'btn-kostka': nazevHry === 'kostka'}" 
-            ></button>
-            <button class="btn btn-green" v-on:click="dal" v-bind:class="{'btn-grey': vyhra === false}"> dál</button>
+            <button class="btn btn-red" v-on:click="pryc" v-bind:class="{'btn-grey': vyhra === true}">🠜 odleťet </button>
+            <button class="btn btn-yellow" v-on:click="obnov" v-bind:class="{'btn btn-grey': nazevHry === 'pohadka', 'btn btn-kostka': nazevHry === 'kostka'}" 
+            ><span v-if="nazevHry != 'kostka'">⟲</span><span v-else-if="nazevHry === 'kostka'">⚄</span></button>
+            <button class="btn btn-green" v-on:click="dal" v-bind:class="{'btn-grey': vyhra === false}"> leťet dál 🠞</button>
 
          
             
@@ -46,12 +46,7 @@
             return {
                 vyhra: false,
                 prohra: false,
-                znovuNactiHru: false,
-                tlacitka: [
-                    {label: "btn-grey", icona: "mdi-island"},
-                    {label: "K sousedovi", icona: "mdi-ferry"},
-                    {label: "O mě", icona: "mdi-information-outline"},
-                    {label: "Do mě", icona: "mdi-coffee"}]
+                znovuNactiHru: false,                
 
             }
         },

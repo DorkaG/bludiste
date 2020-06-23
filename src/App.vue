@@ -94,6 +94,7 @@ p{
 
 .btn {
   background-color: rgb(59, 163, 233);
+  font-size: 30px
 }
 
 .btn-green {
@@ -106,8 +107,7 @@ p{
 
 }
 .btn-kostka {
-  background-color:rgb(243, 38, 216);
-
+  background-color:white;
 }
 
 .btn-red {

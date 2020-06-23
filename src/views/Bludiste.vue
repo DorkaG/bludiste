@@ -298,12 +298,12 @@
     .container {
         position: relative;
         left: calc((100% - 1055px) / 2);
-        top: 2%;
+        top: 1%;
     }
 
     .ramec {
         position: absolute;
-        border: 5px double rgb(59, 163, 233); /*rgb(241, 229, 159) nebo rgb(59, 163, 233) nebo rgb(108, 125, 136)*/
+        border: 4px double rgb(59, 163, 233); /*rgb(241, 229, 159) nebo rgb(59, 163, 233) nebo rgb(108, 125, 136)*/
     }
 
     .ctverecek {

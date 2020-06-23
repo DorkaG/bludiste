@@ -174,7 +174,7 @@
     .zavodniTlacitka {
         width: 150px;
         height: 16vh;
-        background-color: rgb(6, 11, 36);
+        background-color: rgb(4, 8, 27);
         border: 10px double rgb(59, 163, 233);
         color: rgb(241, 229, 159);
     }
@@ -192,7 +192,7 @@
         border: 10px double rgb(59, 163, 233);
         padding-top: 35px;
         text-align: center;
-        background-color: rgb(6, 11, 36);
+        background-color: rgb(4, 8, 27);
     }
 
      

@@ -3,8 +3,8 @@
         <div class="kontejner-cil">
             <div class="pocet-bodu-cil">
                 <h3>Gratulujeme, tvá cesta vesmírem je u konce.</h3> 
-                <p>Doma na Zemi, se všichni těší na tvé vesmírné vyprávění. </p>
-                <p> V této hře ti naše vesmírná kalkulačka počítala body.</p> 
+                <p>Doma na Zemi se všichni těší, na tvé vesmírné vyprávění. </p>
+                <p>V této hře ti naše vesmírná kalkulačka počítala body.</p> 
                 <p>Tady jsou: </p>
                 <p>{{body}} </p>
 
@@ -44,7 +44,7 @@
 
 <style scoped>
     .telo-cil {
-        background-color: rgb(6, 11, 36);
+        background-color: rgb(4, 8, 27);
         height: 600px;
         padding: 100px 0;
     }

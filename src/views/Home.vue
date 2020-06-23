@@ -163,7 +163,7 @@ button {
   font-size: 40px;
   font-family: 'Turret Road', cursive;
   font-weight: 800;
-  color: #09365a;
+  color: rgb(4, 8, 27);
   margin-top: 3%;
 }
 

@@ -26,7 +26,7 @@
     align-items: center;
     width: 97.5%;
     height: 15vh;
-    background-color: rgb(6, 11, 36);
+    background-color: rgb(4, 8, 27);
     border: 10px double rgb(59, 163, 233);
 }
 
@@ -34,7 +34,7 @@
     width: 30%;
     /* height: 40vh; */
     height: 360px; /*pridano*/ 
-    background-color: rgb(6, 11, 36);
+    background-color: rgb(4, 8, 27);
     border: 10px double rgb(59, 163, 233);
     color: rgb(241, 229, 159);
 }
@@ -44,7 +44,7 @@
 }
 
 .hra {
-    background-color: rgb(6, 11, 36); 
+    background-color: rgb(4, 8, 27); 
    
   /*
     background-image: url("./../src/assets/images/pozadi3.jpg");*/
@@ -145,7 +145,7 @@ p{
     top: 30px;
     width: 90%;
     height: 73%; 
-    background-color: rgb(6, 11, 36);
+    background-color: rgb(4, 8, 27);
     border: 10px double rgb(59, 163, 233);
     z-index: 10;
 
@@ -157,7 +157,7 @@ p{
     top: 30px;
     width: 90%;
     height: 73%;
-    background-color: rgb(6, 11, 36);
+    background-color: rgb(4, 8, 27);
     border: 10px double rgb(59, 163, 233);
     z-index: 10;
 

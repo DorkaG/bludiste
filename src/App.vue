@@ -94,33 +94,45 @@ p{
 
 .btn {
   background-color: rgb(59, 163, 233);
-  font-size: 30px
+  font-size: 40px;
+  font-family: 'Turret Road', cursive;
 }
 
 .btn-green {
-  background-color: rgb(73, 151, 73);
+  background-color: rgb(110, 226, 110);
+  border: 2px solid rgb(59, 163, 233);
+  border: 5px double rgb(59, 163, 233);
+  color: rgb(4, 8, 27);
+  
 
 }
 
 .btn-yellow {
   background-color:rgb(241, 229, 159);
+  border: 5px double rgb(59, 163, 233);
+  font-size: 40px;
+  color: rgb(4, 8, 27);
 
 }
 .btn-kostka {
   background-color:white;
-  
+  font-size: 40px;
+  color: rgb(4, 8, 27); 
+  border: 5px double rgb(59, 163, 233);
+
 }
 
 .btn-red {
-  background-color: rgb(182, 58, 58);
+  background-color: rgb(235, 47, 47);
+  border: 5px double rgb(59, 163, 233);
+  color: rgb(4, 8, 27);
 }
 
-.btn-blue {
-  background-color:rgb(83, 83, 179);
-}
 
 .btn-grey {
   background-color: grey;
+  border: 5px double rgb(59, 163, 233);
+  color: rgb(4, 8, 27);
 
 }
 

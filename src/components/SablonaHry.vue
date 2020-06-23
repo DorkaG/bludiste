@@ -89,9 +89,10 @@
         /* width: 755px; */
         margin: 0;
         padding: 0;
-        height: 60px;
+        height: 90px;
         display: flex;
         justify-content: space-evenly;
+        
 
     }
 

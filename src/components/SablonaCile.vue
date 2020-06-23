@@ -2,14 +2,15 @@
     <div class="telo-cil">
         <div class="kontejner-cil">
             <div class="pocet-bodu-cil">
-                <p> Gratulujeme, tvá cesta vesmírem je u konce.</p> 
+                <h3>Gratulujeme, tvá cesta vesmírem je u konce.</h3> 
                 <p>Doma na Zemi, se všichni těší na tvé vesmírné vyprávění. </p>
-                <p> V této hře se ti podařilo získat: </p>
-                <p>{{body}} bodů.</p>
+                <p> V této hře ti naše vesmírná kalkulačka počítala body.</p> 
+                <p>Tady jsou: </p>
+                <p>{{body}} </p>
 
                 <p> V minulém kole to bylo: </p>
 
-                <p> {{old}} bodů. </p>
+                <p> {{old}} </p>
             </div>
 
             <button class="btn btn-green" v-if="jeDalsiLevel" v-on:click="dalsiLevel">Ledaže ... chceš další bludiště.</button>
@@ -52,7 +53,7 @@
         width: 600px;
         height: 500px;
         font-family: 'Roboto', sans-serif;
-        font-size: 20px;
+        font-size: 16;
         color: white;
         border: 20px double rgb(235, 226, 176);
         margin: 0 auto;

@@ -31,7 +31,8 @@
 
 .pokyny {  
     width: 30%;
-    height: 40vh;
+    /* height: 40vh; */
+    height: 360px; /*pridano*/ 
     background-color: rgb(6, 11, 36);
     border: 10px double rgb(59, 163, 233);
     color: rgb(241, 229, 159);
@@ -42,14 +43,25 @@
 }
 
 .hra {
-    background-color: rgb(6, 11, 36);
+    background-color: rgb(6, 11, 36); 
+   
   /*
     background-image: url("./../src/assets/images/pozadi3.jpg");*/
     
     width: 70%;
-    height: 40vh;
-    
+    /* height: 40vh;   */
+    height: 360px; /*pridano*/ 
     border: 10px double rgb(59, 163, 233);
+}
+
+@media (min-height: 900px) {
+  .hra {
+    height: 40vh;
+  }
+
+  .pokyny {
+    height: 40vh;
+  }
 }
 
 .sekce {

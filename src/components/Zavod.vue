@@ -19,7 +19,7 @@
                         <p> To se úplně nepovedlo, ale můžeš to zkusit znovu.</p></div>
                 </div>
 
-                <img class="cil" v-bind:src="require(`./../assets/images/cil.jpg`)" alt="Cilová páska">
+                <!-- <img class="cil" v-bind:src="require(`./../assets/images/cil.jpg`)" alt="Cilová páska"> -->
                 <transition name="start">
                     <img v-bind:class="{zavodnik: posunuto}" v-bind:src="require(`./../assets/images/zavod1.png`)"
                          alt="Raketa1">
@@ -155,9 +155,21 @@
 
     .hra {
         width: 100%;
-        height: 20vh;
+        /* height: 20vh; */
+        height: 180px; /*pridano */
         border: 10px double rgb(59, 163, 233);
+        background-image: url("./../assets/images/cil_pozadi.png");     /*pridano */
+        background-repeat: repeat-y;
+        background-position: right;
+       
     }
+
+      @media (min-height: 900px) {  /*pridano*/
+         .hra {
+             height: 20vh;
+         }
+      }
+      
 
     .zavodniTlacitka {
         width: 150px;
@@ -176,12 +188,14 @@
 
     .pravidla {
         width: 400px;
-        height: 10vh;
+        height: 10vh; 
         border: 10px double rgb(59, 163, 233);
         padding-top: 35px;
         text-align: center;
         background-color: rgb(6, 11, 36);
     }
+
+     
 
     .sipka {
         font-size: 30px;

@@ -44,7 +44,7 @@
 
 <style scoped>
     .telo-cil {
-        background-color: blue;
+        background-color: rgb(6, 11, 36);
         height: 600px;
         padding: 100px 0;
     }
@@ -54,7 +54,7 @@
         height: 500px;
         font-family: 'Roboto', sans-serif;
         font-size: 16;
-        color: white;
+        color: rgb(235, 226, 176);
         border: 20px double rgb(235, 226, 176);
         margin: 0 auto;
         text-align: center;

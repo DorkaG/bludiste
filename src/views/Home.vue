@@ -16,7 +16,7 @@
         <div class="uvod">
   
 
-            <p class="textUvod">Cesta odvážné kosmonautky Sabiny, která při toulkách vesmírem, prozkoumává vše zajímavé a někdy i trochu nebezpečné.</p>
+            <p class="textUvod">Cesta odvážné kosmonautky Sabiny, která při toulkách vesmírem prozkoumává vše zajímavé a někdy i trochu nebezpečné.</p>
             <p class="textSabina">"Ahoj, já jsem Sabina, moc ráda tě poznávám. Jsem nadšená, že se spolu můžeme pustit do vesmírného dobrodružství. Klikni na tlačítko HRÁT a můžeme startovat."</p>
   
             <img class="astronautka" v-bind:src="require(`./../../src/assets/images/astronautka.png`)" alt="astronautka">

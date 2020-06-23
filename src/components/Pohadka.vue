@@ -5,7 +5,7 @@
 
                 <h3>Vítej na planetě Kokosmánie!</h3>
                 <p class="pohadka" v-bind="precetl()">
-                <p>Pozor! Při přistávání to bude trochu skákat, protože tato planeta má trochu nestabilní i když chutné
+                <p>Pozor! Při přistávání to bude trochu skákat, protože tato planeta má trochu nestabilní, i když chutné
                     jádro. </p>
                 <p>Obyvateli této planety jsou Kokosky. Přátelská stvoření a je s nimi vždy legrace, pokud si ovšem
                     neděláte legraci z kokosů… Tak opatrně.</p>
@@ -15,8 +15,8 @@
                 <p>Na hostině, kterou ti Kokosky připraví, se najíš určitě dosyta. A až ti bude lézt kokos i ušima,
                     spláchni ho dobře vychlazeným kokosovým mlékem. Není nic více osvěžujícího.</p>
 
-                <p>Při loučení s Kokoskami, obdržíš spoustu darů, pochopitelně kokosových. Kokosový klobouk nos hrdě,
-                    alespoň, než planetu opustíš. </p>
+                <p>Při loučení s Kokoskami obdržíš spoustu darů, pochopitelně kokosových. Kokosový klobouk nos hrdě,
+                    alespoň než planetu opustíš. </p>
                 <br>
                 <p>Přeji příjemný průzkum.</p>
 

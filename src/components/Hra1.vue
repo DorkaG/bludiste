@@ -34,7 +34,7 @@
                 <p class="cara">Ale ne, narazil jsi na planetu, která je plná tajemných obrazců.</p>
                 <p> Vyber, který z těchto obrázků mezi ostatní nepatří. </p>
                 <div class="zvukovaStopa">
-                    <button v-on:click="play" >Nápověda</button>
+                    <button class="napoveda" v-on:click="play" >Nápověda</button>
                     <audio ref="audioElm" src='./../assets/zvuky/hra1.mp3'></audio>
                </div>
             </div>

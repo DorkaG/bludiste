@@ -135,7 +135,18 @@ p{
   background-color: grey;
   border: 5px double rgb(59, 163, 233);
   color: rgb(4, 8, 27);
+}
 
+.uvodniTlacitko, .posledniTlacitko {
+  height: 80px;
+  width: 250px;
+  background-color: rgb(235, 226, 176);
+  font-size: 40px;
+  font-family: 'Turret Road', cursive;
+  font-weight: 800;
+  color: rgb(4, 8, 27);
+  margin-top: 3%;
+  border: 5px double rgb(4, 8, 27);
 }
 
 .border-grey {

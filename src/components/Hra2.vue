@@ -39,7 +39,7 @@
                 <p class="cara">Teď nás čeká trocha vesmírné akrobacie.</p>
                 <p>Najdi šipku, která ukazuje stejným směrem jako tvoje raketa.</p>
                 <div class="zvukovaStopa">
-                    <button v-on:click="play" >Nápověda</button>
+                    <button class="napoveda" v-on:click="play" >Nápověda</button>
                     <audio ref="audioElm" src='./../assets/zvuky/hra2.mp3'></audio>
                </div>
             </div>

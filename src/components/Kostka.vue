@@ -32,7 +32,7 @@
                 <p class="cara">Ovocný koktejl s vesmírnou mlhou.</p>
                 <p>Hoď kostkou a podle čísla, které ti padne, vyber kartičku se stejným počtem obrázků.</p>
                 <div class="zvukovaStopa">
-                    <button v-on:click="play" >Nápověda</button>
+                    <button class="napoveda" v-on:click="play" >Nápověda</button>
                     <audio ref="audioElm" src='./../assets/zvuky/kostka.mp3'></audio>
                </div>
 

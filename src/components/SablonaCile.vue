@@ -13,7 +13,7 @@
                 <p> {{old}} </p>
             </div>
 
-            <button class="btn btn-green" v-if="jeDalsiLevel" v-on:click="dalsiLevel">Ledaže ... chceš další bludiště.</button>
+            <button class="posledniTlacitko" v-if="jeDalsiLevel" v-on:click="dalsiLevel">Ledaže chceš další bludiště.</button>
         </div>
     </div>
 </template>
@@ -52,7 +52,7 @@
 
     .kontejner-cil {
         width: 600px;
-        height: 500px;
+        height: 600px;
         font-family: 'Turret Road', cursive;
         font-size: 14px;
         color: rgb(232, 235, 217);;
@@ -64,7 +64,10 @@
     .pocet-bodu-cil {
         padding: 0;
         margin: 0;
+    }
 
+    .posledniTlacitko {
+        font-size: 20px;
     }
 
 </style>

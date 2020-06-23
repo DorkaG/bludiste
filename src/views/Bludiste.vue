@@ -298,12 +298,12 @@
     .container {
         position: relative;
         left: calc((100% - 1055px) / 2);
-        top: 3%;
+        top: 2%;
     }
 
     .ramec {
         position: absolute;
-        border: 7px double rgb(59, 163, 233); /*rgb(241, 229, 159) nebo rgb(59, 163, 233) nebo rgb(108, 125, 136)*/
+        border: 5px double rgb(59, 163, 233); /*rgb(241, 229, 159) nebo rgb(59, 163, 233) nebo rgb(108, 125, 136)*/
     }
 
     .ctverecek {
@@ -345,8 +345,7 @@
         left: -180px;
         color: rgb(59, 163, 233);
         font-weight: 900;
-        /* font-family: 'Roboto', sans-serif; */
-        font-family: 'Lato', sans-serif;;
+        
     }
 
     .rybar {

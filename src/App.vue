@@ -94,20 +94,21 @@ p{
 
 .btn {
   background-color: rgb(59, 163, 233);
-  font-size: 40px;
+  font-size: 20px;
   font-family: 'Turret Road', cursive;
+  font-weight: 800;
+  height: 60px;
 }
 
 .btn-green {
   background-color: rgb(110, 226, 110);
-  border: 2px solid rgb(59, 163, 233);
   border: 5px double rgb(59, 163, 233);
   color: rgb(4, 8, 27);
   
-
 }
 
 .btn-yellow {
+  align-items: center;
   background-color:rgb(241, 229, 159);
   border: 5px double rgb(59, 163, 233);
   font-size: 40px;
@@ -115,6 +116,7 @@ p{
 
 }
 .btn-kostka {
+  align-items: center;
   background-color:white;
   font-size: 40px;
   color: rgb(4, 8, 27); 

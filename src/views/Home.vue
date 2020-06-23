@@ -20,7 +20,7 @@
             <p class="textSabina">"Ahoj, já jsem Sabina, moc ráda tě poznávám. Jsem nadšená, že se spolu můžeme pustit do vesmírného dobrodružství. Klikni na tlačítko HRÁT a můžeme startovat."</p>
   
             <img class="astronautka" v-bind:src="require(`./../../src/assets/images/astronautka.png`)" alt="astronautka">
-            <router-link to="/bludiste"><button class="btn btn-green">HRÁT</button></router-link>
+            <router-link to="/bludiste"><button class="uvodniTlacitko">HRÁT</button></router-link>
             <br><br>
             <p>Raketu ovládej šipkami na klávesnici.</p>
 
@@ -158,8 +158,7 @@ p{
   margin-top: 5%;
 }
 
-
-button {
+.uvodniTlacitko {
   height: 80px;
   width: 250px;
   background-color: rgb(235, 226, 176);
@@ -168,6 +167,7 @@ button {
   font-weight: 800;
   color: rgb(4, 8, 27);
   margin-top: 3%;
+  border: 5px double rgb(4, 8, 27);
 }
 
 

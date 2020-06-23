@@ -24,7 +24,7 @@
             <div class="pokyny">
                 <img class="kokosak" v-bind:src="require(`./../assets/images/coconut.png`)" alt="Posvátný kokos">
                 <div class="zvukovaStopa">
-                    <button v-on:click="play">KOKOSMÁNIE</button>
+                    <button class="btnPohadka" v-on:click="play">KOKOSMÁNIE</button>
                     <audio ref="audioElm" src='./../assets/zvuky/pohadka-1.mp3'></audio>
                </div>
 
@@ -68,7 +68,7 @@
 <style scoped>
 
     .kokosak {
-        margin-top: 100px;
+        margin-top: 80px;
     }
 
     h3{
@@ -80,6 +80,17 @@
         padding: 1px;
         text-align: justify;
         font-size: 13px;;
+    }
+
+    .btnPohadka {
+        margin-top: 15px;
+        width: 150px;
+        height: 7vh;
+        background-color: rgb(4, 8, 27);
+        border: 10px double rgb(59, 163, 233);
+        color: rgb(241, 229, 159);
+        font-family: 'Turret Road', cursive;
+        font-weight: 800;
     }
 
 </style>

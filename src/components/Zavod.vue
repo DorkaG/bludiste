@@ -177,6 +177,8 @@
         background-color: rgb(4, 8, 27);
         border: 10px double rgb(59, 163, 233);
         color: rgb(241, 229, 159);
+        font-family: 'Turret Road', cursive;
+        font-weight: 800;
     }
 
     .zavodni {

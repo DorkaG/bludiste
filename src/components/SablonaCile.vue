@@ -15,6 +15,8 @@
 
             <button class="posledniTlacitko" v-if="jeDalsiLevel" v-on:click="dalsiLevel">Ledaže chceš další bludiště.</button>
         </div>
+
+        <img class="astronautka" src="./../../src/assets/images/astronautka.png" alt="astronautka">
     </div>
 </template>
 
@@ -48,6 +50,14 @@
         height: 600px;
         padding: 100px 0;
         margin: 0;
+        position: relative;
+    }
+
+    .astronautka {
+        position: absolute;
+        width: 100px;
+        left: 150px;
+        top: 345px;
     }
 
     .kontejner-cil {

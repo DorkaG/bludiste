@@ -1,4 +1,5 @@
-# bludiste
+# ![Logo](../master/src/assets/images/slunecnisoustava.png) VESMÍRNÉ BLUDIŠTĚ
+* demo také na https://vesmirnebludiste.netlify.app/
 
 ## Project setup
 ```

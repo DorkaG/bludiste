@@ -40,7 +40,11 @@
                 v-on:vyhrat="vyhra"
                 v-on:dalsi-level="dalsiLevel"
         />
-
+<!--
+                <div>
+                    <audio class="hudba" autoplay ref="audioElm" src='./../assets/zvuky/spacemusic.mp3'></audio>    ZVUK 
+               </div>
+-->
 
     </div>
 </template>
@@ -148,7 +152,7 @@
         },
         computed: {
             bludiste() {
-                return pole[this.level].mapa
+                return pole[this.level].mapa;
 
             }
         },
@@ -274,6 +278,7 @@
                 this.zjistiSouradniceObjektu(this.objekty[i].id, this.objekty[i])
             }
         }
+        
     }
 
 </script>
@@ -287,7 +292,6 @@
         background-image: url("./../../src/assets/images/pozadi4.jpg");
         height: 98vh;
         width: 100%;
-       
     }
 
     .supercontainer {

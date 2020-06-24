@@ -89,6 +89,7 @@
         color: rgb(241, 229, 159);
         font-family: 'Turret Road', cursive;
         font-weight: 800;
+        
     }
 
 </style>

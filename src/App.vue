@@ -29,7 +29,6 @@ p{
   font-size: 14px;
 }
 
-
 .okno {
     padding: 40px;
     height: 100%;

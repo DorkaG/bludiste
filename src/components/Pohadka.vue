@@ -16,9 +16,7 @@
                     spláchni ho dobře vychlazeným kokosovým mlékem. Není nic více osvěžujícího.</p>
 
                 <p>Při loučení s Kokoskami obdržíš spoustu darů, pochopitelně kokosových. Kokosový klobouk nos hrdě,
-                    alespoň než planetu opustíš. </p>
-                <br>
-                <p>Přeji příjemný průzkum.</p>
+                    alespoň než planetu opustíš. Přeji příjemný průzkum.</p>
 
             </div>
             <div class="pokyny">
@@ -30,7 +28,7 @@
 
             </div>
         </div>
-
+        <audio ref="zvukVyhry" src='./../assets/zvuky/vyhra2.mp3'></audio>
     </div>
 </template>
 
@@ -52,14 +50,14 @@
             vyhodnot() {
                 if (this.precteno === true) {
                     this.$emit("vyhrani");
+                    this.$refs.zvukVyhry.play();
                 } else {
                     this.$emit("prohrani");
                 }
             },
             play: function(){
                 this.$refs.audioElm.play();
-            }
-
+            },     
         }
     }
 

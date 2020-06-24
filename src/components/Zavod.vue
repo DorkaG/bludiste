@@ -11,6 +11,7 @@
                         <h5>HURÁ</h5>
                         <p> Získáváš BOD a můžeš pokračovat dál. Nebo si klidně zahraj znovu.</p></div>
                 </div>
+                <audio ref="zvukVyhry" src='./../assets/zvuky/vyhra2.mp3'></audio>
                 <div class="vyskakovaci-okno-prohra" v-if="prohra === true"><img class="smutny"
                                                                                  v-bind:src="require(`./../assets/images/neutral.png`)"
                                                                                  alt="Smutná tvář">
@@ -18,6 +19,7 @@
                         <h5>A JÉJE</h5>
                         <p> To se úplně nepovedlo, ale můžeš to zkusit znovu.</p></div>
                 </div>
+                <audio ref="zvukProhry" src='./../assets/zvuky/prohra.mp3'></audio>
 
                 <!-- <img class="cil" v-bind:src="require(`./../assets/images/cil.jpg`)" alt="Cilová páska"> -->
                 <transition name="start">
@@ -48,11 +50,8 @@
                     <button class="zavodniTlacitka" v-on:click="play" >NÁPOVĚDA</button>
                     <audio ref="audioElm" src='./../assets/zvuky/zavod.mp3'></audio>
             </div>
-
-
         </div>
-
-
+        <audio ref="startRakety" src='./../assets/zvuky/startrakety.mp3'></audio>
     </div>
 </template>
 
@@ -71,6 +70,7 @@
             start() {
                 this.odstartuj();
                 this.odlet();
+                this.$refs.startRakety.play();
                 clearTimeout(this.timeoutID);
                 this.timeoutID = setTimeout(this.vyhodnot, 27500);
             },
@@ -108,12 +108,30 @@
 
             play: function(){
                 this.$refs.audioElm.play();
+            },
+            playWinFail: function () {
+                if (this.vyhra === true) {
+                    this.$refs.zvukVyhry.play();
+                    }
+                else if (this.prohra === true) {
+                    this.$refs.zvukProhry.play();
+                    }
             }
         },
         watch: {
             znovuNacist(newVal) {
                 if (newVal === true) {
                     this.znovuNactiHru()
+                }
+            },     
+            vyhra(newVal) {
+                if (newVal === true) {
+                    this.playWinFail();
+                }
+            },
+            prohra(newVal) {
+                if (newVal === true) {
+                    this.playWinFail();
                 }
             }
         },

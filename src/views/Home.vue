@@ -1,5 +1,5 @@
 <template>
-    <div class="telo">
+    <div class="telo" v-on:click="play">
               
         <img class="hvezda1" v-bind:src="require(`./../../src/assets/images/hvezda1.png`)" alt="hvězda">
         <img class="hvezda2" v-bind:src="require(`./../../src/assets/images/hvezda2.png`)" alt="hvězda">
@@ -20,7 +20,7 @@
             <p class="textUvod">Cesta odvážné kosmonautky Sabiny, která při toulkách vesmírem prozkoumává vše zajímavé a někdy i trochu nebezpečné.</p>
             <p class="textSabina">"Ahoj, já jsem Sabina, moc ráda tě poznávám. Jsem nadšená, že se spolu můžeme pustit do vesmírného dobrodružství. Klikni na tlačítko HRÁT a můžeme startovat."</p>
             <div>
-            <img class="astronautka" v-on:click="play" v-bind:src="require(`./../../src/assets/images/astronautka.png`)" alt="astronautka">
+            <img class="astronautka"  v-bind:src="require(`./../../src/assets/images/astronautka.png`)" alt="astronautka">
             <audio autoplay ref="uvodniHudba" src='./../assets/zvuky/spacemusic.mp3'></audio>  
             </div>
             <router-link to="/bludiste"><button class="uvodniTlacitko">HRÁT</button></router-link>

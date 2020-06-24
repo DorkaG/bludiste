@@ -193,6 +193,8 @@
                         var neniposledni = (pole[this.level + 1] !== undefined)
                         this.$modal.show(SablonaCile, {body: this.pocetBodu, jeDalsiLevel: neniposledni})
                         this.pocetBodu = 0;
+                        objekt.zobrazen = false;
+                        this.hraOtevrena = true;
                     } else {
                         this.$modal.show(SablonaHry, {nazevHry: objekt.nazevHry});
 

@@ -60,7 +60,6 @@
         props: ["vyhra", "prohra", "znovuNacist"],
         data() {
             return {
-                zvuk: {nahravka: require("./../assets/zvuky/zavod.mp3"), id: "zavod"},
                 posunuto: false,
                 marginLeft: -3,
                 timeoutID: null,

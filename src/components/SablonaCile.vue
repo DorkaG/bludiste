@@ -17,6 +17,9 @@
         </div>
 
         <img class="astronautka" src="./../../src/assets/images/astronautka.png" alt="astronautka">
+        <div>
+            <audio autoplay ref="uvodniHudba" src='./../assets/zvuky/spacemusic.mp3'></audio>  
+        </div>
     </div>
 </template>
 

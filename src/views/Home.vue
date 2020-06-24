@@ -1,5 +1,6 @@
 <template>
     <div class="telo">
+              
         <img class="hvezda1" v-bind:src="require(`./../../src/assets/images/hvezda1.png`)" alt="hvězda">
         <img class="hvezda2" v-bind:src="require(`./../../src/assets/images/hvezda2.png`)" alt="hvězda">
         <img class="hvezda3" v-bind:src="require(`./../../src/assets/images/hvezda3.png`)" alt="hvězda">
@@ -23,6 +24,12 @@
             <router-link to="/bludiste"><button class="uvodniTlacitko">HRÁT</button></router-link>
             <br><br>
             <p>Raketu ovládej šipkami na klávesnici.</p>
+           
+          <div>
+            <audio autoplay ref="uvodniHudba" src='./../assets/zvuky/spacemusic.mp3'></audio>  
+          </div>
+                
+
 
     
          </div>
@@ -34,7 +41,6 @@
 
 <script>
 export default {
-    
 }
 </script>
 

@@ -40,11 +40,7 @@
                 v-on:vyhrat="vyhra"
                 v-on:dalsi-level="dalsiLevel"
         />
-<!--
-                <div>
-                    <audio class="hudba" autoplay ref="audioElm" src='./../assets/zvuky/spacemusic.mp3'></audio>    ZVUK 
-               </div>
--->
+
 
     </div>
 </template>

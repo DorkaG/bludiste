@@ -44,7 +44,10 @@ export default {
 
   methods: {
     play: function(){
+      if (typeof this.$refs.uvodniHudba !== "undefined") {
+        console.log("bla")
              this.$refs.uvodniHudba.play();
+      }
             },
   }
 

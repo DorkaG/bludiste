@@ -282,9 +282,7 @@
 <style scoped>
 
     #app {
-        /* width: 880; */
         overflow: hidden;
-        /* background-image: linear-gradient(to right, #344c5f 0%, #071C42 100%); */
         background-image: url("./../../src/assets/images/pozadi4.jpg");
         height: 98vh;
         width: 100%;
@@ -294,7 +292,6 @@
         width: 1500px;
         height: 800px;
         margin: 0 auto;
-        /* background-image: url("./..assets/images/vesmir.jpg"); */
     }
 
     .container {
@@ -305,14 +302,13 @@
 
     .ramec {
         position: absolute;
-        border: 4px double rgb(59, 163, 233); /*rgb(241, 229, 159) nebo rgb(59, 163, 233) nebo rgb(108, 125, 136)*/
+        border: 4px double rgb(59, 163, 233); 
     }
 
     .ctverecek {
         background: rgb(241, 229, 159);
         width: 60px;
         height: 60px;
-        /* border: solid brown 2px; */
     }
 
     .radek {
@@ -320,22 +316,15 @@
     }
 
     .zed {
-        /* background-image: url("./../../src/assets/images/pozadi2.jpg"); */
-
-        /* background-color: #344c5f;  */
-        /* #071C42 100%);  */
-
         background-color: rgb(48, 48, 94);
         opacity: 0;
     }
 
     .cesta {
-        /* background: rgb(48, 48, 94); */
         background-color: rgb(241, 229, 159);
     }
 
     .obrazek {
-        /* background: rgb(48, 48, 94); */
         background-color: rgb(241, 229, 159);
         position: absolute;
     }
@@ -346,8 +335,7 @@
         top: 55px;
         left: -180px;
         color: rgb(59, 163, 233);
-        font-weight: 900;
-        
+        font-weight: 900;     
     }
 
     .rybar {

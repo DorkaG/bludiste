@@ -172,16 +172,15 @@
 
     .hra {
         width: 100%;
-        /* height: 20vh; */
-        height: 180px; /*pridano */
+        height: 180px; 
         border: 10px double rgb(59, 163, 233);
-        background-image: url("./../assets/images/cil_pozadi.png");     /*pridano */
+        background-image: url("./../assets/images/cil_pozadi.png");     
         background-repeat: repeat-y;
         background-position: right;
        
     }
 
-      @media (min-height: 900px) {  /*pridano*/
+      @media (min-height: 900px) {  
          .hra {
              height: 20vh;
          }
@@ -212,9 +211,7 @@
         padding-top: 35px;
         text-align: center;
         background-color: rgb(4, 8, 27);
-    }
-
-     
+    }  
 
     .sipka {
         font-size: 30px;

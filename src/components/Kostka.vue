@@ -67,10 +67,8 @@
             vyhodnot(index) {
                 if (this.hod === this.obrazky[index].hodnota) {
                     this.$emit("vyhrani");
-                    console.log("vyhra");
                 } else {
                     this.$emit("prohrani");
-                    console.log("prohra");
                 }
             },
             znovuNactiHru() {
@@ -115,9 +113,7 @@
 
 <style scoped>
 
-
     .ovoce {
-
         width: 100px;
         padding: 20px 25px 0px 25px;
     }

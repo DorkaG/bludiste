@@ -46,8 +46,7 @@ p{
 
 .pokyny {  
     width: 30%;
-    /* height: 40vh; */
-    height: 360px; /*pridano*/ 
+    height: 360px; 
     background-color: rgb(4, 8, 27);
     border: 10px double rgb(59, 163, 233);
     color: rgb(241, 229, 159);
@@ -58,14 +57,9 @@ p{
 }
 
 .hra {
-    background-color: rgb(4, 8, 27); 
-   
-  /*
-    background-image: url("./../src/assets/images/pozadi3.jpg");*/
-    
+    background-color: rgb(4, 8, 27);   
     width: 70%;
-    /* height: 40vh;   */
-    height: 360px; /*pridano*/ 
+    height: 360px; 
     border: 10px double rgb(59, 163, 233);
 }
 
@@ -103,7 +97,6 @@ p{
   background-color: rgb(110, 226, 110);
   border: 5px double rgb(59, 163, 233);
   color: rgb(4, 8, 27);
-  
 }
 
 .btn-yellow {
@@ -112,15 +105,14 @@ p{
   border: 5px double rgb(59, 163, 233);
   font-size: 40px;
   color: rgb(4, 8, 27);
-
 }
+
 .btn-kostka {
   align-items: center;
   background-color:white;
   font-size: 40px;
   color: rgb(4, 8, 27); 
   border: 5px double rgb(59, 163, 233);
-
 }
 
 .btn-red {
@@ -161,12 +153,10 @@ p{
 
 .border-grey {
   border: 10px double rgb(59, 163, 233);
-
 }
 
 .border-yellow {
-  border: 10px double rgb(59, 163, 233);
-  
+  border: 10px double rgb(59, 163, 233); 
 }
 
 .vesely, .smutny{
@@ -174,7 +164,6 @@ p{
   position: absolute;
   left: 100px;
   top: 100px;
-
 }
 
 .vyhodnoceni {
@@ -195,7 +184,6 @@ p{
     background-color: rgb(4, 8, 27);
     border: 10px double rgb(59, 163, 233);
     z-index: 10;
-
 }
 
 .vyskakovaci-okno-prohra{
@@ -207,7 +195,6 @@ p{
     background-color: rgb(4, 8, 27);
     border: 10px double rgb(59, 163, 233);
     z-index: 10;
-
 }
 
 </style>

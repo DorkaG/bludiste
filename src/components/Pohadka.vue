@@ -72,6 +72,7 @@
     h3{
         margin: 10px;
     }
+
     p {
         color: rgb(232, 235, 217);
         margin: 0 15px;
@@ -88,8 +89,7 @@
         border: 10px double rgb(59, 163, 233);
         color: rgb(241, 229, 159);
         font-family: 'Turret Road', cursive;
-        font-weight: 800;
-        
+        font-weight: 800;      
     }
 
 </style>

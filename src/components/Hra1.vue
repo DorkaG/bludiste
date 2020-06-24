@@ -157,23 +157,6 @@
 
 <style scoped>
 
-    /* .kontejnerHry {
-        width: 800px;
-        height: 500px;
-        border: solid blue 5px;
-        margin: 0 auto;
-    } */
-
-
-    /* .tlacitka {
-        width: 755px;
-        border: solid grey 2px;
-        margin: 20px;
-        height: 60px;
-        display: flex;
-        justify-content: space-between;
-    } */
-
 
     .obrazky {
         display: flex;

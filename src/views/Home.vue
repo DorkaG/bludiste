@@ -30,11 +30,8 @@
           <div>
             
           </div>
-                
-
-
-    
-         </div>
+                  
+        </div>
     </div>
 </template>
 
@@ -65,9 +62,7 @@ export default {
   padding: 0;
   height: 98vh;
   background-size: cover;
-  /*background-repeat: no-repeat;*/
   background-image: url("./../../src/assets/images/pozadi6.jpg");
-  /*background-image: linear-gradient(to right, #344c5f 0%, #071C42 100%);*/
 }
 
 .uvod {
@@ -96,8 +91,6 @@ p{
 
 .textUvod {
   padding: 0 35px;
-
-
 }
 
 .textSabina {

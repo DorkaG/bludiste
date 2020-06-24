@@ -86,7 +86,6 @@
 
 <style scoped>
     .tlacitka {
-        /* width: 755px; */
         margin: 0;
         padding: 0;
         height: 90px;
@@ -97,8 +96,4 @@
     }
 
 
-    /* .neaktivni {
-        background-color: silver;
-
-    }*/
 </style>

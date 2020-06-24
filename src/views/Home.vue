@@ -19,14 +19,16 @@
 
             <p class="textUvod">Cesta odvážné kosmonautky Sabiny, která při toulkách vesmírem prozkoumává vše zajímavé a někdy i trochu nebezpečné.</p>
             <p class="textSabina">"Ahoj, já jsem Sabina, moc ráda tě poznávám. Jsem nadšená, že se spolu můžeme pustit do vesmírného dobrodružství. Klikni na tlačítko HRÁT a můžeme startovat."</p>
-  
-            <img class="astronautka" v-bind:src="require(`./../../src/assets/images/astronautka.png`)" alt="astronautka">
+            <div>
+            <img class="astronautka" v-on:click="play" v-bind:src="require(`./../../src/assets/images/astronautka.png`)" alt="astronautka">
+            <audio autoplay ref="uvodniHudba" src='./../assets/zvuky/spacemusic.mp3'></audio>  
+            </div>
             <router-link to="/bludiste"><button class="uvodniTlacitko">HRÁT</button></router-link>
             <br><br>
             <p>Raketu ovládej šipkami na klávesnici.</p>
            
           <div>
-            <audio autoplay ref="uvodniHudba" src='./../assets/zvuky/spacemusic.mp3'></audio>  
+            
           </div>
                 
 
@@ -41,6 +43,14 @@
 
 <script>
 export default {
+
+
+  methods: {
+    play: function(){
+             this.$refs.uvodniHudba.play();
+            },
+  }
+
 }
 </script>
 
@@ -102,7 +112,7 @@ p{
 .astronautka {
   width: 100px;
   position: absolute;
-  margin-left: -10%;
+  margin-left: -17%;
 }
 
 .hvezda1 {
